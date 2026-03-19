@@ -24,16 +24,16 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
     <p>We engage with regulators (including the California Energy Commission) to promote open standards, customer choice, and interoperability in flexible demand appliance standards.</p>
   </div>
   <div class="card">
-    <h3>Influence Standards</h3>
-    <p>We contribute to standards bodies and working groups to ensure that protocols like <a href="https://www.openadr.org/">OpenADR 3</a> evolve to support the grid coordination architecture we envision.</p>
-  </div>
-  <div class="card">
-    <h3>Build Open Software</h3>
-    <p>We develop and publish open-source libraries that implement these standards, making it practical for developers to build grid-coordinated applications today.</p>
-  </div>
-  <div class="card">
     <h3>Practice What We Preach</h3>
-    <p>We lead by example. Our founder fully electrified his home &mdash; replacing gas appliances, adding solar, battery storage, and smart panels &mdash; to demonstrate that whole-home electrification is practical, affordable, and better in every way. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
+    <p>We lead by example. Our founder fully electrified his home &mdash; replacing gas appliances, adding solar, battery storage, and smart panels &mdash; and <a href="/demo">demonstrated a working OpenADR 3 dynamic pricing system</a> at the CEC Demand Flexibility Summit. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
+  </div>
+  <div class="card">
+    <h3>Develop Open Protocols &amp; Software</h3>
+    <p>We don't just use open standards &mdash; we help create them. We proposed and led the working group that added <a href="https://github.com/grid-coordination/openadr3-specification/blob/main/doc/OpenADR3%20Object%20Operation%20Notifications%20via%20Additional%20Protocols.md">push notification protocols</a> to <a href="https://www.openadr.org/">OpenADR 3.1</a>, developed the <a href="https://ebus.energy">Electrification Bus (eBus)</a> framework for home energy infrastructure integration, and publish <a href="/software">open-source libraries</a> that make these standards practical.</p>
+  </div>
+  <div class="card">
+    <h3>Influence Standards</h3>
+    <p>We contribute to standards bodies and working groups &mdash; including the <a href="https://www.openadr.org/">OpenADR Alliance</a> and AHRI 1380 &mdash; to ensure that protocols evolve to support the grid coordination architecture we envision.</p>
   </div>
 </div>
 

@@ -31,6 +31,10 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
     <h3>Build Open Software</h3>
     <p>We develop and publish open-source libraries that implement these standards, making it practical for developers to build grid-coordinated applications today.</p>
   </div>
+  <div class="card">
+    <h3>Practice What We Preach</h3>
+    <p>We lead by example. Our founder fully electrified his home &mdash; replacing gas appliances, adding solar, battery storage, and smart panels &mdash; to demonstrate that whole-home electrification is practical, affordable, and better in every way. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
+  </div>
 </div>
 
 ## The Core Idea

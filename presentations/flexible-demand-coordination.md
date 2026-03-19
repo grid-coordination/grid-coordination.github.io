@@ -102,17 +102,11 @@ DC Jackson
 
 # How Is Residential Coordination Done Today?
 
+![bg right:55% fit](images/current-dr-system.svg)
+
 ### The Aggregator Model
 
-- Each appliance connects to its **manufacturer's cloud** via proprietary protocol
-- Aggregator contracts with manufacturer to control devices
-- Utility contracts with aggregator for demand response
-
-### This model is fundamentally fragmented
-
-- HVAC → manufacturer A's cloud → aggregator X
-- EVSE → manufacturer B's cloud → aggregator Y
-- Water heater → manufacturer C's cloud → aggregator Z
+Each appliance connects to its **manufacturer's cloud** via proprietary protocol. Aggregators contract with manufacturers; utilities contract with aggregators.
 
 **No one has a holistic view of the customer's energy situation.**
 
@@ -255,6 +249,8 @@ OpenADR 3.1 can do everything 2.0b does (with less cost and complexity), plus:
 ---
 
 # The Proposed System
+
+![bg right:45% fit](images/proposed-system.svg)
 
 ### How it works:
 

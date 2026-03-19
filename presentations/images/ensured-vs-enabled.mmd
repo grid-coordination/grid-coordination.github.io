@@ -1,0 +1,33 @@
+flowchart LR
+    subgraph Ensured ["ENSURED: Ready to participate"]
+        direction TB
+        E_APP["Appliance"]
+        E_NET["Integrated\nWi-Fi / Ethernet"]
+        E_OA["OpenADR 3.1\nVEN"]
+        E_VTN["LSE / DRP / HEMS\n(customer's choice)"]
+
+        E_APP --- E_NET
+        E_NET --- E_OA
+        E_OA -->|"Open protocol\nover Internet or LAN"| E_VTN
+    end
+
+    subgraph Enabled ["ENABLED: Gaps remain"]
+        direction TB
+        D_APP["Appliance"]
+        D_PORT["CTA-2045\nPort"]
+        D_UCM["UCM\n(~$100+)"]
+        D_WIFI["Wi-Fi\nConfig?"]
+        D_DRP["Single DRP\n(proprietary)"]
+
+        D_APP --- D_PORT
+        D_PORT -.-|"Customer\nmust install"| D_UCM
+        D_UCM -.-|"Must configure\nSSID/password"| D_WIFI
+        D_WIFI -.-|"Proprietary\nprotocol"| D_DRP
+    end
+
+    style Ensured fill:#e8f5e9,stroke:#2e7d32
+    style Enabled fill:#fce4ec,stroke:#c62828
+    style E_APP fill:#c8e6c9,stroke:#2e7d32
+    style E_OA fill:#bbdefb,stroke:#1565c0
+    style D_APP fill:#ffcdd2,stroke:#c62828
+    style D_UCM fill:#ffcdd2,stroke:#c62828

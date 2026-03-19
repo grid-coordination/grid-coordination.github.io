@@ -63,29 +63,11 @@ Provide DR management wherever needed to maximize grid benefits:
 
 # Ensured vs. Enabled
 
-<div class="columns">
-<div>
+![bg right:55% fit](images/ensured-vs-enabled.svg)
 
-### Ensured
-The appliance supports:
-- An open/standard protocol for flexible demand control
-- Server URL is customer-configurable
-- Network interface(s) for LAN/Internet
+**Ensured:** Open protocol + network interface = ready to participate. No additional cost or effort.
 
-**Fully capable — no additional cost or effort!**
-
-</div>
-<div>
-
-### Enabled
-The appliance supports:
-- A connector/port for another device
-- That device provides flexible demand control by unspecified means
-
-**Requires additional cost and effort...**
-
-</div>
-</div>
+**Enabled:** Port for aftermarket module = gaps remain. Additional cost, installation, configuration required.
 
 ---
 

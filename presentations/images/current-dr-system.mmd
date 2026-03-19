@@ -1,0 +1,39 @@
+flowchart TB
+    subgraph Grid ["Grid / LSE"]
+        LSE["Utility / LSE"]
+    end
+
+    subgraph Aggregators ["Aggregators"]
+        AGG_A["Aggregator A"]
+        AGG_B["Aggregator B"]
+        AGG_C["Aggregator C"]
+    end
+
+    subgraph Clouds ["Manufacturer Clouds"]
+        CLOUD_H["HVAC Mfr Cloud"]
+        CLOUD_E["EVSE Mfr Cloud"]
+        CLOUD_W["WH Mfr Cloud"]
+    end
+
+    subgraph Home ["Customer Home"]
+        HVAC["HVAC System"]
+        EVSE["EV Charger"]
+        WH["Water Heater"]
+    end
+
+    LSE -->|"DR contract"| AGG_A
+    LSE -->|"DR contract"| AGG_B
+    LSE -->|"DR contract"| AGG_C
+
+    AGG_A -->|"API"| CLOUD_H
+    AGG_B -->|"API"| CLOUD_E
+    AGG_C -->|"API"| CLOUD_W
+
+    CLOUD_H <-->|"Proprietary"| HVAC
+    CLOUD_E <-->|"Proprietary"| EVSE
+    CLOUD_W <-->|"Proprietary"| WH
+
+    style Grid fill:#e8eaf6,stroke:#3949ab
+    style Aggregators fill:#fff3e0,stroke:#ef6c00
+    style Clouds fill:#fce4ec,stroke:#c62828
+    style Home fill:#e8f5e9,stroke:#2e7d32

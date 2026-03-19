@@ -17,3 +17,10 @@ exclude:
   - .claude
   - .beads
   - README.md
+  - presentations/flexible-demand-coordination.md
+  - presentations/grid-coordination-residential.md
+  - presentations/ahri-1380-update.md
+  - presentations/appliance-dr-mandates.md
+  - presentations/openadr3-demo-handout.md
+  - presentations/whole-home-electrification.md
+  - presentations/images/*.mmd

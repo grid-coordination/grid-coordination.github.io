@@ -27,7 +27,7 @@ Spec-driven HTTP clients with full CRUD for all OpenADR 3 resources, two-layer d
 
 | Repository | Language | Package |
 |------------|----------|---------|
-| [clj-oa3](https://github.com/grid-coordination/clj-oa3) | Clojure | *Clojars &mdash; coming soon* |
+| [clj-oa3](https://github.com/grid-coordination/clj-oa3) | Clojure | [clj-oa3](https://clojars.org/energy.grid-coordination/clj-oa3) on Clojars |
 | [python-oa3](https://github.com/grid-coordination/python-oa3) | Python | [openadr3](https://pypi.org/project/openadr3/) on PyPI |
 
 ### Client Frameworks
@@ -36,7 +36,7 @@ Higher-level wrappers with lifecycle management, VEN/BL client roles, MQTT and w
 
 | Repository | Language | Package |
 |------------|----------|---------|
-| [clj-oa3-client](https://github.com/grid-coordination/clj-oa3-client) | Clojure | *Clojars &mdash; coming soon* |
+| [clj-oa3-client](https://github.com/grid-coordination/clj-oa3-client) | Clojure | [clj-oa3-client](https://clojars.org/energy.grid-coordination/clj-oa3-client) on Clojars |
 | [python-oa3-client](https://github.com/grid-coordination/python-oa3-client) | Python | [python-oa3-client](https://pypi.org/project/python-oa3-client/) on PyPI |
 
 ### Integration Tests
@@ -49,8 +49,8 @@ Higher-level wrappers with lifecycle management, VEN/BL client roles, MQTT and w
 
 | Repository | Language | Description | Package |
 |------------|----------|-------------|---------|
-| [clj-gridx](https://github.com/grid-coordination/clj-gridx) | Clojure | Client library for the GridX Pricing API | *Clojars &mdash; coming soon* |
-| [clj-mdns](https://github.com/grid-coordination/clj-mdns) | Clojure | mDNS/DNS-SD service discovery | *Clojars &mdash; coming soon* |
+| [clj-gridx](https://github.com/grid-coordination/clj-gridx) | Clojure | Client library for the GridX Pricing API | [clj-gridx](https://clojars.org/energy.grid-coordination/clj-gridx) on Clojars |
+| [clj-mdns](https://github.com/grid-coordination/clj-mdns) | Clojure | mDNS/DNS-SD service discovery | [clj-mdns](https://clojars.org/energy.grid-coordination/clj-mdns) on Clojars |
 
 ## Architecture
 

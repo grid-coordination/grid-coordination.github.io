@@ -8,48 +8,53 @@ permalink: /software
 
 Grid Coordination develops and publishes open-source libraries that make it practical to build applications using the standards we advocate. All software is MIT licensed and available on [GitHub](https://github.com/grid-coordination).
 
-## Specifications
-
-Machine-readable API specifications that our client libraries are built on:
-
-| Repository | Description |
-|------------|-------------|
-| [openadr3-specification](https://github.com/grid-coordination/openadr3-specification) | OpenAPI specifications for the [OpenADR 3](https://www.openadr.org/) protocol (versions 3.0.0 through 3.1.1) |
-| [gridx-api-specs](https://github.com/grid-coordination/gridx-api-specs) | OpenAPI specifications for GridX pricing APIs, derived from public documentation |
-
 ## OpenADR 3 Libraries
 
-Implementations of the OpenADR 3 protocol in Clojure and Python. Each language has a pure API library and a higher-level client framework.
+Implementations of the [OpenADR 3](https://www.openadr.org/) protocol in Clojure and Python. Each language has a pure API library and a higher-level client framework.
 
-### Pure API Libraries
-
-Spec-driven HTTP clients with full CRUD for all OpenADR 3 resources, two-layer data models (raw JSON and coerced native types), and extensible payload coercion.
-
-| Repository | Language | Package |
-|------------|----------|---------|
-| [clj-oa3](https://github.com/grid-coordination/clj-oa3) | Clojure | [clj-oa3](https://clojars.org/energy.grid-coordination/clj-oa3) on Clojars |
-| [python-oa3](https://github.com/grid-coordination/python-oa3) | Python | [openadr3](https://pypi.org/project/openadr3/) on PyPI |
-
-### Client Frameworks
-
-Higher-level wrappers with lifecycle management, VEN/BL client roles, MQTT and webhook notification channels, and mDNS/DNS-SD service discovery.
-
-| Repository | Language | Package |
-|------------|----------|---------|
-| [clj-oa3-client](https://github.com/grid-coordination/clj-oa3-client) | Clojure | [clj-oa3-client](https://clojars.org/energy.grid-coordination/clj-oa3-client) on Clojars |
-| [python-oa3-client](https://github.com/grid-coordination/python-oa3-client) | Python | [python-oa3-client](https://pypi.org/project/python-oa3-client/) on PyPI |
-
-### Integration Tests
+### Specification
 
 | Repository | Description |
 |------------|-------------|
-| [clj-oa3-test](https://github.com/grid-coordination/clj-oa3-test) | Integration test suite for OpenADR 3 VTN implementations |
+| [openadr3-specification](https://github.com/grid-coordination/openadr3-specification) | OpenAPI specifications for the OpenADR 3 protocol (versions 3.0.0 through 3.1.1) |
 
-## Other Libraries
+Each language has a two-layer stack: a **pure API library** (spec-driven HTTP client with full CRUD, two-layer data models, extensible payload coercion) and a **client framework** (lifecycle management, VEN/BL client roles, MQTT and webhook notification channels, mDNS/DNS-SD service discovery).
+
+### Clojure
+
+| Repository | Layer | Package |
+|------------|-------|---------|
+| [clj-oa3](https://github.com/grid-coordination/clj-oa3) | Pure API | [clj-oa3](https://clojars.org/energy.grid-coordination/clj-oa3) on Clojars |
+| [clj-oa3-client](https://github.com/grid-coordination/clj-oa3-client) | Client framework | [clj-oa3-client](https://clojars.org/energy.grid-coordination/clj-oa3-client) on Clojars |
+| [clj-oa3-test](https://github.com/grid-coordination/clj-oa3-test) | Integration tests for VTN implementations | &mdash; |
+
+### Python
+
+| Repository | Layer | Package |
+|------------|-------|---------|
+| [python-oa3](https://github.com/grid-coordination/python-oa3) | Pure API | [openadr3](https://pypi.org/project/openadr3/) on PyPI |
+| [python-oa3-client](https://github.com/grid-coordination/python-oa3-client) | Client framework | [python-oa3-client](https://pypi.org/project/python-oa3-client/) on PyPI |
+
+## GridX Pricing API
+
+Client library for the GridX dynamic pricing API.
+
+### Specification
+
+| Repository | Description |
+|------------|-------------|
+| [gridx-api-specs](https://github.com/grid-coordination/gridx-api-specs) | OpenAPI specifications for GridX pricing APIs, derived from public documentation |
+
+### Client Library
+
+| Repository | Language | Package |
+|------------|----------|---------|
+| [clj-gridx](https://github.com/grid-coordination/clj-gridx) | Clojure | [clj-gridx](https://clojars.org/energy.grid-coordination/clj-gridx) on Clojars |
+
+## Supporting Libraries
 
 | Repository | Language | Description | Package |
 |------------|----------|-------------|---------|
-| [clj-gridx](https://github.com/grid-coordination/clj-gridx) | Clojure | Client library for the GridX Pricing API | [clj-gridx](https://clojars.org/energy.grid-coordination/clj-gridx) on Clojars |
 | [clj-mdns](https://github.com/grid-coordination/clj-mdns) | Clojure | mDNS/DNS-SD service discovery | [clj-mdns](https://clojars.org/energy.grid-coordination/clj-mdns) on Clojars |
 
 ## Architecture

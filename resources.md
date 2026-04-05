@@ -8,6 +8,18 @@ permalink: /resources
 
 Projects, articles, and references aligned with the Grid Coordination architecture — open protocols, direct utility-to-home communication, and site-level coordination rather than per-device cloud control.
 
+## Events
+
+### CalFlexHub Symposium 2026
+
+**April 15, 2026** &mdash; Lawrence Berkeley National Lab, Berkeley, CA (hybrid: in-person + online)
+
+[Register here](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) &mdash; [CalFlexHub at LBNL](https://calflexhub.lbl.gov)
+
+The final [CalFlexHub](https://calflexhub.lbl.gov) Symposium, featuring updates on CalFlexHub's portfolio of load flexibility projects, the latest policies and research in dynamic energy management, and keynotes from the California Energy Commission, California utilities and CCAs, and innovators in the field.
+
+**Grid Coordination will be demonstrating [live OpenADR 3 dynamic pricing](/demo)** &mdash; the same grid-to-appliance coordination system shown at the 2025 CEC Demand Flexibility Summit, running on open-source software and inexpensive hardware.
+
 ## Real-World Deployments
 
 ### PG&E + Itron AMI 2.0 + SPAN Edge &mdash; Pilots for Transformer-Aware Load Coordination

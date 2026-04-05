@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+<div class="banner" markdown="0">
+  <strong>April 15, 2026</strong> &mdash; Grid Coordination will be demonstrating <a href="/demo">live OpenADR 3 dynamic pricing</a> at the <a href="https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw">CalFlexHub Symposium 2026</a> at Lawrence Berkeley National Lab &mdash; hybrid event, open to all.
+</div>
+
 <div class="hero" markdown="0">
   <h1>Grid Coordination</h1>
   <p>Defining the architecture of the future electric grid &mdash; through open standards, policy advocacy, and working software.</p>

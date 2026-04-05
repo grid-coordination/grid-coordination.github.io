@@ -30,9 +30,9 @@ History shows that open standards in energy do not emerge from market forces alo
 
 We have contributed formal responses to CEC proceedings on flexible demand standards:
 
-- **Docket 24-FDAS-03** &mdash; Low-Voltage Thermostats: We advocated for broadening the scope beyond thermostats to encompass HVAC systems holistically, requiring open control protocols, and supporting (but not requiring) aggregators. [Response document](/policy/24-fdas-03)
+- **[Docket 24-FDAS-03](/policy/24-fdas-03)** &mdash; Low-Voltage Thermostats: We advocated for broadening the scope beyond thermostats to encompass HVAC systems holistically, requiring open control protocols, and supporting (but not requiring) aggregators.
 
-- **Docket 24-FDAS-04** &mdash; Electric Vehicle Supply Equipment: We advocated for customer choice and interoperability in EVSE standards, open protocol requirements for local and cloud control, V2X capability requirements, and user-configurable flexible demand servers. [Response document](/policy/24-fdas-04)
+- **[Docket 24-FDAS-04](/policy/24-fdas-04)** &mdash; Electric Vehicle Supply Equipment: We advocated for customer choice and interoperability in EVSE standards, open protocol requirements for local and cloud control, V2X capability requirements, and user-configurable flexible demand servers.
 
 ### Key Regulatory Drivers
 

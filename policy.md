@@ -8,6 +8,12 @@ permalink: /policy
 
 Grid Coordination engages with regulators and standards bodies to promote an open, customer-centric architecture for the electrified grid. Our advocacy rests on three principles:
 
+## The Technology Moment
+
+The grid was historically engineered around **worst-case demand** because real-time coordination with customer loads was impossible. Infrastructure was oversized; customer consumption was whatever it happened to be. That is no longer a fundamental constraint. **IP networking**, **open grid-coordination protocols**, and **low-cost networked microcontrollers and single-board computers** now make it practical to communicate dynamic prices and power limits to every flexible load in every home &mdash; and for those loads to respond autonomously on the customer's behalf.
+
+Regulation's role is to ensure this new coordination layer stays **open** &mdash; so the capability benefits customers rather than entrenching proprietary lock-in.
+
 ## Core Principles
 
 ### Customer Choice

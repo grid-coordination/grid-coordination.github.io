@@ -37,6 +37,14 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
   </div>
 </div>
 
+## Why Now
+
+For a century, the electric grid was engineered around **worst-case assumptions**. Distribution infrastructure was sized for peak loads that might occur only a few hours a year, because the grid had no way to talk to customer loads in real time. Coordination between generation and consumption happened at the wholesale level &mdash; customer demand was simply something the grid had to accommodate.
+
+That constraint is gone. The same information technology that transformed every other industry &mdash; **IP networking**, **open communication protocols**, and **inexpensive networked microcontrollers and single-board computers** &mdash; now makes it practical to coordinate generation and consumption in real time, at the scale of millions of devices.
+
+A heat pump, an EV charger, or a smart panel can each run a standards-based client on a $5 chip. A utility can publish dynamic prices and power constraints to every connected customer over the Internet. A home energy management system can optimize across every flexible load a household owns. **The grid no longer has to be built for the worst case &mdash; it can be coordinated for the actual case.**
+
 ## The Core Idea
 
 Today's grid coordination model is fragmented: each appliance connects to its manufacturer's cloud, each aggregator controls a single device type, and no one has a holistic view of the customer's energy situation. This per-device model cannot scale to the electrified home.

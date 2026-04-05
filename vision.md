@@ -8,6 +8,14 @@ permalink: /vision
 
 Effective grid coordination requires solving two distinct but complementary problems. Understanding this distinction is essential to designing the right architecture.
 
+## The Historical Constraint
+
+For most of its history, the grid had no way to coordinate with customer loads in real time. Infrastructure was therefore sized for **worst-case demand** &mdash; the peak that might occur only a few hours a year. Customer consumption was treated as an exogenous input: whatever loads customers chose to run, the grid had to accommodate.
+
+That constraint no longer holds. **IP networking**, **open grid-coordination protocols**, and **low-cost networked microcontrollers and single-board computers** now make it practical to communicate dynamic prices and power limits to every flexible load in every home &mdash; and for those loads to respond autonomously.
+
+This changes what the grid has to do. It no longer needs to be sized for the worst case; it can be *coordinated* for the actual case. The two problems below &mdash; macro balancing and micro distribution protection &mdash; are both now tractable through communication rather than oversizing.
+
 ## Problem 1: Macro Grid Coordination
 
 The overall electric grid must continuously balance generation with consumption. Today, this is managed through a combination of static time-of-use rates, grid emergency alerts, and aggregator-mediated demand response.

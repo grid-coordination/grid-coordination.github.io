@@ -102,7 +102,7 @@ DC Jackson
 
 # How Is Residential Coordination Done Today?
 
-![bg right:55% fit](images/current-dr-system.svg)
+![bg right:55% fit](images/flexible-demand-today.png)
 
 ### The Aggregator Model
 
@@ -217,6 +217,8 @@ OpenADR 3.1 can do everything 2.0b does (with less cost and complexity), plus:
 
 # Matter: The Local Complement
 
+![bg right:40% fit](images/oa3-matter-2.png)
+
 - Matter excels at **smart-appliance interoperability within the home**
 - Does **not** provide utility-to-customer coordination alone
 - Combined with OpenADR 3.1: EMS receives grid signals via OpenADR, controls appliances via Matter
@@ -250,7 +252,7 @@ OpenADR 3.1 can do everything 2.0b does (with less cost and complexity), plus:
 
 # The Proposed System
 
-![bg right:45% fit](images/proposed-system.svg)
+![bg right:45% fit](images/future-flexible-demand.png)
 
 ### How it works:
 

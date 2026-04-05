@@ -71,7 +71,38 @@ Provide DR management wherever needed to maximize grid benefits:
 
 ---
 
+# Enabled versus Ensured
+
+<div class="columns">
+<div>
+
+### Enabled: Success left to chance
+
+![w:500](images/car-jumping-with-ramps.jpg)
+
+</div>
+<div>
+
+### Ensured!
+
+![w:500](images/car-crossing-a-wooden-bridge.jpg)
+
+</div>
+</div>
+
+---
+
+# When the distance from Enabled to Ensured is too large
+
+![w:700](images/car-jumping-crash.jpg)
+
+> CTA-2045: the gap between the port and participation proved insurmountable.
+
+---
+
 # CTA-2045: Components and How It Works
+
+![bg right:40% fit](images/DRP-UCM-SGD.png)
 
 ### SGD (Appliance)
 - CTA-2045 SGD interface
@@ -121,6 +152,8 @@ CTA-2045 mandates have **failed** to accomplish the goal of shifting water heate
 
 # What Went Wrong with CTA-2045?
 
+![bg right:35% fit](images/example-ucm.jpeg)
+
 Ex-ante it seemed like a great idea, and everyone had the best intentions...
 
 1. CTA-2045 only **enables** connection via a UCM obtained and installed separately
@@ -136,6 +169,8 @@ Ex-ante it seemed like a great idea, and everyone had the best intentions...
 ---
 
 # The Proposed Solution
+
+![bg right:40% fit](images/DRP-OA3-SGD.png)
 
 Many/most new water heaters now include Wi-Fi for manufacturer cloud connectivity.
 

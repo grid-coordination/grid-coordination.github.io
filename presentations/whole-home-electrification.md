@@ -90,6 +90,30 @@ DC Jackson
 
 ---
 
+# Pre-Electrification Baseline (2020)
+
+<div class="columns">
+<div>
+
+### Consumption history
+![w:500](images/ConsumptionHistory-2020-01.png)
+
+### Average daily
+![w:500](images/AverageDailyConsumption.png)
+
+</div>
+<div>
+
+### Utility meter reads
+![w:500](images/MeterReads-2020-01.png)
+
+</div>
+</div>
+
+**Utility data + networked sub-metering established our real baseline — not NEC worst-case.**
+
+---
+
 # Design Decisions
 
 | Component | Choice |
@@ -110,72 +134,160 @@ DC Jackson
 
 # Before & After: Service Entrance
 
-<!-- TODO: Add before/after photos from Google Slides -->
-<!-- images/electrification-service-before.jpg -->
-<!-- images/electrification-service-after.jpg -->
+<div class="columns">
+<div>
 
-*Photos to be added — see image TODO list*
+### Before
+
+![w:500](images/Service-Entrance.jpg)
+
+200A service, marked up for re-route
+
+</div>
+<div>
+
+### After
+
+![w:500](images/New-Service-Entrance.jpg)
+
+New panels + Tesla Powerwall
+
+</div>
+</div>
 
 ---
 
 # SPAN Smart Electric Panels
+
+<div class="columns">
+<div>
 
 - Home automation and energy management systems
 - Real-time power monitoring of each circuit
 - Controllable relay on each circuit
 - Configurable automated load-shedding during outages
 
-<!-- TODO: Add SPAN panel photos from Google Slides -->
+![w:400](images/home-automation-system.jpg)
 
-*Photos to be added — see image TODO list*
+</div>
+<div>
+
+![w:300](images/span-panels-1.jpg)
+![w:300](images/span-panels-2.jpg)
+
+</div>
+</div>
 
 ---
 
 # Before & After: HVAC and Water Heater
 
+<div class="columns">
+<div>
+
 ### Before
-- Aging gas furnace and gas water heater
+Aging gas furnace and gas water heater
+
+![w:250](images/wh-before-1.jpg) ![w:250](images/wh-before-2.jpg)
+
+</div>
+<div>
 
 ### After
-- Rheem heat pump water heater (50 gal, 240V)
-- Lennox variable-speed heat pump HVAC, multi-zoned
-- All on separate 240 VAC high-amp circuits
+Rheem HP-WH (50 gal, 240V) + Lennox variable-speed HP-HVAC, multi-zoned
 
-<!-- TODO: Add before/after HVAC/WH photos from Google Slides -->
+![w:250](images/wh-after.jpg) ![w:250](images/wh-hvac-after.jpg)
 
-*Photos to be added — see image TODO list*
+</div>
+</div>
 
 ---
 
 # New Roof and PV Panels
 
+<div class="columns">
+<div>
+
 - Standing-seam metal roof with S-5! PVKIT rail-less mount
 - LG 400W panels with Enphase microinverters
 - Conduit from rooftops to service entrance routed through former furnace/WH flue
 
-<!-- TODO: Add roof/PV photos from Google Slides -->
+![w:300](images/roof-detail-1.jpg) ![w:300](images/roof-detail-2.jpg)
 
-*Photos to be added — see image TODO list*
+</div>
+<div>
+
+![w:350](images/roof-1.jpg)
+![w:350](images/roof-2.jpg)
+
+</div>
+</div>
+
+---
+
+# EV Charging (EVSE)
+
+<div class="columns">
+<div>
+
+- Tesla Wall Connector, Level 2, 60A
+- Installed in garage for primary EV
+- Capacity allocated via SPAN smart panel
+
+</div>
+<div>
+
+![w:350](images/evse-1.jpg) ![w:350](images/evse-2.jpg)
+
+</div>
+</div>
 
 ---
 
 # Induction Cooktop
 
-- Induction cooktop in same location as gas
-- Moderate kitchen remodel: new countertop, backsplash, new appliances, kept existing cabinets
+<div class="columns">
+<div>
+
+### Before (gas)
+
+![w:400](images/kitchen-gas-cooktop.jpg)
+
+</div>
+<div>
+
+### After (induction)
+
+![w:400](images/kitchen-induction-cooktop.jpg)
+
+</div>
+</div>
+
+- 50A induction cooktop in same location as gas
+- Moderate kitchen remodel: new countertop, backsplash, new appliances, kept cabinets
 - Moved ventilation hood into ceiling — no gas fumes to exhaust!
-
-<!-- TODO: Add kitchen before/after photos from Google Slides -->
-
-*Photos to be added — see image TODO list*
 
 ---
 
 # Disconnecting from Gas
 
-<!-- TODO: Add gas disconnect photos from Google Slides -->
+<div class="columns">
+<div>
 
-*Photos to be added — see image TODO list*
+![w:280](images/disconnect-1.jpg)
+![w:280](images/disconnect-2.jpg)
+![w:280](images/disconnect-3.jpg)
+
+</div>
+<div>
+
+![w:280](images/disconnect-4.jpg)
+![w:280](images/disconnect-5.jpg)
+
+Meter removal, pipe capping, final disconnection from the gas utility.
+
+</div>
+</div>
 
 ---
 
@@ -188,9 +300,7 @@ But grid consumption actually **decreased** — from ~2500 to ~2000 kWh from gri
 
 The difference: **~750 kWh/month of PV generation**
 
-<!-- TODO: Add consumption chart from Google Slides -->
-
-*Chart to be added — see image TODO list*
+![bg right:55% fit](images/GridConsumption.png)
 
 ---
 
@@ -202,9 +312,7 @@ The difference: **~750 kWh/month of PV generation**
 - But ~500 kWh **less** from the grid
 - PV generation makes up the difference: ~750 kWh
 
-<!-- TODO: Add total consumption chart from Google Slides -->
-
-*Chart to be added — see image TODO list*
+![bg right:55% fit](images/Grid-PV-Consumption.png)
 
 ---
 
@@ -214,21 +322,33 @@ The difference: **~750 kWh/month of PV generation**
 - (Mini "data center" in the basement!)
 - Peaks of **15-20 kW** for a few hours — EV charging + cooking or dryer
 
-<!-- TODO: Add instantaneous consumption chart from Google Slides -->
-
-*Chart to be added — see image TODO list*
+![bg right:60% fit](images/Grid-Amps.png)
 
 ---
 
-# Data: PV Generation 2024
+# Data: Peak Usage Event (Zoom)
 
-- **8.2 MWh** total for 2024
-- Monthly range: 0.2 MWh (winter) to 1.2 MWh (summer)
-- Best day (~June 13): **6.2 kW** peak, **41.7 kWh** total
+A typical peak: EV charging overlapped with cooking and dryer.
 
-<!-- TODO: Add PV generation charts from Google Slides -->
+![bg right:60% fit](images/Peak-Amps.png)
 
-*Charts to be added — see image TODO list*
+---
+
+# Data: PV Generation 2024 — Monthly
+
+- **8.1 MWh** total for 2024 (8.4 MWh in 2023)
+- Monthly range: ~0.25 MWh (winter) to ~1.2 MWh (summer)
+
+![bg right:60% fit](images/PV-Generated-2024.jpeg)
+
+---
+
+# Data: PV Generation — Best Day (June 13, 2024)
+
+- **41.7 kWh** generated on June 13, 2024
+- Peak output around solar noon
+
+![bg right:60% fit](images/PV-Generated-2024-06-13.jpeg)
 
 ---
 

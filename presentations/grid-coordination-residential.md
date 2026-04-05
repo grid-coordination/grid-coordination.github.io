@@ -118,6 +118,8 @@ DC Jackson
 
 **Use Matter** within the home to control the power and shift energy of appliances
 
+![w:900](images/oa3-matter-1.png)
+
 ### Two Protocol Layers
 
 | Layer | Protocol | Scope |
@@ -128,6 +130,8 @@ DC Jackson
 ---
 
 # The Future Residential Utility Customer
+
+![bg right:40% fit](images/future-residential-utility-customer.png)
 
 ### Smart Meter capabilities:
 - Power import & export measurement

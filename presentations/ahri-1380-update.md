@@ -57,6 +57,8 @@ Define a standard that enables HVAC systems to participate in demand flexibility
 
 # AHRI 1380-2019 Protocols
 
+![bg right:40% fit](images/1380-2019-OA2-Cloud.png)
+
 ### OpenADR 2.0b
 - HVAC system connects via Wi-Fi and/or Ethernet
 - VEN (client) typically resides in **manufacturer's cloud**
@@ -166,6 +168,8 @@ The HVAC system supports:
 
 # AHRI 1380-2026 Proposal: Networking
 
+![bg right:35% fit](images/1380-2019-Networking.png)
+
 ### HVAC systems must support (or be capable of supporting):
 - **Wi-Fi**
 - **Cellular modem**
@@ -178,7 +182,34 @@ The HVAC system supports:
 
 ---
 
+# USB-C Network Dongles
+
+<div class="columns">
+<div>
+
+![w:300](images/WiFi-dongle.png)
+**Wi-Fi dongle**
+
+![w:300](images/Ethernet-dongle.png)
+**Ethernet dongle**
+
+</div>
+<div>
+
+![w:300](images/LTE-dongle.png)
+**Cellular (LTE) dongle**
+
+![w:300](images/Cheap-ethernet-dongle.png)
+**Inexpensive Ethernet dongle**
+
+</div>
+</div>
+
+---
+
 # AHRI 1380-2026 Proposal: Protocols
+
+![bg right:30% fit](images/cloud-to-native-hvac-oa31.png)
 
 Two distinct compliance types — a system **must** support one, **may** support both:
 
@@ -224,6 +255,8 @@ Enables existing products to comply while providing a clear transition path.
 ---
 
 # Where the Puck Is Going: HVAC Systems
+
+![bg right:25% fit](images/Google-Pixel-Tablet.png)
 
 | From | To |
 |------|----|

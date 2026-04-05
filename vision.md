@@ -66,3 +66,7 @@ The industry is evolving along a clear trajectory:
 Per-device aggregator control was viable when a home had one or two controllable loads. It cannot scale to the electrified home with EV charger, heat pump HVAC, heat pump water heater, battery storage, and solar PV &mdash; all of which need holistic coordination at the site level.
 
 **Implicit demand response via dynamic pricing is the scalable, customer-friendly endpoint of this evolution.** The energy management system receives price signals and power limits, and optimizes across all loads and resources based on customer preferences. This is the architecture Grid Coordination advocates for, builds toward, and works to embed in standards and policy.
+
+## This Is Being Built
+
+The architecture described above is no longer speculative. Pacific Gas & Electric is [piloting transformer-aware smart meters and meter-mounted smart panels](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) that communicate directly with home energy devices &mdash; enforcing site-level power limits without per-device aggregator control. See [Resources](/resources) for more deployments and references.

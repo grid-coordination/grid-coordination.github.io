@@ -62,3 +62,7 @@ This is what Grid Coordination is about. Read more in our [Vision](/vision).
 We are strong proponents of [OpenADR 3](https://www.openadr.org/), the open standard for communicating demand response signals, dynamic pricing, and grid events from utilities to customers. OpenADR 3 provides the protocol layer that connects utility price servers to customer energy management systems &mdash; a critical piece of the grid coordination architecture.
 
 Our open-source [software libraries](/software) implement OpenADR 3 in both Clojure and Python.
+
+## This Is Not Theoretical
+
+Pacific Gas & Electric, California's largest utility, is [piloting smart meters and meter-mounted smart panels that coordinate directly with home energy devices](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) &mdash; enforcing transformer-level power limits so customers can electrify without panel upgrades or costly grid reinforcement. The architecture described on this site is being built and deployed today. See [Resources](/resources) for more.

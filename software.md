@@ -35,6 +35,25 @@ Each language has a two-layer stack: a **pure API library** (spec-driven HTTP cl
 | [python-oa3](https://github.com/grid-coordination/python-oa3) | Pure API | [openadr3](https://pypi.org/project/openadr3/) on PyPI |
 | [python-oa3-client](https://github.com/grid-coordination/python-oa3-client) | Client framework | [python-oa3-client](https://pypi.org/project/python-oa3-client/) on PyPI |
 
+### VTN Server
+
+| Repository | Description | Package |
+|------------|-------------|---------|
+| [clj-oa3-vtn](https://github.com/grid-coordination/clj-oa3-vtn) | OpenADR 3.1.0 VTN server with BL/VEN two-port architecture, MQTT notifications, pluggable storage | [clj-oa3-vtn](https://clojars.org/energy.grid-coordination/clj-oa3-vtn) on Clojars |
+
+## Live Services
+
+The price server is a live deployment of clj-oa3-vtn, composed with a price-fetching layer that serves hourly California marginal electricity prices from the CAISO Day-Ahead Market via [GridX](https://www.gridx.com/).
+
+| Service | Endpoint |
+|---------|----------|
+| REST API (OpenADR 3.1.0) | [price.grid-coordination.energy](https://price.grid-coordination.energy/openadr3/3.1.0/) |
+| MQTT push (TLS) | `mqtts://mqtt.grid-coordination.energy:8883` |
+| MQTT push (plain) | `tcp://mqtt.grid-coordination.energy:1883` |
+| User guide & tutorials | [price-server-user-guide](https://github.com/grid-coordination/price-server-user-guide) |
+
+No authentication required. 492 programs covering PG&E and SCE tariffs across 105 distribution circuits and substations. Tutorials available for Python, Clojure, and Rust clients.
+
 ## GridX Pricing API
 
 Client library for the GridX dynamic pricing API.
@@ -68,9 +87,11 @@ Pure API libraries (clj-oa3, python-oa3)
   |
 Client frameworks (clj-oa3-client, python-oa3-client)
   |
-Applications (your code here)
+VTN server (clj-oa3-vtn)
+  |
+Applications & live services (price server, your code here)
 ```
 
-The pure API libraries provide spec-driven HTTP access and data coercion. The client frameworks add lifecycle management, notification channels, and service discovery. Applications compose these layers to build grid-coordinated energy management systems.
+The pure API libraries provide spec-driven HTTP access and data coercion. The client frameworks add lifecycle management, notification channels, and service discovery. The VTN server provides a composable OpenADR 3.1.0 server that can be embedded into larger systems. Applications compose these layers to build grid-coordinated energy management systems.
 
 Both the Clojure and Python implementations follow the same architecture and provide semantically equivalent functionality, so teams can choose the language that fits their stack.

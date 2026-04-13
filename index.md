@@ -25,7 +25,7 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
   </div>
   <div class="card">
     <h3>Practice What We Preach</h3>
-    <p>We lead by example. Our founder fully electrified his home &mdash; replacing gas appliances, adding solar, battery storage, and smart panels &mdash; and <a href="/demo">demonstrated a working OpenADR 3 dynamic pricing system</a> at the CEC Demand Flexibility Summit. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
+    <p>We lead by example. Our founder fully electrified his home &mdash; replacing gas appliances, adding solar, battery storage, and smart panels &mdash; and <a href="/demo">demonstrated a working OpenADR 3 dynamic pricing system</a> at the CEC Demand Flexibility Summit. We now operate a <a href="https://github.com/grid-coordination/price-server-user-guide">public price server</a> delivering live California electricity prices via OpenADR 3. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
   </div>
   <div class="card">
     <h3>Influence Standards</h3>
@@ -35,6 +35,19 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
     <h3>Develop Open Protocols &amp; Software</h3>
     <p>We don't just use open standards &mdash; we help create them. We proposed and led the working group that added <a href="https://github.com/grid-coordination/openadr3-specification/blob/main/doc/OpenADR3%20Object%20Operation%20Notifications%20via%20Additional%20Protocols.md">push notification protocols</a> to <a href="https://www.openadr.org/">OpenADR 3.1</a>, developed the <a href="https://ebus.energy">Electrification Bus (eBus)</a> framework for home energy infrastructure integration, and publish <a href="/software">open-source libraries</a> that make these standards practical.</p>
   </div>
+</div>
+
+## Live Price Server
+
+<div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;" markdown="0">
+  <h3 style="color: var(--accent); margin-top: 0;">California Electricity Prices &mdash; Live via OpenADR 3</h3>
+  <p>Our public price server delivers real-time hourly marginal prices from the CAISO Day-Ahead Market for <strong>PG&amp;E</strong> and <strong>SCE</strong> &mdash; 492 programs covering 9 tariffs across 105 distribution circuits and substations. Standard OpenADR 3.1.0 API, no authentication required.</p>
+  <pre style="background: #fff; border: 1px solid var(--border);"><code>curl https://price.grid-coordination.energy/openadr3/3.1.0/programs?limit=3</code></pre>
+  <p style="margin-bottom: 0;">
+    <a href="https://github.com/grid-coordination/price-server-user-guide"><strong>User Guide &amp; Tutorials</strong></a> &middot;
+    <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">Try the API</a> &middot;
+    MQTT push: <code>mqtt.grid-coordination.energy</code>
+  </p>
 </div>
 
 ## Why Now
@@ -61,7 +74,7 @@ This is what Grid Coordination is about. Read more in our [Vision](/vision).
 
 We are strong proponents of [OpenADR 3](https://www.openadr.org/), the open standard for communicating demand response signals, dynamic pricing, and grid events from utilities to customers. OpenADR 3 provides the protocol layer that connects utility price servers to customer energy management systems &mdash; a critical piece of the grid coordination architecture.
 
-Our open-source [software libraries](/software) implement OpenADR 3 in both Clojure and Python.
+Our open-source [software libraries](/software) implement OpenADR 3 in both Clojure and Python, and our [VTN server](https://github.com/grid-coordination/clj-oa3-vtn) powers the [live price server](#live-price-server) serving real California electricity prices to anyone with a standard OpenADR 3 client.
 
 ## This Is Not Theoretical
 

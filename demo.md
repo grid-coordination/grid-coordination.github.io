@@ -80,4 +80,5 @@ The system illustrates that flexible demand appliance standards mandating networ
 - [Our software libraries](/software) — OpenADR 3 implementations in Clojure and Python
 - [OpenADR Alliance](https://www.openadr.org/) — the standard behind grid-to-customer coordination
 - [2025 CA Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) — the CEC event where this was demonstrated
+- [Live price server](https://price.grid-coordination.energy/openadr3/3.1.0/) — public OpenADR 3 price server serving live California electricity prices ([user guide](https://github.com/grid-coordination/price-server-user-guide))
 - [Demo handout (PDF)](/presentations/openadr3-demo-handout.pdf) — the one-page flyer from the event

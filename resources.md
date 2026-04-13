@@ -20,6 +20,21 @@ The final [CalFlexHub](https://calflexhub.lbl.gov) Symposium, featuring updates 
 
 **Grid Coordination will be demonstrating [live OpenADR 3 dynamic pricing](/demo)** &mdash; the same grid-to-appliance coordination system shown at the 2025 CEC Demand Flexibility Summit, running on open-source software and inexpensive hardware.
 
+## Open Infrastructure
+
+### Public OpenADR 3 Price Server
+
+A live, public electricity price service built on [clj-oa3-vtn](https://github.com/grid-coordination/clj-oa3-vtn), serving hourly marginal prices from the CAISO Day-Ahead Market via [GridX](https://www.gridx.com/) for PG&E and SCE rate schedules.
+
+| Resource | Link |
+|----------|------|
+| REST API (OpenADR 3.1.0) | [price.grid-coordination.energy](https://price.grid-coordination.energy/openadr3/3.1.0/) |
+| MQTT push notifications | `mqtt.grid-coordination.energy` (ports 1883 / 8883) |
+| User guide & tutorials | [price-server-user-guide](https://github.com/grid-coordination/price-server-user-guide) |
+| VTN server source | [clj-oa3-vtn](https://github.com/grid-coordination/clj-oa3-vtn) |
+
+No authentication required. 492 programs, 9 tariffs, 105 circuits/substations. Tutorials for Python, Clojure, and Rust clients.
+
 ## Real-World Deployments
 
 ### PG&E + Itron AMI 2.0 + SPAN Edge &mdash; Pilots for Transformer-Aware Load Coordination

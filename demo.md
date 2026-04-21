@@ -6,7 +6,7 @@ permalink: /demo
 
 # Price-based Demand Flexibility with OpenADR 3
 
-At the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission, we demonstrated a complete grid-to-appliance coordination system using OpenADR 3, open-source software, and inexpensive hardware.
+At the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission, we demonstrated a complete grid-to-appliance coordination system using OpenADR 3, open-source software, and inexpensive hardware. We also demonstrated live OpenADR 3 dynamic pricing at the [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab on April 15, 2026.
 
 The demo showed what we've been advocating: **dynamic pricing delivered over open protocols, driving autonomous local optimization of household loads.** Not a simulation — a working system.
 
@@ -18,15 +18,15 @@ A grid price server communicates hourly dynamic prices via [OpenADR 3](https://w
 
 ```
 Cloud                        Customer Home (LAN)
-┌──────────────┐             ┌────────────────────────────────┐
-│ Grid Price   │  OpenADR 3  │  Gateway / HEMS                │
+┌──────────────┐             ┌─────────────────────────────────┐
+│ Grid Price   │  OpenADR 3  │  Gateway / HEMS                 │
 │ Server (VTN) │────────────>│  (Home Assistant + OpenADR VEN) │
-└──────────────┘             │         │                      │
-                             │    OpenADR 3 (local)           │
-                             │    ┌────┴─────┬───────┐        │
-                             │    v          v       v        │
-                             │  EV Charger  WH    HVAC       │
-                             └────────────────────────────────┘
+└──────────────┘             │         │                       │
+                             │    OpenADR 3 (local)            │
+                             │    ┌────┴─────┬───────┐         │
+                             │    v          v       v         │
+                             │  EV Charger  WH    HVAC         │
+                             └─────────────────────────────────┘
 ```
 
 - The **gateway** receives prices from the cloud and re-publishes them locally

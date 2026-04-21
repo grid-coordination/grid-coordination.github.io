@@ -41,12 +41,23 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
 
 <div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;" markdown="0">
   <h3 style="color: var(--accent); margin-top: 0;">California Electricity Prices &mdash; Live via OpenADR 3</h3>
-  <p>Our public price server delivers real-time hourly marginal prices from the CAISO Day-Ahead Market for <strong>PG&amp;E</strong> and <strong>SCE</strong> &mdash; 492 programs covering 9 tariffs across 105 distribution circuits and substations. Standard OpenADR 3.1.0 API, no authentication required.</p>
-  <pre style="background: #fff; border: 1px solid var(--border);"><code>curl https://price.grid-coordination.energy/openadr3/3.1.0/programs?limit=3</code></pre>
-  <p style="margin-bottom: 0;">
+  <p>Our public price server delivers real-time hourly marginal prices from the CAISO Day-Ahead Market for <strong>PG&amp;E</strong> and <strong>SCE</strong> &mdash; 492 pricing programs plus 11 GHG emissions programs, covering 9 tariffs across 105 distribution circuits and substations. Standard OpenADR 3.1.0 API, no authentication required.</p>
+  <p style="margin-bottom: 0.75rem;">
+    <a href="https://price.grid-coordination.energy/openadr3/3.1.0/"><strong>Browse the API</strong></a> &middot;
     <a href="https://github.com/grid-coordination/price-server-user-guide"><strong>User Guide &amp; Tutorials</strong></a> &middot;
-    <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">Try the API</a> &middot;
     MQTT push: <code>mqtt.grid-coordination.energy</code>
+  </p>
+</div>
+
+## Home Assistant Integration
+
+<div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;" markdown="0">
+  <h3 style="color: var(--accent); margin-top: 0;">OpenADR 3 VEN for Home Assistant</h3>
+  <p>Bring real-time electricity pricing and GHG emissions data directly into your smart home. The integration connects Home Assistant to our price server (or any OpenADR 3 VTN) and creates sensor entities that update automatically &mdash; so you can automate EV charging, HVAC, and other loads based on live prices.</p>
+  <p style="margin-bottom: 0;">
+    <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701"><strong>Announcement &amp; Details</strong></a> &middot;
+    <a href="https://github.com/grid-coordination/openadr3-ven-hass"><strong>Source &amp; Install</strong></a> &middot;
+    Available via <a href="https://hacs.xyz/">HACS</a>
   </p>
 </div>
 

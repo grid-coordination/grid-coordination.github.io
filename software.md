@@ -54,6 +54,12 @@ The price server is a live deployment of clj-oa3-vtn, composed with a price-fetc
 
 No authentication required. 492 programs covering PG&E and SCE tariffs across 105 distribution circuits and substations. Tutorials available for Python, Clojure, and Rust clients.
 
+## Home Assistant Integration
+
+| Repository | Description |
+|------------|-------------|
+| [openadr3-ven-hass](https://github.com/grid-coordination/openadr3-ven-hass) | OpenADR 3 VEN integration for Home Assistant — real-time pricing and GHG emissions sensors, MQTT push updates, multi-program support. Available via [HACS](https://hacs.xyz/). [Announcement](https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701). |
+
 ## GridX Pricing API
 
 Client library for the GridX dynamic pricing API.
@@ -69,6 +75,33 @@ Client library for the GridX dynamic pricing API.
 | Repository | Language | Package |
 |------------|----------|---------|
 | [clj-gridx](https://github.com/grid-coordination/clj-gridx) | Clojure | [clj-gridx](https://clojars.org/energy.grid-coordination/clj-gridx) on Clojars |
+
+## CEC MIDAS API
+
+Client libraries for the California Energy Commission's [MIDAS](https://www.energy.ca.gov/data-reports/energy-almanac/midas) (Market Informed Demand Automation Server) API.
+
+### Specification
+
+| Repository | Description |
+|------------|-------------|
+| [midas-api-specs](https://github.com/grid-coordination/midas-api-specs) | Unofficial OpenAPI 3.1 and JSON Schema specifications for the CEC MIDAS API |
+
+### Client Libraries
+
+| Repository | Language | Package |
+|------------|----------|---------|
+| [clj-midas](https://github.com/grid-coordination/clj-midas) | Clojure | &mdash; |
+| [python-midas](https://github.com/grid-coordination/python-midas) | Python | &mdash; |
+
+## Emissions &amp; Rate Data
+
+Client libraries for grid emissions and utility rate data services.
+
+| Repository | Language | Description | Package |
+|------------|----------|-------------|---------|
+| [clj-sgipsignal](https://github.com/grid-coordination/clj-sgipsignal) | Clojure | Client for the [SGIP Signal](https://sgipsignal.com) API — California marginal GHG emissions | &mdash; |
+| [clj-watttime](https://github.com/grid-coordination/clj-watttime) | Clojure | Client for the [WattTime](https://watttime.org) API — real-time grid emissions data | &mdash; |
+| [clj-urdb](https://github.com/grid-coordination/clj-urdb) | Clojure | Client for the [OpenEI Utility Rate Database](https://openei.org/wiki/Utility_Rate_Database) (URDB) | &mdash; |
 
 ## Supporting Libraries
 

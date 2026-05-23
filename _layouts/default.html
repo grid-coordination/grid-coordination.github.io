@@ -29,7 +29,8 @@
     nav .nav-links a:hover { color: #fff; text-decoration: none; }
     nav .nav-links a.active { color: #fff; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
 
-    .banner { background: var(--accent); color: #fff; text-align: center; padding: 0.75rem 2rem; font-size: 0.95rem; }
+    .banner { background: var(--accent); color: #fff; text-align: center; padding: 1.25rem 2rem; font-size: 1.15rem; }
+    .banner + .banner { border-top: 3px solid var(--bg); }
     .banner a { color: #fff; text-decoration: underline; font-weight: 600; }
     .banner a:hover { opacity: 0.9; }
 
@@ -76,14 +77,14 @@
         <a href="/software" {% if page.url == '/software' %}class="active"{% endif %}>Software</a>
         <a href="/resources" {% if page.url == '/resources' %}class="active"{% endif %}>Resources</a>
         <a href="/standards" {% if page.url == '/standards' %}class="active"{% endif %}>Related Standards</a>
-        <a href="/demo" {% if page.url == '/demo' %}class="active"{% endif %}>Live Demo</a>
+        <a href="/demo" {% if page.url == '/demo' %}class="active"{% endif %}>Live Demos</a>
         <a href="/presentations/" {% if page.url contains '/presentations' %}class="active"{% endif %}>Presentations</a>
       </div>
     </div>
   </nav>
   {% if page.url == '/' %}
   <div class="banner">
-    <strong>Now live:</strong> Free <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">California electricity prices via OpenADR 3</a> &mdash; 492 programs, no auth required. Plus: <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701">Home Assistant integration</a> brings real-time pricing &amp; GHG data to your smart home.
+    <strong>Now live:</strong> Free <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">California electricity prices via OpenADR 3</a>. Plus: <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701">Home Assistant integration</a> brings real-time pricing &amp; GHG data to your smart home.
   </div>
   <div class="banner">
     <strong>June 10, 2026:</strong> Join us at the <a href="https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit">2026 CEC/EPRI Electrification Summit</a> &mdash; we'll again be demonstrating our live Price-based Demand Flexibility with OpenADR 3 system.

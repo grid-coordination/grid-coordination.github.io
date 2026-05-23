@@ -41,11 +41,10 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
 
 <div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;" markdown="0">
   <h3 style="color: var(--accent); margin-top: 0;">California Electricity Prices &mdash; Live via OpenADR 3</h3>
-  <p>Our public price server delivers real-time hourly marginal prices from the CAISO Day-Ahead Market for <strong>PG&amp;E</strong> and <strong>SCE</strong> &mdash; 492 pricing programs plus 11 GHG emissions programs, covering 9 tariffs across 105 distribution circuits and substations. Standard OpenADR 3.1.0 API, no authentication required.</p>
+  <p>Our free, public OpenADR 3 price server streams <strong>live California electricity prices</strong> &mdash; hourly marginal prices from the CAISO Day-Ahead Market for <strong>PG&amp;E</strong> and <strong>SCE</strong>, alongside real-time grid GHG emissions signals. Built on the open OpenADR 3.1.0 standard and accessible to any developer or application.</p>
   <p style="margin-bottom: 0.75rem;">
     <a href="https://price.grid-coordination.energy/openadr3/3.1.0/"><strong>Browse the API</strong></a> &middot;
-    <a href="https://github.com/grid-coordination/price-server-user-guide"><strong>User Guide &amp; Tutorials</strong></a> &middot;
-    MQTT push: <code>mqtt.grid-coordination.energy</code>
+    <a href="https://github.com/grid-coordination/price-server-user-guide"><strong>User Guide &amp; Tutorials</strong></a>
   </p>
 </div>
 
@@ -60,14 +59,6 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
     Available via <a href="https://hacs.xyz/">HACS</a>
   </p>
 </div>
-
-## Where We've Demonstrated
-
-We've shown a complete grid-to-appliance [Price-based Demand Flexibility with OpenADR 3](/demo) system &mdash; running on inexpensive hardware, using only open-source software and open standards &mdash; at:
-
-- **June 10, 2026** &mdash; [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit) ([agenda](https://www.energy.ca.gov/sites/default/files/2026-05/Agenda_2026_CEC_EPRI_Electrification_Summit%202026-05-22_ada.pdf)) &mdash; *upcoming*
-- **May 2025** &mdash; [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission
-- **April 15, 2026** &mdash; [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab
 
 ## Why Now
 

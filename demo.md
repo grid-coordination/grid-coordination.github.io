@@ -1,14 +1,16 @@
 ---
 layout: default
-title: Live Demo
+title: Live Demos
 permalink: /demo
 ---
 
 # Price-based Demand Flexibility with OpenADR 3
 
-At the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission, we demonstrated a complete grid-to-appliance coordination system using OpenADR 3, open-source software, and inexpensive hardware. We also demonstrated live OpenADR 3 dynamic pricing at the [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab on April 15, 2026.
+**A complete grid-to-appliance dynamic pricing system &mdash; running on $5 hardware, built entirely from open standards and open-source software.**
 
-The demo showed what we've been advocating: **dynamic pricing delivered over open protocols, driving autonomous local optimization of household loads.** Not a simulation — a working system.
+Hourly OpenADR 3 prices stream from the cloud to a customer gateway, then flow over the local network to appliances &mdash; an EV charger, water heater, and HVAC system &mdash; that each autonomously optimize against the current price. No proprietary clouds. No per-device control. No aggregators. Just dynamic prices, open protocols, and software running on inexpensive microcontrollers.
+
+**This is not a simulation.** It's a working system, built by four volunteers in one month, that you can build yourself.
 
 ## What We Built
 
@@ -53,12 +55,11 @@ The ESP32 — a microcontroller with integrated Wi-Fi costing under $5 — is re
 The gateway runs [Home Assistant](https://www.home-assistant.io/) — free, open-source home automation software used in approximately 2 million homes worldwide — augmented with our [OpenADR 3 client libraries](/software).
 
 - **Automatic discovery**: The gateway advertises itself on the LAN via mDNS; appliances discover and connect without configuration
-- **Open-source**: All code is published in our [GitHub repositories](https://github.com/grid-coordination)
 - **Standards-based**: OpenADR 3 end-to-end, no proprietary protocols
 
 ## The Prices
 
-The demo used "SpringHDP" prices from CalFlexHub, derived from real CAISO wholesale prices with the vertical scale stretched for visibility. Time was compressed so each hour played out in 5 seconds, making a full "day" visible in two minutes. OpenADR 3 handles arbitrary price intervals — most dynamic pricing programs worldwide use hourly granularity today.
+The demo uses live California electricity prices streamed from our own public [Grid Coordination price server](https://github.com/grid-coordination/price-server-user-guide) &mdash; the same OpenADR 3.1.0 service anyone can connect to today. For presentation, time is compressed so each hour plays out in 5 seconds, making a full "day" visible in about two minutes. OpenADR 3 handles arbitrary price intervals &mdash; most dynamic pricing programs worldwide use hourly granularity today.
 
 ## Why This Matters
 
@@ -75,10 +76,17 @@ The system illustrates that flexible demand appliance standards mandating networ
 - **Standards-based** — one open protocol from grid to appliance
 - **Local control** — works without the cloud once prices are received
 
+## Where We've Demonstrated
+
+We've shown this complete grid-to-appliance Price-based Demand Flexibility with OpenADR 3 system at:
+
+- **June 10, 2026** &mdash; [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit) ([agenda](https://www.energy.ca.gov/sites/default/files/2026-05/Agenda_2026_CEC_EPRI_Electrification_Summit%202026-05-22_ada.pdf)) &mdash; *upcoming*
+- **May 2025** &mdash; [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission
+- **April 15, 2026** &mdash; [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab
+
 ## Learn More
 
 - [Our software libraries](/software) — OpenADR 3 implementations in Clojure and Python
 - [OpenADR Alliance](https://www.openadr.org/) — the standard behind grid-to-customer coordination
-- [2025 CA Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) — the CEC event where this was demonstrated
 - [Live price server](https://price.grid-coordination.energy/openadr3/3.1.0/) — public OpenADR 3 price server serving live California electricity prices ([user guide](https://github.com/grid-coordination/price-server-user-guide))
 - [Demo handout (PDF)](/presentations/openadr3-demo-handout.pdf) — the one-page flyer from the event

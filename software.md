@@ -109,6 +109,12 @@ Client libraries for grid emissions and utility rate data services.
 |------------|----------|-------------|---------|
 | [clj-mdns](https://github.com/grid-coordination/clj-mdns) | Clojure | mDNS/DNS-SD service discovery | [clj-mdns](https://clojars.org/energy.grid-coordination/clj-mdns) on Clojars |
 
+## Analysis & Proposals
+
+| Repository | Description |
+|------------|-------------|
+| [caiso-flex-alert](https://github.com/grid-coordination/caiso-flex-alert) | Documentation and analysis of the CAISO Flex Alert API, with an enhancement proposal to support machine-to-machine signalling |
+
 ## Architecture
 
 The libraries are designed in layers:

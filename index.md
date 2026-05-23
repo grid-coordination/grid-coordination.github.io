@@ -61,6 +61,14 @@ The electric grid is undergoing a fundamental transformation. As homes electrify
   </p>
 </div>
 
+## Where We've Demonstrated
+
+We've shown a complete grid-to-appliance [Price-based Demand Flexibility with OpenADR 3](/demo) system &mdash; running on inexpensive hardware, using only open-source software and open standards &mdash; at:
+
+- **June 10, 2026** &mdash; [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit) ([agenda](https://www.energy.ca.gov/sites/default/files/2026-05/Agenda_2026_CEC_EPRI_Electrification_Summit%202026-05-22_ada.pdf)) &mdash; *upcoming*
+- **May 2025** &mdash; [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission
+- **April 15, 2026** &mdash; [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab
+
 ## Why Now
 
 For a century, the electric grid was engineered around **worst-case assumptions**. Distribution infrastructure was sized for peak loads that might occur only a few hours a year, because the grid had no way to talk to customer loads in real time. Coordination between generation and consumption happened at the wholesale level &mdash; customer demand was simply something the grid had to accommodate.

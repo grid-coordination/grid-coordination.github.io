@@ -1,5 +1,7 @@
 # Grid Coordination
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Grid%20Coordination-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/grid-coordination)
+
 Source for the [Grid Coordination](https://grid-coordination.energy) website — an initiative defining the architecture of the future electric grid through open standards, policy advocacy, and working software.
 
 ## Connect

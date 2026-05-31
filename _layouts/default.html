@@ -58,7 +58,13 @@
     .card { border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; background: #fff; }
     .card h3 { margin-top: 0; color: var(--accent); }
 
-    footer { text-align: center; padding: 2rem; color: #888; font-size: 0.85rem; border-top: 1px solid var(--border); }
+    footer { background: var(--nav-bg); color: rgba(255,255,255,0.7); padding: 3rem 2rem 1.5rem; font-size: 0.9rem; margin-top: 2rem; }
+    footer .footer-inner { max-width: var(--max-width); margin: 0 auto; }
+    footer .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+    footer .footer-col h4 { color: #fff; font-size: 1rem; margin-bottom: 0.75rem; }
+    footer .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; display: block; margin-bottom: 0.4rem; }
+    footer .footer-col a:hover { color: #fff; text-decoration: none; }
+    footer .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.6rem; }
@@ -94,8 +100,33 @@
     {{ content }}
   </div>
   <footer>
-    Contact: <a href="mailto:grid-coordination@clark-communications.com">grid-coordination@clark-communications.com</a><br>
-    &copy; 2026 Clark Communications Corporation. Licensed under MIT.
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:grid-coordination@clark-communications.com">Email Contact</a>
+          <a href="https://grid-coordination.slack.com">Slack</a>
+          <a href="https://github.com/grid-coordination">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/vision">Vision</a>
+          <a href="/policy">Policy</a>
+          <a href="/software">Software</a>
+          <a href="/resources">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h4>See it Live</h4>
+          <a href="/demo">Live Demos</a>
+          <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">Price Server</a>
+          <a href="/presentations/">Presentations</a>
+          <a href="/standards">Related Standards</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Clark Communications Corporation. Licensed under MIT.
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,6 +1,8 @@
 # Grid Coordination
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Grid%20Coordination-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/grid-coordination)
+[![Slack](https://img.shields.io/badge/Slack-Grid%20Coordination-4A154B?logo=slack&logoColor=white)](https://grid-coordination.slack.com)
+[![GitHub](https://img.shields.io/badge/GitHub-grid--coordination-181717?logo=github&logoColor=white)](https://github.com/grid-coordination)
 
 Source for the [Grid Coordination](https://grid-coordination.energy) website — an initiative defining the architecture of the future electric grid through open standards, policy advocacy, and working software.
 

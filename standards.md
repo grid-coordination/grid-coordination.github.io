@@ -22,17 +22,17 @@ Grid Coordination is an active participant in the OpenADR Alliance. We proposed 
 
 ## Matter
 
-**The home network to the devices in it.**
+**Appliances and IoT devices in the home.**
 
 [Matter](https://csa-iot.org/all-solutions/matter/) is the open smart home standard from the Connectivity Standards Alliance, shipping today in ordinary consumer products and supported by every major ecosystem. Its energy management clusters (Device Energy Management, Energy EVSE, Water Heater Management, Electrical Power and Energy Measurement) let a home energy manager see what devices are doing and shift what they plan to do.
 
-Matter runs over the home network and does not reach the utility, which is exactly right: paired with OpenADR 3 it completes the path, with prices and limits arriving from the grid over the Internet and reaching every device over Wi-Fi, Ethernet or Thread.
+Matter covers the appliances and IoT devices a household buys: thermostats, water heaters, EV charging equipment, lighting, sensors. It runs over the home network and does not reach the utility, which is exactly right. Paired with OpenADR 3 it completes the path, with prices and limits arriving from the grid over the Internet and reaching every device over Wi-Fi, Ethernet or Thread.
 
 ## Electrification Bus
 
-**The home's energy infrastructure, coordinating with itself.**
+**Home energy infrastructure devices.**
 
-The [Electrification Bus](https://ebus.energy), eBus for short, is an open framework for the devices that make up a home's electrical system: the panel, the meter, inverters, batteries, EV charging equipment and the microgrid interconnect device. These are not consumer smart home products, and they have a coordination problem Matter was never meant to solve. Today each one meters what it can and shares nothing, control paths run through vendor clouds that fail during the outages when local coordination matters most, and every device-to-device integration is a bespoke project.
+The [Electrification Bus](https://ebus.energy), eBus for short, is an open framework for **home energy infrastructure**: the devices that make up the home's electrical system rather than the devices plugged into it. The panel, the meter, inverters, batteries and the microgrid interconnect device. These are not consumer products, they are rarely bought by the homeowner as smart devices at all, and they have a coordination problem Matter was never designed to solve. Today each one meters what it can and shares nothing, control paths run through vendor clouds that fail during the outages when local coordination matters most, and every device-to-device integration is a bespoke project.
 
 The Electrification Bus defines how these devices discover each other, publish what they measure, and coordinate locally without the cloud in the loop.
 
@@ -43,10 +43,10 @@ Grid Coordination developed the Electrification Bus. The [specification](https:/
 | Standard | Covers | Transport |
 |---|---|---|
 | **OpenADR 3** | Utility to the customer's own equipment | The Internet |
-| **Matter** | Home energy manager to consumer devices | The home network |
-| **Electrification Bus** | Home energy infrastructure devices to each other | The home network |
+| **Matter** | Appliances and IoT devices in the home | The home network |
+| **Electrification Bus** | Home energy infrastructure devices | The home network |
 
-Each is open, each is implementable on inexpensive hardware, and none of them requires an aggregator or a manufacturer's cloud.
+Matter and the Electrification Bus both run on the home network, but they cover different classes of device: Matter the appliances and IoT devices in the home, the Electrification Bus the electrical infrastructure of the home itself. Each of the three is open, each is implementable on inexpensive hardware, and none of them requires an aggregator or a manufacturer's cloud.
 
 ## Other standards
 

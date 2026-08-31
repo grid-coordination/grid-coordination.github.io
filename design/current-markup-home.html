@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Grid Coordination</title>
+  <meta name="description" content="Open standards for the future electric grid">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #222;
+      --accent: #2a6e3f;
+      --accent-light: #e8f5e9;
+      --border: #ddd;
+      --max-width: 52rem;
+      --nav-bg: #1a1a2e;
+      --nav-fg: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--fg); background: var(--bg); line-height: 1.7; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { background: var(--nav-bg); padding: 1rem 2rem; }
+    nav .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    nav .site-name { color: #fff; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.02em; }
+    nav .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav .nav-links a { color: var(--nav-fg); font-size: 0.95rem; }
+    nav .nav-links a:hover { color: #fff; text-decoration: none; }
+    nav .nav-links a.active { color: #fff; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+
+    .banner { background: var(--accent); color: #fff; text-align: center; padding: 1.25rem 2rem; font-size: 1.15rem; }
+    .banner + .banner { border-top: 3px solid var(--bg); }
+    .banner a { color: #fff; text-decoration: underline; font-weight: 600; }
+    .banner a:hover { opacity: 0.9; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 2rem 2rem 4rem; }
+    h1 { font-size: 2rem; margin-bottom: 1rem; color: var(--accent); }
+    h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; color: #333; }
+    h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    blockquote { border-left: 4px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--accent-light); }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    table td:first-child a { white-space: nowrap; }
+    .caption { font-size: 0.9rem; color: #666; margin-top: -0.5rem; }
+    article img, .container img { max-width: 100%; height: auto; border-radius: 6px; }
+    th, td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #f0f0f0; font-weight: 600; }
+    code { background: #f0f0f0; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.9em; }
+    pre { background: #f0f0f0; padding: 1rem; border-radius: 4px; overflow-x: auto; margin: 1rem 0; }
+    pre code { background: none; padding: 0; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    .hero { background: var(--nav-bg); color: #fff; padding: 3rem 2rem; text-align: center; margin: -2rem -2rem 2rem; }
+    .hero h1 { color: #fff; font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .hero p { color: #ccc; font-size: 1.15rem; max-width: 40rem; margin: 0 auto; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+    .card { border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem; background: #fff; }
+    .card h3 { margin-top: 0; color: var(--accent); }
+
+    footer { background: var(--nav-bg); color: rgba(255,255,255,0.7); padding: 3rem 2rem 1.5rem; font-size: 0.9rem; margin-top: 2rem; }
+    footer .footer-inner { max-width: var(--max-width); margin: 0 auto; }
+    footer .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+    footer .footer-col h4 { color: #fff; font-size: 1rem; margin-bottom: 0.75rem; }
+    footer .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; display: block; margin-bottom: 0.4rem; }
+    footer .footer-col a:hover { color: #fff; text-decoration: none; }
+    footer .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.6rem; }
+      nav .nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="site-name">Grid Coordination</a>
+      <div class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="/vision" >Vision</a>
+        <a href="/policy" >Policy</a>
+        <a href="/software" >Software</a>
+        <a href="/resources" >Resources</a>
+        <a href="/standards" >Related Standards</a>
+        <a href="/demo" >Live Demos</a>
+        <a href="/presentations/" >Presentations</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="banner">
+    <strong>Free and public:</strong> <a href="https://github.com/grid-coordination/price-server-user-guide">California electricity prices via OpenADR 3</a>. Plus: <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701">Home Assistant integration</a> brings real-time pricing &amp; GHG data to your smart home.
+  </div>
+  
+  <div class="container">
+    <div class="hero">
+  <h1>Grid Coordination</h1>
+  <p>The grid has two problems. They need two different signals, and today the customer receives neither one directly.</p>
+</div>
+
+<h2 id="two-problems-not-one">Two problems, not one</h2>
+
+<p><img src="/images/diagrams/two-problems.svg" alt="The whole state hour by hour, an economics problem answered by a price; and one block right now, a physics problem answered by a limit" /></p>
+
+<p>The grid has to do two different things at once, and they are not the same job.</p>
+
+<p><strong>Balancing the state, hour by hour, is an economics problem.</strong> Supply must match demand continuously. The right signal is a price that changes hourly or faster, and it moves energy through the day. California is already moving here, and it should be pursued harder, not hedged.</p>
+
+<p><strong>Protecting the wire to one house is a physics problem.</strong> The neighborhood transformer and the service drop have a fixed capacity, and they do not care what electricity costs. The right signal is a limit on that customer’s whole service connection, import and export, and it caps power immediately.</p>
+
+<p><strong>Both land on the bill.</strong> Peak we cannot shift is generation and transmission somebody has to build; a transformer we cannot protect is a street somebody has to dig up. Ratepayers fund both.</p>
+
+<p>You cannot solve a physics problem with a price, and you cannot motivate flexibility with a limit. Read the full argument in our <a href="/vision">Vision</a>.</p>
+
+<h2 id="what-that-means-in-practice">What that means in practice</h2>
+
+<p>Today’s model is fragmented. Each appliance connects to its manufacturer’s cloud, each aggregator controls a single device type, and nobody has a view of the whole house. That cannot scale to the electrified home, where one household has an EV charger, a heat pump, a heat pump water heater, battery storage and rooftop solar all at once.</p>
+
+<p>The alternative is simple in principle:</p>
+
+<ol>
+  <li><strong>The grid communicates constraints</strong> — a dynamic price reflecting supply and demand, and a power limit protecting distribution infrastructure</li>
+  <li><strong>A local energy management system optimizes</strong> — across all loads and resources, respecting both signals, according to the customer’s own preferences</li>
+  <li><strong>Open standards connect them</strong> — so any energy manager works with any utility, and any appliance works with any energy manager</li>
+</ol>
+
+<p><strong>This is not speculative in California.</strong> In February 2026 the CPUC directed PG&amp;E and SCE to establish a standardized, tariffed flexible service connection (D.26-02-025), with load managed behind a certified power control system excluded from the connected load calculation: a customer-level power limit, in a tariff. See <a href="/policy">Policy</a> for the regulatory record.</p>
+
+<h2 id="this-is-running-today">This is running today</h2>
+
+<div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
+  <p>A <a href="https://github.com/grid-coordination/price-server-user-guide"><strong>free, public OpenADR 3 price server</strong></a> streams real hourly California electricity prices and grid emissions: CAISO Day-Ahead prices for PG&amp;E and SCE, prices computed from published SDG&amp;E, LADWP and City of Palo Alto rate schedules, and marginal emissions for 11 grid regions. <strong>No account, no contract, no enrollment.</strong></p>
+  <p>An <a href="https://github.com/grid-coordination/openadr3-ven-hass"><strong>open-source Home Assistant integration</strong></a>, in the HACS default repository, receives that signal and orchestrates the household's loads against it.</p>
+  <p style="margin-bottom: 0;">
+    <a href="/demo"><strong>See the working demonstration</strong></a> &middot;
+    <a href="https://price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5"><strong>Try the API</strong></a> &middot;
+    <a href="/software"><strong>Open-source libraries</strong></a>
+  </p>
+</div>
+
+<p><a href="/demo"><img src="/images/photos/openadr3-demo-board.jpg" alt="The demonstration board: an OpenADR 3 price server in the cloud, a Home Assistant gateway inside a house outline, and tablets showing an EV charger, water heater and HVAC unit each responding to the current hourly price" /></a></p>
+
+<p class="caption">The complete grid-to-appliance system, demonstrated at the 2026 CEC/EPRI Electrification Summit. Every screen is live.</p>
+
+<h2 id="start-here">Start here</h2>
+
+<div class="card" style="border: 2px solid var(--accent); background: var(--accent-light); padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
+  <h3 style="color: var(--accent); margin-top: 0;">Two Signals, Six Tests</h3>
+  <p>Prepared for California PUC and CEC staff. The two problems, the two signals that answer them, and six tests for judging any flexibility proposal that crosses your desk.</p>
+  <p style="margin-bottom: 0;">
+    <a href="/presentations/two-signals-six-tests.html"><strong>View the slides</strong></a> &middot;
+    <a href="/presentations/two-signals-six-tests.pdf"><strong>PDF</strong></a> &middot;
+    <a href="/presentations/two-signals-six-tests-onepager.pdf"><strong>One-page handout</strong></a>
+  </p>
+</div>
+
+<h2 id="why-now">Why now</h2>
+
+<p>For a century the grid was engineered around <strong>worst-case demand</strong>, because it had no way to talk to customer loads in real time. Infrastructure was oversized, and customer consumption was simply something the grid had to accommodate.</p>
+
+<p>That constraint is gone. A heat pump, an EV charger or a smart panel can each run a standards-based client on a $5 chip. A utility can publish dynamic prices and power limits to every connected customer over the Internet. <strong>The grid no longer has to be built for the worst case. It can be coordinated for the actual case.</strong></p>
+
+<h2 id="what-we-do">What we do</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Advocate for policy</h3>
+    <p>We file formal comments with the California Energy Commission on flexible demand appliance standards, arguing for open standards, customer choice and interoperability. <a href="/policy">Our filings and the regulatory record</a>.</p>
+  </div>
+  <div class="card">
+    <h3>Build open protocols and software</h3>
+    <p>We proposed and led the working group that added <a href="https://github.com/grid-coordination/openadr3-specification/blob/main/doc/OpenADR3%20Object%20Operation%20Notifications%20via%20Additional%20Protocols.md">push notifications</a> to <a href="https://www.openadr.org/">OpenADR 3.1</a>, and publish <a href="/software">open-source libraries</a> in Clojure and Python.</p>
+  </div>
+  <div class="card">
+    <h3>Practice what we preach</h3>
+    <p>Our founder fully electrified his home, then built and now operates the public price server and the demonstration system above. <a href="/presentations/whole-home-electrification.html">See the project</a>.</p>
+  </div>
+</div>
+
+<p style="margin-top:2rem"><a href="/vision"><strong>Vision</strong></a> &middot; <a href="/policy"><strong>Policy</strong></a> &middot; <a href="/standards"><strong>Standards</strong></a> &middot; <a href="/software"><strong>Software</strong></a> &middot; <a href="/demo"><strong>Demo</strong></a> &middot; <a href="/presentations/"><strong>Presentations</strong></a> &middot; <a href="/resources"><strong>Resources</strong></a></p>
+
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/company/grid-coordination">LinkedIn</a>
+          <a href="https://grid-coordination.slack.com">Slack</a>
+          <a href="https://github.com/grid-coordination">GitHub</a>
+          <a href="mailto:grid-coordination@clark-communications.com">Email Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/vision">Vision</a>
+          <a href="/policy">Policy</a>
+          <a href="/software">Software</a>
+          <a href="/resources">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h4>See it Live</h4>
+          <a href="/demo">Live Demos</a>
+          <a href="https://github.com/grid-coordination/price-server-user-guide">Price Server</a>
+          <a href="/presentations/">Presentations</a>
+          <a href="/standards">Related Standards</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Clark Communications Corporation.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

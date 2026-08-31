@@ -12,3 +12,6 @@ _source/
 
 # Design handoff archives: the extracted files are what we track
 design/*.zip
+
+# Interrupted rebuilds must not leave a shadow copy of a deck next to the real one
+.pv.md

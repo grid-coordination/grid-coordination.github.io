@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="eg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#2A6E3F"/></marker>
+    <marker id="ec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#B25B27"/></marker>
+  </defs>
+  <rect width="1000" height="400" fill="#FFFFFF"/>
+
+  <!-- ============ ENSURED ============ -->
+  <text x="20" y="46" font-size="14" font-weight="600" letter-spacing="2.6" fill="#2A6E3F">ENSURED</text>
+  <rect x="20" y="62" width="330" height="86" rx="8" fill="#E6EFE8" stroke="#2A6E3F" stroke-width="2.4"/>
+  <text x="185" y="94" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">The appliance</text>
+  <text x="185" y="116" font-size="13.5" fill="#2A6E3F" text-anchor="middle">open protocol, network interface,</text>
+  <text x="185" y="133" font-size="13.5" fill="#2A6E3F" text-anchor="middle">server address the owner can change</text>
+
+  <line x1="352" y1="105" x2="452" y2="105" stroke="#2A6E3F" stroke-width="3" marker-end="url(#eg)"/>
+
+  <rect x="454" y="62" width="300" height="86" rx="8" fill="#FFFFFF" stroke="#2A6E3F" stroke-width="2.4"/>
+  <text x="604" y="100" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Whoever the customer</text>
+  <text x="604" y="124" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">chose</text>
+
+  <text x="790" y="98" font-size="40" font-weight="600" fill="#2A6E3F">0</text>
+  <text x="836" y="98" font-size="17" font-weight="600" fill="#16212E">steps for</text>
+  <text x="836" y="120" font-size="17" font-weight="600" fill="#16212E">the customer</text>
+  <text x="790" y="143" font-size="13.5" fill="#7A8592">It participates out of the box.</text>
+
+  <line x1="20" y1="188" x2="980" y2="188" stroke="#D9DEE3" stroke-width="1"/>
+
+  <!-- ============ ENABLED ============ -->
+  <text x="20" y="228" font-size="14" font-weight="600" letter-spacing="2.6" fill="#B25B27">ENABLED</text>
+  <rect x="20" y="244" width="196" height="86" rx="8" fill="#F7EBE2" stroke="#B25B27" stroke-width="2.4"/>
+  <text x="118" y="282" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">An appliance</text>
+  <text x="118" y="304" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">with a socket</text>
+
+  <!-- gap 1 -->
+  <path d="M222,287 L246,287 M258,287 L282,287" stroke="#B25B27" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="252" y="262" font-size="12.5" font-weight="600" letter-spacing="1.2" fill="#B25B27" text-anchor="middle">BUY IT</text>
+  <text x="252" y="316" font-size="12.5" fill="#7A8592" text-anchor="middle">$100+</text>
+
+  <rect x="288" y="244" width="196" height="86" rx="8" fill="#FFFFFF" stroke="#E0CBBB" stroke-width="1.8"/>
+  <text x="386" y="282" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">A separate</text>
+  <text x="386" y="304" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">module</text>
+
+  <!-- gap 2 -->
+  <path d="M490,287 L514,287 M526,287 L550,287" stroke="#B25B27" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="520" y="262" font-size="12.5" font-weight="600" letter-spacing="1.2" fill="#B25B27" text-anchor="middle">INSTALL IT</text>
+  <text x="520" y="316" font-size="12.5" fill="#7A8592" text-anchor="middle">or a truck roll</text>
+
+  <rect x="556" y="244" width="196" height="86" rx="8" fill="#FFFFFF" stroke="#E0CBBB" stroke-width="1.8"/>
+  <text x="654" y="282" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">Configured</text>
+  <text x="654" y="304" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">to the network</text>
+
+  <!-- gap 3 -->
+  <path d="M758,287 L782,287" stroke="#B25B27" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="770" y="262" font-size="12.5" font-weight="600" letter-spacing="1.2" fill="#B25B27" text-anchor="middle">ACCEPT</text>
+
+  <rect x="788" y="244" width="192" height="86" rx="8" fill="#FFFFFF" stroke="#E0CBBB" stroke-width="1.8"/>
+  <text x="884" y="274" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">Whatever that</text>
+  <text x="884" y="294" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">module speaks,</text>
+  <text x="884" y="314" font-size="15" font-weight="600" fill="#B25B27" text-anchor="middle">to one provider</text>
+
+  <text x="500" y="374" font-size="16" fill="#16212E" text-anchor="middle">Three things the customer has to do. <tspan font-weight="600">Miss any one of them and the appliance participates in nothing.</tspan></text>
+</svg>

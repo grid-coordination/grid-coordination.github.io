@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="148 0 872 430" width="872" height="430" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <rect width="1120" height="430" fill="#FFFFFF"/>
+  <text x="168" y="64" font-size="19" font-weight="600" fill="#16212E">What the legacy electrical-code calculation adds up:</text>
+  <text x="168" y="88" font-size="16" fill="#7A8592">every appliance at its maximum rating, all in the same instant</text>
+  <rect x="168" y="104" width="132" height="58" fill="#16212E"/>
+  <text x="234.0" y="139" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.92">Water heater</text>
+  <rect x="300" y="104" width="196" height="58" fill="#243447"/>
+  <text x="398.0" y="139" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.92">HVAC</text>
+  <rect x="496" y="104" width="238" height="58" fill="#324458"/>
+  <text x="615.0" y="139" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.92">Car charger</text>
+  <rect x="734" y="104" width="116" height="58" fill="#41556B"/>
+  <text x="792.0" y="139" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.92">Range</text>
+  <rect x="850" y="104" width="150" height="58" fill="#51667D"/>
+  <text x="925.0" y="139" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.92">Everything else</text>
+  <text x="168" y="242" font-size="19" font-weight="600" fill="#2A6E3F">What the house actually draws at 6:14 p.m. on a Tuesday</text>
+  <text x="168" y="266" font-size="16" fill="#7A8592">high-load appliances are not always on, and rarely need to be on together</text>
+  <rect x="168" y="282" width="472" height="58" fill="#2A6E3F"/>
+  <line x1="858" y1="92" x2="858" y2="356" stroke="#B25B27" stroke-width="3"/>
+  <text x="870" y="200" font-size="17" font-weight="600" fill="#B25B27">existing</text>
+  <text x="870" y="222" font-size="17" font-weight="600" fill="#B25B27">service</text>
+  <text x="870" y="244" font-size="17" font-weight="600" fill="#B25B27">capacity</text>
+  <path d="M640,352 L640,362 L858,362 L858,352" fill="none" stroke="#2A6E3F" stroke-width="1.8"/>
+  <text x="749.0" y="384" font-size="16" font-weight="600" fill="#2A6E3F" text-anchor="middle">room the customer and the grid already have</text>
+  <text x="168" y="418" font-size="20" fill="#16212E">The top bar is a calculation. <tspan font-weight="600">The bottom bar is a measurement.</tspan></text>
+</svg>

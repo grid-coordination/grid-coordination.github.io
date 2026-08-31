@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 500" width="1120" height="500" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <rect width="1120" height="500" fill="#FFFFFF"/>
+
+  <!-- ============ LEFT PANEL: MACRO ============ -->
+  <rect x="0" y="0" width="524" height="500" rx="10" fill="#F4F7F4"/>
+  <text x="34" y="46" font-size="15" font-weight="600" letter-spacing="2.6" fill="#2A6E3F">PROBLEM 1</text>
+  <text x="34" y="84" font-size="30" font-weight="600" fill="#16212E">The whole state, hour by hour</text>
+  <text x="34" y="116" font-size="19" fill="#5C6874">Supply must match demand, always.</text>
+
+  <!-- chart frame -->
+  <g transform="translate(34,150)">
+    <!-- axis -->
+    <line x1="0" y1="230" x2="456" y2="230" stroke="#C9D2C9" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="230" stroke="#C9D2C9" stroke-width="1.5"/>
+
+    <!-- solar supply bulge -->
+    <path d="M0,230 C 70,230 96,206 140,150 C 178,102 216,74 250,74 C 288,74 320,104 356,152 C 396,206 424,230 456,230 Z"
+          fill="#2A6E3F" fill-opacity="0.14"/>
+    <path d="M0,230 C 70,230 96,206 140,150 C 178,102 216,74 250,74 C 288,74 320,104 356,152 C 396,206 424,230 456,230"
+          fill="none" stroke="#2A6E3F" stroke-width="2.5" stroke-opacity="0.55"/>
+
+    <!-- demand curve: morning ramp, midday dip, evening peak -->
+    <path d="M0,188 C 40,186 62,158 92,150 C 126,142 150,164 182,168 C 216,172 244,158 274,140 C 302,124 322,84 348,54 C 366,34 384,26 404,32 C 428,40 442,84 456,120"
+          fill="none" stroke="#16212E" stroke-width="3.4" stroke-linecap="round"/>
+
+    <!-- the gap -->
+    <line x1="348" y1="54" x2="348" y2="150" stroke="#B25B27" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <circle cx="348" cy="54" r="5.5" fill="#B25B27"/>
+
+    <text x="240" y="132" font-size="15" font-weight="600" fill="#2A6E3F" text-anchor="middle">solar</text>
+    <text x="112" y="126" font-size="15" font-weight="600" fill="#16212E">demand</text>
+    <text x="340" y="30" font-size="15" font-weight="600" fill="#B25B27" text-anchor="end">the evening gap</text>
+
+    <text x="0" y="256" font-size="14" fill="#7A8592">midnight</text>
+    <text x="228" y="256" font-size="14" fill="#7A8592" text-anchor="middle">noon</text>
+    <text x="456" y="256" font-size="14" fill="#7A8592" text-anchor="end">midnight</text>
+  </g>
+
+  <line x1="34" y1="436" x2="490" y2="436" stroke="#C9D2C9" stroke-width="1"/>
+  <text x="34" y="468" font-size="20" fill="#16212E"><tspan font-weight="600" fill="#2A6E3F">An economics problem.</tspan> Move energy in time.</text>
+
+  <!-- ============ RIGHT PANEL: MICRO ============ -->
+  <rect x="596" y="0" width="524" height="500" rx="10" fill="#FAF3EE"/>
+  <text x="630" y="46" font-size="15" font-weight="600" letter-spacing="2.6" fill="#B25B27">PROBLEM 2</text>
+  <text x="630" y="84" font-size="30" font-weight="600" fill="#16212E">One block, right now</text>
+  <text x="630" y="116" font-size="19" fill="#5C6874">The wire has a fixed capacity.</text>
+
+  <g transform="translate(630,150)">
+    <!-- transformer -->
+    <rect x="164" y="0" width="128" height="52" rx="7" fill="#16212E"/>
+    <text x="228" y="32" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">TRANSFORMER</text>
+
+    <!-- capacity meter -->
+    <rect x="164" y="64" width="128" height="15" rx="7.5" fill="#EADED5"/>
+    <path d="M171.5,64 H300 L318,71.5 L300,79 H171.5 A7.5,7.5 0 0 1 171.5,64 Z" fill="#B25B27"/>
+    <line x1="292" y1="54" x2="292" y2="90" stroke="#16212E" stroke-width="2"/>
+    <text x="328" y="77" font-size="14" font-weight="600" fill="#B25B27">over limit</text>
+
+    <!-- trunk -->
+    <line x1="228" y1="79" x2="228" y2="104" stroke="#B08A72" stroke-width="2.5"/>
+    <line x1="40" y1="104" x2="416" y2="104" stroke="#B08A72" stroke-width="2.5"/>
+
+    <!-- six houses -->
+    <g>
+      <g transform="translate(0,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B08A72" stroke-width="2.5"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#FFFFFF" stroke="#B08A72" stroke-width="2.2"/>
+      </g>
+      <g transform="translate(75,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B25B27" stroke-width="3"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#F3DFD2" stroke="#B25B27" stroke-width="2.6"/>
+        <rect x="30" y="172" width="20" height="16" rx="3" fill="#B25B27"/>
+      </g>
+      <g transform="translate(150,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B25B27" stroke-width="3"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#F3DFD2" stroke="#B25B27" stroke-width="2.6"/>
+        <rect x="30" y="172" width="20" height="16" rx="3" fill="#B25B27"/>
+      </g>
+      <g transform="translate(225,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B08A72" stroke-width="2.5"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#FFFFFF" stroke="#B08A72" stroke-width="2.2"/>
+      </g>
+      <g transform="translate(300,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B25B27" stroke-width="3"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#F3DFD2" stroke="#B25B27" stroke-width="2.6"/>
+        <rect x="30" y="172" width="20" height="16" rx="3" fill="#B25B27"/>
+      </g>
+      <g transform="translate(375,0)">
+        <line x1="40" y1="104" x2="40" y2="130" stroke="#B25B27" stroke-width="3"/>
+        <path d="M14,164 L40,138 L66,164 L66,196 L14,196 Z" fill="#F3DFD2" stroke="#B25B27" stroke-width="2.6"/>
+        <rect x="30" y="172" width="20" height="16" rx="3" fill="#B25B27"/>
+      </g>
+    </g>
+    <text x="228" y="228" font-size="16" fill="#8A6A56" text-anchor="middle">four of six charging at once</text>
+  </g>
+
+  <line x1="630" y1="436" x2="1086" y2="436" stroke="#E3D2C6" stroke-width="1"/>
+  <text x="630" y="468" font-size="20" fill="#16212E"><tspan font-weight="600" fill="#B25B27">A physics problem.</tspan> Cap power right now.</text>
+</svg>

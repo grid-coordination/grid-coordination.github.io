@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 540" width="1120" height="540" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#7A8592"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#2A6E3F"/></marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#B25B27"/></marker>
+    <marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#16212E"/></marker>
+  </defs>
+  <rect width="1120" height="540" fill="#FFFFFF"/>
+  <text x="152" y="66" font-size="13" font-weight="600" letter-spacing="2.2" fill="#7A8592" text-anchor="end">UTILITY</text>
+  <text x="152" y="182" font-size="13" font-weight="600" letter-spacing="2.2" fill="#7A8592" text-anchor="end">AGGREGATORS</text>
+  <text x="152" y="298" font-size="13" font-weight="600" letter-spacing="2.2" fill="#7A8592" text-anchor="end">MANUFACTURER</text>
+  <text x="152" y="316" font-size="13" font-weight="600" letter-spacing="2.2" fill="#7A8592" text-anchor="end">CLOUDS</text>
+  <text x="152" y="432" font-size="13" font-weight="600" letter-spacing="2.2" fill="#B25B27" text-anchor="end">YOUR HOME</text>
+  <rect x="546" y="34" width="208" height="54" rx="8" fill="#EEF0F2" stroke="#C3CAD1" stroke-width="1.8"/>
+  <text x="650.0" y="67.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Your utility</text>
+  <line x1="650" y1="88" x2="390.0" y2="148" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="650" y1="88" x2="650.0" y2="148" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="650" y1="88" x2="910.0" y2="148" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <rect x="286" y="150" width="208" height="54" rx="8" fill="#FFFFFF" stroke="#D3D9DE" stroke-width="1.8"/>
+  <text x="390.0" y="174.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Aggregator A</text>
+  <text x="390.0" y="193.0" font-size="13" fill="#7A8592" text-anchor="middle">EV program</text>
+  <line x1="390.0" y1="204" x2="390.0" y2="264" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <rect x="286" y="266" width="208" height="54" rx="8" fill="#FBF3F1" stroke="#E3CFC7" stroke-width="1.8"/>
+  <text x="390.0" y="290.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">EV charger maker</text>
+  <text x="390.0" y="309.0" font-size="13" fill="#7A8592" text-anchor="middle">private cloud</text>
+  <line x1="390.0" y1="320" x2="390.0" y2="392" stroke="#7A8592" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#a)"/>
+  <text x="400.0" y="360" font-size="13" font-style="italic" fill="#B25B27">private protocol</text>
+  <rect x="546" y="150" width="208" height="54" rx="8" fill="#FFFFFF" stroke="#D3D9DE" stroke-width="1.8"/>
+  <text x="650.0" y="174.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Aggregator B</text>
+  <text x="650.0" y="193.0" font-size="13" fill="#7A8592" text-anchor="middle">thermostat program</text>
+  <line x1="650.0" y1="204" x2="650.0" y2="264" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <rect x="546" y="266" width="208" height="54" rx="8" fill="#FBF3F1" stroke="#E3CFC7" stroke-width="1.8"/>
+  <text x="650.0" y="290.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Thermostat maker</text>
+  <text x="650.0" y="309.0" font-size="13" fill="#7A8592" text-anchor="middle">private cloud</text>
+  <line x1="650.0" y1="320" x2="650.0" y2="392" stroke="#7A8592" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#a)"/>
+  <text x="660.0" y="360" font-size="13" font-style="italic" fill="#B25B27">private protocol</text>
+  <rect x="806" y="150" width="208" height="54" rx="8" fill="#FFFFFF" stroke="#D3D9DE" stroke-width="1.8"/>
+  <text x="910.0" y="174.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Aggregator C</text>
+  <text x="910.0" y="193.0" font-size="13" fill="#7A8592" text-anchor="middle">water heater program</text>
+  <line x1="910.0" y1="204" x2="910.0" y2="264" stroke="#7A8592" stroke-width="1.8" marker-end="url(#a)"/>
+  <rect x="806" y="266" width="208" height="54" rx="8" fill="#FBF3F1" stroke="#E3CFC7" stroke-width="1.8"/>
+  <text x="910.0" y="290.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Water heater maker</text>
+  <text x="910.0" y="309.0" font-size="13" fill="#7A8592" text-anchor="middle">private cloud</text>
+  <line x1="910.0" y1="320" x2="910.0" y2="392" stroke="#7A8592" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#a)"/>
+  <text x="920.0" y="360" font-size="13" font-style="italic" fill="#B25B27">private protocol</text>
+  <rect x="254" y="394" width="792" height="118" rx="12" fill="#F7EBE2" fill-opacity="0.45" stroke="#B25B27" stroke-width="1.8" stroke-dasharray="8 6"/>
+  <rect x="286" y="420" width="208" height="52" rx="8" fill="#FFFFFF" stroke="#D8C3B7" stroke-width="1.8"/>
+  <text x="390.0" y="452.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">EV charger</text>
+  <rect x="546" y="420" width="208" height="52" rx="8" fill="#FFFFFF" stroke="#D8C3B7" stroke-width="1.8"/>
+  <text x="650.0" y="452.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Thermostat</text>
+  <rect x="806" y="420" width="208" height="52" rx="8" fill="#FFFFFF" stroke="#D8C3B7" stroke-width="1.8"/>
+  <text x="910.0" y="452.0" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Water heater</text>
+  <line x1="502" y1="446" x2="538" y2="446" stroke="#B25B27" stroke-width="2" stroke-dasharray="4 4" opacity="0.75"/>
+  <g stroke="#B25B27" stroke-width="2.6" stroke-linecap="round"><line x1="513.0" y1="439" x2="527.0" y2="453"/><line x1="527.0" y1="439" x2="513.0" y2="453"/></g>
+  <line x1="762" y1="446" x2="798" y2="446" stroke="#B25B27" stroke-width="2" stroke-dasharray="4 4" opacity="0.75"/>
+  <g stroke="#B25B27" stroke-width="2.6" stroke-linecap="round"><line x1="773.0" y1="439" x2="787.0" y2="453"/><line x1="787.0" y1="439" x2="773.0" y2="453"/></g>
+  <text x="650.0" y="500" font-size="15" fill="#B25B27" text-anchor="middle">These three cannot see each other</text>
+</svg>

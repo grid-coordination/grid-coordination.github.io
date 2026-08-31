@@ -162,7 +162,7 @@ Balancing the state is an <span class="green">economics</span> problem. Protecti
 
 **Highly dynamic pricing is the right answer to problem 1, and the most important thing California is doing here.**
 
-It should be pursued harder, not hedged. It just has no way to see the transformer, so it needs a companion that can.
+It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because the price is a statewide number and the constraint is on one street.
 
 </div>
 
@@ -180,6 +180,8 @@ It should be pursued harder, not hedged. It just has no way to see the transform
 <div class="cap">
 
 Everyone in this room already lives with a power limit: it is the main breaker in your garage, and nobody has ever called it tyranny. The transformer on your street is the same device one size up, shared with five or six neighbors, except it has no breaker. It just cooks quietly for years, and then fails on the hottest day.
+
+**These two can be legislated separately.** Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.
 
 </div>
 
@@ -231,8 +233,8 @@ Rate designs, appliance standards, virtual power plant programs, capacity and in
 
 1. Does the grid send the home **an objective**, or does it **operate the appliance**?
 2. Does the open interface reach **the appliance itself**, or stop at **the manufacturer's cloud**?
-3. Can the customer **point the appliance at a server of their own choosing**?
-4. Can the customer take the signal **directly from their utility**, or is a **middleman required**?
+3. Can the customer choose **who optimizes their home**, including doing it themselves?
+4. Can the customer take **the signals** **directly from their utility**, or is a **middleman required**?
 5. Does the limit **hold at the customer's connection**, when the internet does not?
 6. Does the customer **who cannot respond** end up better off, or worse?
 
@@ -270,26 +272,10 @@ To be clear about which control is at issue: **a customer operating their own eq
 
 ---
 
-## Test 5: a bound, not a hope
-
-<div class="columns">
-<div class="band">
-
-#### Advisory to the home
-
-Sent ahead, with a forward view, so the house can plan: pre-heat the tank, stage the car, surprise nobody.
-
-</div>
-<div class="bandc">
-
-#### Enforced at the connection
-
-So it binds. A planner can count it, rather than hoping enough customers respond.
-
-</div>
-</div>
+## Test 5: the limit is on the connection, not the device
 
 - **One customer, one connection, one limit** (import and export). A modern home has solar, a battery, one or two car chargers, a heat pump and a heat pump water heater, all at once. The limit belongs on the wire, not on any one appliance.
+- **Two things need to know it, and everything else in the house does not.** The **UL 3141 listed power control system** that enforces it, because enforcement has to happen where the whole site's draw is visible, not inside one appliance. And the **energy manager** that plans against it, so the house schedules inside the envelope instead of colliding with it. They can be the same device.
 - **It must survive the network.** A home that already has today's prices and today's limit keeps behaving correctly with no connection at all.
 
 <div class="pf">
@@ -300,6 +286,8 @@ So it binds. A planner can count it, rather than hoping enough customers respond
 </div>
 
 ---
+
+<!-- _class: dense2 -->
 
 ## Test 6: the customer who cannot respond
 
@@ -316,7 +304,8 @@ The first objection to hourly prices and per-customer limits is that the affluen
 | **A particular brand of device** | Usually | Any device that can reach the network |
 
 - **Nobody should have to watch a price.** The appliance watches the price. The customer sets a preference once.
-- **The customers who cannot shift are paying today** for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.
+- **Many customers who cannot shift are paying today** for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.
+- **Dynamic pricing asks less of people than a virtual power plant does.** Everyone already pays for VPP incentives through rates. PNNL's DSO+T study found participants **and non-participants** both saw bills fall 10 to 16 percent.
 
 ---
 

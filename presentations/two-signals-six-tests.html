@@ -863,7 +863,7 @@ section img { display: block; margin: 0 auto; }
 <p><img src="images/cpuc/price-alone.svg" alt="" style="width:920px;" /></p>
 <div class="band">
 <p><strong>Highly dynamic pricing is the right answer to problem 1, and the most important thing California is doing here.</strong></p>
-<p>It should be pursued harder, not hedged. It just has no way to see the transformer, so it needs a companion that can.</p>
+<p>It should be pursued harder, not hedged. <strong>Dynamic pricing reduces capacity problems. It cannot eliminate them</strong>, because the price is a statewide number and the constraint is on one street.</p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -1108,6 +1108,7 @@ section img { display: block; margin: 0 auto; }
 </table>
 <div class="cap">
 <p>Everyone in this room already lives with a power limit: it is the main breaker in your garage, and nobody has ever called it tyranny. The transformer on your street is the same device one size up, shared with five or six neighbors, except it has no breaker. It just cooks quietly for years, and then fails on the hottest day.</p>
+<p><strong>These two can be legislated separately.</strong> Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.</p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -1759,8 +1760,8 @@ section img { display: block; margin: 0 auto; }
 <ol>
 <li>Does the grid send the home <strong>an objective</strong>, or does it <strong>operate the appliance</strong>?</li>
 <li>Does the open interface reach <strong>the appliance itself</strong>, or stop at <strong>the manufacturer's cloud</strong>?</li>
-<li>Can the customer <strong>point the appliance at a server of their own choosing</strong>?</li>
-<li>Can the customer take the signal <strong>directly from their utility</strong>, or is a <strong>middleman required</strong>?</li>
+<li>Can the customer choose <strong>who optimizes their home</strong>, including doing it themselves?</li>
+<li>Can the customer take <strong>the signals</strong> <strong>directly from their utility</strong>, or is a <strong>middleman required</strong>?</li>
 <li>Does the limit <strong>hold at the customer's connection</strong>, when the internet does not?</li>
 <li>Does the customer <strong>who cannot respond</strong> end up better off, or worse?</li>
 </ol>
@@ -2406,19 +2407,10 @@ section img { display: block; margin: 0 auto; }
 .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
 ;" data-marpit-pagination-total="24">
-<h2 id="test-5-a-bound-not-a-hope">Test 5: a bound, not a hope</h2>
-<div class="columns">
-<div class="band">
-<h4 id="advisory-to-the-home">Advisory to the home</h4>
-<p>Sent ahead, with a forward view, so the house can plan: pre-heat the tank, stage the car, surprise nobody.</p>
-</div>
-<div class="bandc">
-<h4 id="enforced-at-the-connection">Enforced at the connection</h4>
-<p>So it binds. A planner can count it, rather than hoping enough customers respond.</p>
-</div>
-</div>
+<h2 id="test-5-the-limit-is-on-the-connection-not-the-device">Test 5: the limit is on the connection, not the device</h2>
 <ul>
 <li><strong>One customer, one connection, one limit</strong> (import and export). A modern home has solar, a battery, one or two car chargers, a heat pump and a heat pump water heater, all at once. The limit belongs on the wire, not on any one appliance.</li>
+<li><strong>Two things need to know it, and everything else in the house does not.</strong> The <strong>UL 3141 listed power control system</strong> that enforces it, because enforcement has to happen where the whole site's draw is visible, not inside one appliance. And the <strong>energy manager</strong> that plans against it, so the house schedules inside the envelope instead of colliding with it. They can be the same device.</li>
 <li><strong>It must survive the network.</strong> A home that already has today's prices and today's limit keeps behaving correctly with no connection at all.</li>
 </ul>
 <div class="pf">
@@ -2427,7 +2419,7 @@ section img { display: block; margin: 0 auto; }
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="grid-coordination.energy&lt;span class=&quot;who&quot;&gt;DC Jackson&lt;/span&gt;" data-style=":root {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="grid-coordination.energy&lt;span class=&quot;who&quot;&gt;DC Jackson&lt;/span&gt;" data-class="dense2" data-style=":root {
   --ink: #16212E;
   --body: #2C3844;
   --muted: #7A8592;
@@ -2530,7 +2522,7 @@ section img { display: block; margin: 0 auto; }
 .cta strong { color: #FFFFFF; }
 .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
-" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--footer:grid-coordination.energy&lt;span class=&quot;who&quot;&gt;DC Jackson&lt;/span&gt;;--style::root {
+" lang="en-US" class="dense2" data-marpit-pagination="12" style="--paginate:true;--footer:grid-coordination.energy&lt;span class=&quot;who&quot;&gt;DC Jackson&lt;/span&gt;;--class:dense2;--style::root {
   --ink: #16212E;
   --body: #2C3844;
   --muted: #7A8592;
@@ -2666,7 +2658,8 @@ section img { display: block; margin: 0 auto; }
 </table>
 <ul>
 <li><strong>Nobody should have to watch a price.</strong> The appliance watches the price. The customer sets a preference once.</li>
-<li><strong>The customers who cannot shift are paying today</strong> for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.</li>
+<li><strong>Many customers who cannot shift are paying today</strong> for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.</li>
+<li><strong>Dynamic pricing asks less of people than a virtual power plant does.</strong> Everyone already pays for VPP incentives through rates. PNNL's DSO+T study found participants <strong>and non-participants</strong> both saw bills fall 10 to 16 percent.</li>
 </ul>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>

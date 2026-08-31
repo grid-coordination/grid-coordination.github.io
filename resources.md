@@ -8,10 +8,6 @@ permalink: /resources
 
 Projects, articles, and references aligned with the Grid Coordination architecture — open protocols, direct utility-to-home communication, and site-level coordination rather than per-device cloud control.
 
-## Events
-
-Grid Coordination has demonstrated live OpenADR 3 dynamic pricing at the [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit), the [CalFlexHub Symposium 2026](https://calflexhub.lbl.gov/events/) at Lawrence Berkeley National Lab, and the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) hosted by the California Energy Commission. See [the demo](/demo) for what the system does and how it is built.
-
 ## Open Infrastructure
 
 ### Public OpenADR 3 Price Server
@@ -44,3 +40,7 @@ Together they let customers electrify without triggering panel or transformer up
 This is exactly the architecture Grid Coordination advocates: **dynamic power limits at the site level**, communicated over open networks to devices that respond autonomously &mdash; not per-device control from manufacturer clouds.
 
 *Grid Coordination's founder participates in this pilot through one of the partner organizations.*
+
+## Past demonstrations
+
+Grid Coordination has demonstrated live OpenADR 3 dynamic pricing at the [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit), the [CalFlexHub Symposium 2026](https://calflexhub.lbl.gov/events/) at Lawrence Berkeley National Lab, and the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) hosted by the California Energy Commission. See [the demo](/demo) for what the system does and how it is built.

@@ -9,3 +9,6 @@ vendor/
 # Source materials (local only)
 _source/
 .DS_Store
+
+# Design handoff archives: the extracted files are what we track
+design/*.zip

@@ -1,0 +1,593 @@
+/* ==========================================================================
+   Grid Coordination: components
+   Depends only on tokens.css. Styles the bare HTML that Kramdown emits,
+   plus the class names already present in the markup.
+
+   Reading order: reset, page shell, nav, banner, typography, lists,
+   quotes, code, tables, figures, hero, cards, callout, footer, print.
+   ========================================================================== */
+
+/* --- Reset -------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg);
+  background: var(--bg);
+}
+
+::selection { background: var(--accent-light); }
+
+/* --- Links -------------------------------------------------------------- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+/* --- Page shell --------------------------------------------------------- */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--gutter) var(--space-8);
+}
+
+/* --- Nav ---------------------------------------------------------------- */
+
+nav {
+  background: var(--nav-bg);
+  padding: var(--space-4) var(--gutter);
+}
+nav .nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+}
+nav .site-name {
+  color: var(--fg-inverse);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+}
+nav .site-name:hover { color: var(--fg-inverse); text-decoration: none; }
+nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+nav .nav-links a {
+  color: var(--nav-fg);
+  font-size: var(--text-sm);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+nav .nav-links a:hover {
+  color: var(--fg-inverse);
+  text-decoration: none;
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+nav .nav-links a.active {
+  color: var(--fg-inverse);
+  border-bottom-color: var(--accent-on-dark);
+}
+
+/* --- Banner ------------------------------------------------------------
+   Was a full width filled green band at 1.15rem, competing with the hero.
+   Now a quiet dark strip with an accent edge: present, not shouting.
+   ---------------------------------------------------------------------- */
+
+.banner {
+  background: var(--nav-bg-raised);
+  color: var(--fg-inverse-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  /* The page column lives on the banner's own content box, because Jekyll
+     emits the banner text as bare inline children with no wrapper. */
+  padding-block: var(--space-3);
+  padding-inline: max(var(--gutter), calc((100% - var(--max-width)) / 2));
+}
+.banner strong {
+  color: var(--accent-on-dark);
+  font-weight: var(--weight-bold);
+}
+.banner a {
+  color: var(--fg-inverse);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: var(--weight-normal);
+}
+.banner a:hover { color: var(--accent-on-dark); }
+.banner + .banner { border-top: 1px solid rgba(255, 255, 255, 0.09); }
+
+/* --- Headings ----------------------------------------------------------
+   h1 carries an accent rule above it instead of being set in green, so the
+   green is reserved for links and structural rules. h2 opens a section with
+   a hairline, which is what breaks up long argument pages.
+   ---------------------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+  color: var(--fg);
+  margin-bottom: var(--space-5);
+}
+h1::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: var(--rule-thick);
+  background: var(--accent);
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  color: var(--fg);
+  margin: var(--space-8) 0 var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+h2:first-child,
+.hero + h2,
+.banner + h2 {
+  margin-top: var(--space-6);
+  padding-top: 0;
+  border-top: 0;
+}
+
+h3 {
+  font-size: var(--text-lg);
+  margin: var(--space-6) 0 var(--space-2);
+}
+
+h4 {
+  font-size: var(--text-base);
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+/* --- Body copy ---------------------------------------------------------- */
+
+p {
+  margin-bottom: var(--space-4);
+  text-wrap: pretty;
+}
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: var(--weight-bold); color: var(--fg); }
+
+/* First paragraph after the page h1 reads as a lede. */
+h1 + p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--fg-muted);
+  margin-bottom: var(--space-5);
+}
+
+/* --- Lists -------------------------------------------------------------
+   The numbered list on the home page is an argument, not a set of notes,
+   so ordered lists get a hanging accent numeral.
+   ---------------------------------------------------------------------- */
+
+ul, ol {
+  margin: 0 0 var(--space-4) 0;
+  padding-left: var(--space-5);
+}
+li {
+  margin-bottom: var(--space-2);
+  text-wrap: pretty;
+}
+li > ul, li > ol { margin-top: var(--space-2); margin-bottom: 0; }
+
+ol {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+ol > li {
+  counter-increment: step;
+  padding-left: var(--space-6);
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--accent);
+}
+ol ol > li::before { color: var(--fg-muted); }
+
+ul > li { list-style: none; padding-left: var(--space-5); position: relative; }
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: var(--space-1);
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  background: var(--border-strong);
+}
+
+/* --- Blockquote --------------------------------------------------------
+   Reserved for quoted regulatory text. Not a highlight box: use .callout
+   when the intent is emphasis.
+   ---------------------------------------------------------------------- */
+
+blockquote {
+  margin: var(--space-5) 0;
+  padding: 0 0 0 var(--space-5);
+  border-left: var(--rule-thick) solid var(--border-strong);
+  color: var(--fg-muted);
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote cite {
+  display: block;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  font-style: normal;
+  color: var(--fg-muted);
+}
+
+/* --- Code -------------------------------------------------------------- */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--surface-sunken);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.32em;
+  word-break: break-word;
+}
+pre {
+  background: var(--surface-sunken);
+  border: 1px solid var(--rule);
+  border-left: var(--rule-thick) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  margin: var(--space-5) 0;
+  overflow-x: auto;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  word-break: normal;
+}
+
+/* --- Tables -----------------------------------------------------------
+   Tables carry most of the substance on /software, /policy and /resources.
+   No outer box: horizontal rules only, an accent rule under the head, and
+   room to read. First column is the row label and is set in medium weight.
+   ---------------------------------------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-5) 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  padding-bottom: var(--space-2);
+}
+th, td {
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  text-align: left;
+  vertical-align: baseline;
+}
+th:last-child, td:last-child { padding-right: 0; }
+thead th {
+  background: none;
+  border-bottom: 2px solid var(--accent);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding-bottom: var(--space-2);
+}
+tbody tr:last-child td { border-bottom: 1px solid var(--border-strong); }
+tbody td:first-child {
+  font-weight: var(--weight-medium);
+  color: var(--fg);
+}
+table td:first-child a { white-space: nowrap; }
+@media (min-width: 601px) {
+  thead th { white-space: nowrap; }
+}
+tbody th {
+  font-weight: var(--weight-medium);
+  padding-right: var(--space-4);
+}
+td code { font-size: 0.85em; }
+
+/* Wide tables: wrap the table in this to scroll it rather than break the
+   page at 320px. */
+.table-scroll {
+  overflow-x: auto;
+  margin: var(--space-5) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.table-scroll table { margin: 0; }
+
+/* --- Figures ----------------------------------------------------------
+   Diagrams and photos had no treatment. Now: a mat and hairline so an SVG
+   on a white background reads as a figure, with .caption as its label.
+   ---------------------------------------------------------------------- */
+
+img { max-width: 100%; height: auto; }
+
+article img,
+.container img {
+  display: block;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin: var(--space-5) 0 0;
+}
+
+/* A paragraph that only holds an image is a figure wrapper, so it must not
+   add a text gap between the image and its caption. */
+p:has(> img),
+p:has(> a > img) {
+  margin-bottom: 0;
+}
+
+.caption {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--fg-muted);
+  margin: var(--space-2) 0 var(--space-6);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--border-strong);
+  max-width: 44rem;
+}
+
+figure { margin: var(--space-5) 0; }
+figure img { margin-top: 0; }
+figure figcaption {
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  margin-top: var(--space-2);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--border-strong);
+}
+
+/* --- Hero -------------------------------------------------------------
+   Was a flat centred dark band. Now it does work: an accent rule at the
+   top edge, left aligned so it shares the reading axis with the body, and
+   a lede sized to be read rather than skimmed.
+   ---------------------------------------------------------------------- */
+
+.hero {
+  background: var(--nav-bg);
+  color: var(--fg-inverse);
+  border-top: var(--rule-thick) solid var(--accent);
+  padding: var(--space-7) var(--gutter) var(--space-7);
+  margin: calc(var(--space-6) * -1) calc(var(--gutter) * -1) var(--space-6);
+  text-align: left;
+}
+.hero h1 {
+  color: var(--fg-inverse);
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+  max-width: 30ch;
+}
+.hero h1::before { display: none; }
+.hero p {
+  color: var(--fg-inverse-muted);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  max-width: 34ch;
+  margin: 0;
+}
+.hero p + p {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  letter-spacing: normal;
+  max-width: 52ch;
+  margin-top: var(--space-4);
+}
+.hero a { color: var(--fg-inverse); text-decoration: underline; text-underline-offset: 3px; }
+.hero a:hover { color: var(--accent-on-dark); }
+
+/* --- Cards -----------------------------------------------------------
+   A card is navigational: here is a thing, go and read it. Quiet on
+   purpose, because the accent belonged to too many elements at once.
+   ---------------------------------------------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-5) 0 var(--space-6);
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5) var(--space-5) var(--space-5);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+.card h3 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-lg);
+  color: var(--fg);
+}
+.card h4 { margin-top: 0; }
+.card p { margin-bottom: var(--space-3); }
+.card p:last-child { margin-bottom: 0; }
+.card ul, .card ol { margin-bottom: var(--space-3); }
+
+/* --- Callout ----------------------------------------------------------
+   NEW. The one accent block: this is the argument, or this is running
+   today. At most one or two per page, otherwise it stops meaning anything.
+   Replaces the inline styled accent cards in the current markup.
+   ---------------------------------------------------------------------- */
+
+.callout {
+  background: var(--accent-light);
+  border: 1px solid #bcdcc3;
+  border-left: var(--rule-thick) solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+}
+.callout h3 {
+  margin: 0 0 var(--space-3);
+  color: var(--accent-dark);
+  font-size: var(--text-lg);
+}
+.callout > p:last-child { margin-bottom: 0; }
+.callout a { color: var(--accent-dark); }
+
+/* A run of links at the end of a callout or a section. */
+.callout > p:last-child a + a::before,
+.actions a + a::before { content: none; }
+
+/* --- Footer ------------------------------------------------------------ */
+
+footer {
+  background: var(--nav-bg);
+  color: var(--fg-inverse-muted);
+  font-size: var(--text-sm);
+  padding: var(--space-7) var(--gutter) var(--space-5);
+  margin-top: var(--space-7);
+}
+footer .footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+footer .footer-col h4 {
+  color: var(--fg-inverse);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+footer .footer-col a {
+  color: var(--fg-inverse-muted);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+footer .footer-col a:hover { color: var(--fg-inverse); text-decoration: none; }
+footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--nav-fg-dim);
+}
+
+/* --- Dividers ---------------------------------------------------------- */
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: var(--space-7) 0;
+}
+
+/* --- Narrow screens --------------------------------------------------- */
+
+@media (max-width: 600px) {
+  nav .nav-inner { flex-direction: column; align-items: flex-start; }
+  nav .nav-links { gap: var(--space-2) var(--space-4); }
+  .hero { padding: var(--space-6) var(--gutter); }
+  .hero h1, .hero p { max-width: none; }
+  /* Tables scroll themselves at narrow widths: Kramdown emits no wrapper,
+     so this cannot depend on .table-scroll being present. */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  table td:first-child a { white-space: normal; }
+  th, td { padding-right: var(--space-3); }
+  .card { padding: var(--space-4); }
+}
+
+/* --- Print ------------------------------------------------------------ */
+
+@media print {
+  nav, .banner { display: none; }
+  .container { max-width: none; padding: 0; }
+  .hero {
+    background: none;
+    color: #000;
+    margin: 0 0 var(--space-5);
+    padding: 0 0 var(--space-4);
+    border-top: 0;
+    border-bottom: 2px solid #000;
+  }
+  .hero h1, .hero p { color: #000; max-width: none; }
+  .hero a, .banner a { color: #000; }
+  .card, .callout {
+    border: 1px solid #999;
+    border-left-width: 1px;
+    background: none;
+    break-inside: avoid;
+  }
+  .callout h3 { color: #000; }
+  a { color: #000; text-decoration: underline; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  table, figure, .caption { break-inside: avoid; }
+  img { border-color: #999; padding: 0; }
+  footer { background: none; color: #000; margin-top: var(--space-5); }
+  footer .footer-col h4, footer .footer-col a, footer .footer-bottom { color: #000; }
+}

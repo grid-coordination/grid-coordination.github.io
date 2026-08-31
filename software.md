@@ -118,20 +118,10 @@ Client libraries for grid emissions and utility rate data services.
 
 ## Architecture
 
-The libraries are designed in layers:
+The libraries are designed in layers, each building on the one above it.
 
-```
-Specifications (OpenAPI YAML)
-  |
-Pure API libraries (clj-oa3, python-oa3)
-  |
-Client frameworks (clj-oa3-client, python-oa3-client)
-  |
-VTN server (clj-oa3-vtn)
-  |
-Applications & live services (price server, your code here)
-```
+![Five stacked layers: OpenAPI specifications, pure API libraries clj-oa3 and python-oa3, client frameworks clj-oa3-client and python-oa3-client, the clj-oa3-vtn server, and applications including the live price server](/images/diagrams/library-layers.svg)
 
 The pure API libraries provide spec-driven HTTP access and data coercion. The client frameworks add lifecycle management, notification channels, and service discovery. The VTN server provides a composable OpenADR 3.1.0 server that can be embedded into larger systems. Applications compose these layers to build grid-coordinated energy management systems.
 
-Both the Clojure and Python implementations follow the same architecture and provide semantically equivalent functionality, so teams can choose the language that fits their stack.
+The Clojure and Python implementations are semantically equivalent, so a team can pick either and get the same behavior.

@@ -6,28 +6,50 @@ permalink: /standards
 
 # Related Standards
 
-Grid Coordination builds on and advocates for open standards that enable interoperability across the electric grid. Here are the key standards in this space.
+A grid signal has to travel a long way to reach the appliance that acts on it: from the utility, across the Internet, into the house, and then between the devices inside it. No single standard covers that whole path, and none should.
+
+Three open standards cover it between them, and Grid Coordination backs all three.
 
 ## OpenADR 3
 
-[OpenADR 3](https://www.openadr.org/) is the open standard for communicating demand response signals, dynamic pricing, and grid events from utilities to customers. It defines the protocol layer between utility price servers (VTNs) and customer energy management systems (VENs).
+**The grid to the customer, over the Internet.**
 
-Grid Coordination is an active participant in the OpenADR Alliance. We contributed the push notification protocol extension adopted in OpenADR 3.1 and publish [open-source libraries](/software) implementing the standard in Clojure and Python. Our [live price server](https://github.com/grid-coordination/price-server-user-guide) is a public OpenADR 3.1.0 deployment.
+[OpenADR 3](https://www.openadr.org/) carries dynamic prices, demand response events, grid alerts and power limits from a utility to whatever the customer chooses to receive them: an appliance directly, a hub they own, or a service provider they picked. The server address is a setting the customer controls, so no aggregator sits in the path unless the customer wants one there.
 
-## S2 Standard
+It is the only one of these standards designed for the utility-to-customer leg, and it runs on ordinary web technology (HTTPS, JSON, OAuth2, MQTT for push) on hardware costing a few dollars.
 
-[S2](https://s2standard.org/) is a communication standard for energy flexibility in homes and buildings, developed in the Netherlands and gaining international traction. While OpenADR 3 defines the protocol between the grid and the customer, S2 defines the protocol between a Customer Energy Manager (CEM) and the smart appliances within a building.
+Grid Coordination is an active participant in the OpenADR Alliance. We proposed and led the working group that added the [push notification protocol](https://github.com/grid-coordination/openadr3-specification/blob/main/doc/OpenADR3%20Object%20Operation%20Notifications%20via%20Additional%20Protocols.md) adopted in OpenADR 3.1, publish [open-source libraries](/software) in Clojure and Python, and operate a [free public price server](https://github.com/grid-coordination/price-server-user-guide) carrying real California prices.
 
-S2 uses a model of **energy flexibility patterns** rather than device-specific commands. A Resource Manager (RM) in each appliance communicates what the device *can* do flexibly, while the CEM decides *how* to use that flexibility based on price signals, grid constraints, and user preferences. This separation keeps appliance manufacturers in control of their devices while enabling coordinated optimization.
+## Matter
 
-S2 is complementary to OpenADR 3: OpenADR 3 carries price and constraint signals from the grid to the home, while S2 enables the home energy management system to coordinate flexible loads in response.
+**The home network to the devices in it.**
 
-- [S2 Standard website](https://s2standard.org/)
-- [S2 Whitepaper (PDF)](https://s2standard.org/wpcms/wp-content/uploads/2023/09/S2-Whitepaper-202309-1.pdf)
-- [S2 on GitHub](https://github.com/flexiblepower)
+[Matter](https://csa-iot.org/all-solutions/matter/) is the open smart home standard from the Connectivity Standards Alliance, shipping today in ordinary consumer products and supported by every major ecosystem. Its energy management clusters (Device Energy Management, Energy EVSE, Water Heater Management, Electrical Power and Energy Measurement) let a home energy manager see what devices are doing and shift what they plan to do.
 
-## AHRI 1380
+Matter runs over the home network and does not reach the utility, which is exactly right: paired with OpenADR 3 it completes the path, with prices and limits arriving from the grid over the Internet and reaching every device over Wi-Fi, Ethernet or Thread.
 
-AHRI 1380 is a standard from the Air-Conditioning, Heating, and Refrigeration Institute defining a communication interface for demand-responsive residential HVAC equipment. It specifies how HVAC systems should receive and respond to external signals — including price signals and load-shed requests — enabling them to participate in demand flexibility programs.
+## eBus
 
-Grid Coordination participates in the AHRI 1380 working group to ensure alignment with the broader grid coordination architecture.
+**The home's energy infrastructure, coordinating with itself.**
+
+[eBus, the Electrification Bus](https://ebus.energy), is an open framework for the devices that make up a home's electrical system: the panel, the meter, inverters, batteries, EV charging equipment and the microgrid interconnect device. These are not consumer smart home products, and they have a coordination problem Matter was never meant to solve. Today each one meters what it can and shares nothing, control paths run through vendor clouds that fail during the outages when local coordination matters most, and every device-to-device integration is a bespoke project.
+
+eBus defines how these devices discover each other, publish what they measure, and coordinate locally without the cloud in the loop.
+
+Grid Coordination developed the eBus framework. The [specification](https://github.com/electrification-bus/specification) and reference work are public.
+
+## The three together
+
+| Standard | Covers | Transport |
+|---|---|---|
+| **OpenADR 3** | Utility to the customer's own equipment | The Internet |
+| **Matter** | Home energy manager to consumer devices | The home network |
+| **eBus** | Home energy infrastructure devices to each other | The home network |
+
+Each is open, each is implementable on inexpensive hardware, and none of them requires an aggregator or a manufacturer's cloud.
+
+## Other standards
+
+Several other standards address parts of this problem. Some are complementary, some fall short in ways worth understanding before they are written into regulation.
+
+**[Read the assessment](/standards/other)** &mdash; S2, AHRI 1380, CTA-2045 (EcoPort), IEEE 2030.5 and OCPP.

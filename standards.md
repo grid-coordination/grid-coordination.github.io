@@ -12,7 +12,7 @@ Grid Coordination builds on and advocates for open standards that enable interop
 
 [OpenADR 3](https://www.openadr.org/) is the open standard for communicating demand response signals, dynamic pricing, and grid events from utilities to customers. It defines the protocol layer between utility price servers (VTNs) and customer energy management systems (VENs).
 
-Grid Coordination is an active participant in the OpenADR Alliance. We contributed the push notification protocol extension adopted in OpenADR 3.1 and publish [open-source libraries](/software) implementing the standard in Clojure and Python. Our [live price server](https://price.grid-coordination.energy/openadr3/3.1.0/) is a public OpenADR 3.1.0 deployment.
+Grid Coordination is an active participant in the OpenADR Alliance. We contributed the push notification protocol extension adopted in OpenADR 3.1 and publish [open-source libraries](/software) implementing the standard in Clojure and Python. Our [live price server](https://github.com/grid-coordination/price-server-user-guide) is a public OpenADR 3.1.0 deployment.
 
 ## S2 Standard
 

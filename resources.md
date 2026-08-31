@@ -10,15 +10,7 @@ Projects, articles, and references aligned with the Grid Coordination architectu
 
 ## Events
 
-### CalFlexHub Symposium 2026
-
-**April 15, 2026** &mdash; Lawrence Berkeley National Lab, Berkeley, CA (hybrid: in-person + online)
-
-[Register here](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) &mdash; [CalFlexHub at LBNL](https://calflexhub.lbl.gov)
-
-The final [CalFlexHub](https://calflexhub.lbl.gov) Symposium, featuring updates on CalFlexHub's portfolio of load flexibility projects, the latest policies and research in dynamic energy management, and keynotes from the California Energy Commission, California utilities and CCAs, and innovators in the field.
-
-**Grid Coordination will be demonstrating [live OpenADR 3 dynamic pricing](/demo)** &mdash; the same grid-to-appliance coordination system shown at the 2025 CEC Demand Flexibility Summit, running on open-source software and inexpensive hardware.
+Grid Coordination has demonstrated live OpenADR 3 dynamic pricing at the [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit), the [CalFlexHub Symposium 2026](https://calflexhub.lbl.gov/events/) at Lawrence Berkeley National Lab, and the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) hosted by the California Energy Commission. See [the demo](/demo) for what the system does and how it is built.
 
 ## Open Infrastructure
 
@@ -28,12 +20,13 @@ A live, public electricity price service built on [clj-oa3-vtn](https://github.c
 
 | Resource | Link |
 |----------|------|
-| REST API (OpenADR 3.1.0) | [price.grid-coordination.energy](https://price.grid-coordination.energy/openadr3/3.1.0/) |
+| REST API base (OpenADR 3.1.0) | `https://price.grid-coordination.energy/openadr3/3.1.0/` |
+| Try it in a browser | [`/programs?limit=5`](https://price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5) |
 | MQTT push notifications | `mqtt.grid-coordination.energy` (ports 1883 / 8883) |
 | User guide & tutorials | [price-server-user-guide](https://github.com/grid-coordination/price-server-user-guide) |
 | VTN server source | [clj-oa3-vtn](https://github.com/grid-coordination/clj-oa3-vtn) |
 
-No authentication required. 492 programs, 9 tariffs, 105 circuits/substations. Tutorials for Python, Clojure, and Rust clients.
+No authentication required. About 1,700 programs: PG&E and SCE tariffs across 105 distribution circuits and substations, prices computed from published PG&E, SCE, SDG&E, LADWP and City of Palo Alto rate schedules, and hourly marginal GHG emissions for 11 California grid regions. Tutorials for Python, Clojure, and Rust clients.
 
 ## Real-World Deployments
 

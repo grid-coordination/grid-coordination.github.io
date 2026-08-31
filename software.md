@@ -6,7 +6,7 @@ permalink: /software
 
 # Open Source Software
 
-Grid Coordination develops and publishes open-source libraries that make it practical to build applications using the standards we advocate. All software is MIT licensed and available on [GitHub](https://github.com/grid-coordination).
+Grid Coordination develops and publishes open-source libraries that make it practical to build applications using the standards we advocate. All of it is on [GitHub](https://github.com/grid-coordination). Our libraries are MIT licensed. Our public copy of the OpenADR 3 specification is Apache 2.0, and the specification documents in it remain copyright the OpenADR Alliance.
 
 ## OpenADR 3 Libraries
 
@@ -43,16 +43,17 @@ Each language has a two-layer stack: a **pure API library** (spec-driven HTTP cl
 
 ## Live Services
 
-The price server is a live deployment of clj-oa3-vtn, composed with a price-fetching layer that serves hourly California marginal electricity prices from the CAISO Day-Ahead Market via [GridX](https://www.gridx.com/).
+The price server is a live deployment of clj-oa3-vtn, composed with a price-fetching layer. It publishes hourly prices of two kinds: dynamic CAISO Day-Ahead Market prices via [GridX](https://www.gridx.com/), and prices computed mathematically from published rate schedules. It also publishes hourly marginal GHG emissions from [SGIP Signal](https://sgipsignal.com/). A client sees hourly price intervals either way, and does not need to know which kind it is reading.
 
 | Service | Endpoint |
 |---------|----------|
-| REST API (OpenADR 3.1.0) | [price.grid-coordination.energy](https://price.grid-coordination.energy/openadr3/3.1.0/) |
+| REST API base (OpenADR 3.1.0) | `https://price.grid-coordination.energy/openadr3/3.1.0/` |
+| Try it in a browser | [`/programs?limit=5`](https://price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5) |
 | MQTT push (TLS) | `mqtts://mqtt.grid-coordination.energy:8883` |
-| MQTT push (plain) | `tcp://mqtt.grid-coordination.energy:1883` |
+| MQTT push (plain) | `mqtt://mqtt.grid-coordination.energy:1883` |
 | User guide & tutorials | [price-server-user-guide](https://github.com/grid-coordination/price-server-user-guide) |
 
-No authentication required. 492 programs covering PG&E and SCE tariffs across 105 distribution circuits and substations. Tutorials available for Python, Clojure, and Rust clients.
+No authentication required. About 1,700 programs: PG&E and SCE tariffs across 105 distribution circuits and substations, prices computed directly from published PG&E, SCE, SDG&E, LADWP and City of Palo Alto rate schedules, and hourly marginal GHG emissions for 11 California grid regions. Tutorials available for Python, Clojure, and Rust clients.
 
 ## Home Assistant Integration
 
@@ -78,7 +79,7 @@ Client library for the GridX dynamic pricing API.
 
 ## CEC MIDAS API
 
-Client libraries for the California Energy Commission's [MIDAS](https://www.energy.ca.gov/data-reports/energy-almanac/midas) (Market Informed Demand Automation Server) API.
+Client libraries for the California Energy Commission's [MIDAS](https://www.energy.ca.gov/proceedings/market-informed-demand-automation-server-midas) (Market Informed Demand Automation Server) API.
 
 ### Specification
 
@@ -90,8 +91,8 @@ Client libraries for the California Energy Commission's [MIDAS](https://www.ener
 
 | Repository | Language | Package |
 |------------|----------|---------|
-| [clj-midas](https://github.com/grid-coordination/clj-midas) | Clojure | &mdash; |
-| [python-midas](https://github.com/grid-coordination/python-midas) | Python | &mdash; |
+| [clj-midas](https://github.com/grid-coordination/clj-midas) | Clojure | [clj-midas](https://clojars.org/energy.grid-coordination/clj-midas) on Clojars |
+| [python-midas](https://github.com/grid-coordination/python-midas) | Python | [python-midas](https://pypi.org/project/python-midas/) on PyPI |
 
 ## Emissions &amp; Rate Data
 
@@ -99,9 +100,9 @@ Client libraries for grid emissions and utility rate data services.
 
 | Repository | Language | Description | Package |
 |------------|----------|-------------|---------|
-| [clj-sgipsignal](https://github.com/grid-coordination/clj-sgipsignal) | Clojure | Client for the [SGIP Signal](https://sgipsignal.com) API — California marginal GHG emissions | &mdash; |
-| [clj-watttime](https://github.com/grid-coordination/clj-watttime) | Clojure | Client for the [WattTime](https://watttime.org) API — real-time grid emissions data | &mdash; |
-| [clj-urdb](https://github.com/grid-coordination/clj-urdb) | Clojure | Client for the [OpenEI Utility Rate Database](https://openei.org/wiki/Utility_Rate_Database) (URDB) | &mdash; |
+| [clj-sgipsignal](https://github.com/grid-coordination/clj-sgipsignal) | Clojure | Client for the [SGIP Signal](https://sgipsignal.com) API — California marginal GHG emissions | [clj-sgipsignal](https://clojars.org/energy.grid-coordination/clj-sgipsignal) on Clojars |
+| [clj-watttime](https://github.com/grid-coordination/clj-watttime) | Clojure | Client for the [WattTime](https://watttime.org) API — real-time grid emissions data | [clj-watttime](https://clojars.org/energy.grid-coordination/clj-watttime) on Clojars |
+| [clj-urdb](https://github.com/grid-coordination/clj-urdb) | Clojure | Client for the [OpenEI Utility Rate Database](https://openei.org/wiki/Utility_Rate_Database) (URDB) | [clj-urdb](https://clojars.org/energy.grid-coordination/clj-urdb) on Clojars |
 
 ## Supporting Libraries
 

@@ -17,14 +17,15 @@ Source for the [Grid Coordination](https://grid-coordination.energy) website —
 ## Live site
 
 - Production: <https://grid-coordination.energy>
-- Live OpenADR 3 price server: <https://price.grid-coordination.energy/openadr3/3.1.0/>
+- Live OpenADR 3 price server (API base): `https://price.grid-coordination.energy/openadr3/3.1.0/`, see the [user guide](https://github.com/grid-coordination/price-server-user-guide)
 
 ## How it's built
 
-Static site rendered by [Jekyll](https://jekyllrb.com/) and deployed via GitHub Pages. The site is the Markdown files at the repo root (`index.md`, `vision.md`, `software.md`, …) plus the layout in `_layouts/default.html`. Presentations live under `presentations/` and the placeholder logo under `images/`.
+Static site rendered by [Jekyll](https://jekyllrb.com/) and deployed via GitHub Pages. The site is the Markdown files at the repo root (`index.md`, `vision.md`, `software.md`, …) plus the layout in `_layouts/default.html`. Presentations live under `presentations/` and the placeholder logo under `images/`. Decks are authored as [Marp](https://marp.app/) Markdown and rendered to the `.html` and `.pdf` the site serves; the `.md` sources are listed in the `exclude:` block of `_config.yml` so Jekyll does not render them as pages.
 
 Local preview:
 
 ```bash
+bundle install
 bundle exec jekyll serve
 ```

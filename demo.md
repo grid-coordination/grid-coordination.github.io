@@ -6,11 +6,15 @@ permalink: /demo
 
 # Price-based Demand Flexibility with OpenADR 3
 
-**A complete grid-to-appliance dynamic pricing system &mdash; running on $5 hardware, built entirely from open standards and open-source software.**
+**A complete grid-to-appliance dynamic pricing system &mdash; running on low-cost single-board computers, built entirely from open standards and open-source software.**
 
 Hourly OpenADR 3 prices stream from the cloud to a customer gateway, then flow over the local network to appliances &mdash; an EV charger, water heater, and HVAC system &mdash; that each autonomously optimize against the current price. No proprietary clouds. No per-device control. No aggregators. Just dynamic prices, open protocols, and software running on inexpensive microcontrollers.
 
 **This is not a simulation.** It's a working system, built by four volunteers in one month, that you can build yourself.
+
+![The demonstration board: a house outline with an OpenADR 3 price server in the cloud, a Home Assistant gateway inside the home, and tablets showing an EV charger, water heater and HVAC unit each responding to the current hourly price](/images/photos/openadr3-demo-board.jpg)
+
+<p class="caption">The board as demonstrated at the 2026 CEC/EPRI Electrification Summit. Every screen is live: the gateway is fetching real California prices, and each appliance is deciding what to do with them on its own.</p>
 
 ## What We Built
 
@@ -18,18 +22,7 @@ A grid price server communicates hourly dynamic prices via [OpenADR 3](https://w
 
 ### The Architecture
 
-```
-Cloud                        Customer Home (LAN)
-┌──────────────┐             ┌─────────────────────────────────┐
-│ Grid Price   │  OpenADR 3  │  Gateway / HEMS                 │
-│ Server (VTN) │────────────>│  (Home Assistant + OpenADR VEN) │
-└──────────────┘             │         │                       │
-                             │    OpenADR 3 (local)            │
-                             │    ┌────┴─────┬───────┐         │
-                             │    v          v       v         │
-                             │  EV Charger  WH    HVAC         │
-                             └─────────────────────────────────┘
-```
+![Grid price server in the cloud sends OpenADR 3 over the Internet to a Home Assistant gateway in the home, which republishes prices on the local network to an EV charger, water heater and HVAC unit](/images/diagrams/demo-architecture.svg)
 
 - The **gateway** receives prices from the cloud and re-publishes them locally
 - Each **appliance** discovers the gateway automatically via mDNS and connects
@@ -37,7 +30,7 @@ Cloud                        Customer Home (LAN)
 
 ### How Appliances Use Prices
 
-Each load optimizes against the current price and forecast. The demo used a simple algorithm for illustration — real products would be more sophisticated, optimizing across many hours using thermal storage (water heater), electrical storage (battery), or deferred service delivery (pool pump, EV charging).
+Each load optimizes against the current price and forecast. The demo uses a simple algorithm for illustration — real products would be more sophisticated, optimizing across many hours using thermal storage (water heater), electrical storage (battery), or deferred service delivery (pool pump, EV charging).
 
 When the price is low, deferrable loads run. When the price spikes, they curtail. The gateway computes an effective **local price** that accounts for self-generation and storage, so appliances always see the most relevant signal.
 
@@ -46,7 +39,7 @@ When the price is low, deferrable loads run. When the price spikes, they curtail
 | Component | Hardware | Cost |
 |-----------|----------|------|
 | Gateway | Raspberry Pi 4 | ~$35 |
-| Load controllers | Raspberry Pi 4 (demo); ESP32 would suffice in production | ~$5 in quantity |
+| Load controllers | Raspberry Pi 4 (demo); ESP32 would suffice in production | ~$35 as demonstrated; ~$5 in quantity for an ESP32 |
 
 The ESP32 — a microcontroller with integrated Wi-Fi costing under $5 — is representative of what's already inside most network-connected appliances today. **Manufacturers have no technical or cost barrier to incorporating OpenADR 3.**
 
@@ -80,13 +73,13 @@ The system illustrates that flexible demand appliance standards mandating networ
 
 We've shown this complete grid-to-appliance Price-based Demand Flexibility with OpenADR 3 system at:
 
-- **June 10, 2026** &mdash; [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit) ([agenda](https://www.energy.ca.gov/sites/default/files/2026-05/Agenda_2026_CEC_EPRI_Electrification_Summit%202026-05-22_ada.pdf)) &mdash; *upcoming*
+- **June 10, 2026** &mdash; [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit) ([agenda](https://www.energy.ca.gov/media/12794))
+- **April 15, 2026** &mdash; [CalFlexHub Symposium 2026](https://calflexhub.lbl.gov/events/) at Lawrence Berkeley National Lab
 - **May 2025** &mdash; [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit), hosted by the California Energy Commission
-- **April 15, 2026** &mdash; [CalFlexHub Symposium 2026](https://events.zoom.us/ev/AsBfF0i4LAAWsYfon8ZJ-kuN27Ji-ZuRM1TIplqg265uVHrj8K_v~AmvhbIzRmpTQJnECn9l46TFxlyv1e8ZIleIgZGV543jFuX_s40q4kCbKfw) at Lawrence Berkeley National Lab
 
 ## Learn More
 
 - [Our software libraries](/software) — OpenADR 3 implementations in Clojure and Python
 - [OpenADR Alliance](https://www.openadr.org/) — the standard behind grid-to-customer coordination
-- [Live price server](https://price.grid-coordination.energy/openadr3/3.1.0/) — public OpenADR 3 price server serving live California electricity prices ([user guide](https://github.com/grid-coordination/price-server-user-guide))
+- [Live price server](https://github.com/grid-coordination/price-server-user-guide) — public OpenADR 3 price server serving live California electricity prices, with user guide and client tutorials
 - [Demo handout (PDF)](/presentations/openadr3-demo-handout.pdf) — the one-page flyer from the event

@@ -43,6 +43,9 @@
     li { margin-bottom: 0.3rem; }
     blockquote { border-left: 4px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--accent-light); }
     table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    table td:first-child a { white-space: nowrap; }
+    .caption { font-size: 0.9rem; color: #666; margin-top: -0.5rem; }
+    article img, .container img { max-width: 100%; height: auto; border-radius: 6px; }
     th, td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
     th { background: #f0f0f0; font-weight: 600; }
     code { background: #f0f0f0; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.9em; }
@@ -90,10 +93,7 @@
   </nav>
   {% if page.url == '/' %}
   <div class="banner">
-    <strong>Now live:</strong> Free <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">California electricity prices via OpenADR 3</a>. Plus: <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701">Home Assistant integration</a> brings real-time pricing &amp; GHG data to your smart home.
-  </div>
-  <div class="banner">
-    <strong>June 10, 2026:</strong> Join us at the <a href="https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit">2026 CEC/EPRI Electrification Summit</a> &mdash; we'll again be demonstrating our live Price-based Demand Flexibility with OpenADR 3 system.
+    <strong>Free and public:</strong> <a href="https://github.com/grid-coordination/price-server-user-guide">California electricity prices via OpenADR 3</a>. Plus: <a href="https://community.home-assistant.io/t/announcing-openadr-3-ven-for-home-assistant/1005701">Home Assistant integration</a> brings real-time pricing &amp; GHG data to your smart home.
   </div>
   {% endif %}
   <div class="container">
@@ -119,7 +119,7 @@
         <div class="footer-col">
           <h4>See it Live</h4>
           <a href="/demo">Live Demos</a>
-          <a href="https://price.grid-coordination.energy/openadr3/3.1.0/">Price Server</a>
+          <a href="https://github.com/grid-coordination/price-server-user-guide">Price Server</a>
           <a href="/presentations/">Presentations</a>
           <a href="/standards">Related Standards</a>
         </div>

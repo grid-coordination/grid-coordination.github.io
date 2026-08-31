@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#2a6e3f"/></marker>
+  </defs>
+  <rect width="1000" height="430" fill="#FFFFFF"/>
+  <text x="118" y="52" font-size="12" font-weight="600" letter-spacing="2" fill="#7A8592" text-anchor="end">CLOUD</text>
+  <text x="112" y="126" font-size="12" font-weight="600" letter-spacing="2" fill="#2a6e3f" text-anchor="end">YOUR</text>
+  <text x="112" y="144" font-size="12" font-weight="600" letter-spacing="2" fill="#2a6e3f" text-anchor="end">HOME</text>
+  <rect x="140" y="28" width="210" height="52" rx="7" fill="#EEF0F2" stroke="#C3CAD1" stroke-width="1.8"/>
+  <text x="245.0" y="51.0" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">Grid price server</text>
+  <text x="245.0" y="69.0" font-size="12" fill="#7A8592" text-anchor="middle">OpenADR 3 VTN</text>
+  <line x1="245" y1="80" x2="245" y2="128" stroke="#2a6e3f" stroke-width="2.4" marker-end="url(#g)"/>
+  <text x="258" y="108" font-size="13" font-weight="600" fill="#2a6e3f">OpenADR 3, over the Internet</text>
+  <rect x="128" y="130" width="832" height="264" rx="12" fill="#f4f8f5" stroke="#2a6e3f" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect x="150" y="156" width="300" height="62" rx="7" fill="#FFFFFF" stroke="#2a6e3f" stroke-width="2.4"/>
+  <text x="300.0" y="184.0" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">Gateway</text>
+  <text x="300.0" y="202.0" font-size="12" fill="#7A8592" text-anchor="middle">Home Assistant + OpenADR 3 VEN</text>
+  <text x="470" y="180" font-size="13" fill="#16212E">Receives prices, republishes them</text>
+  <text x="470" y="199" font-size="13" fill="#16212E">on the LAN as a local price server</text>
+  <text x="300" y="252" font-size="13" font-weight="600" fill="#2a6e3f" text-anchor="middle">OpenADR 3, over the home network</text>
+  <line x1="300" y1="262" x2="260" y2="300" stroke="#2a6e3f" stroke-width="1.8" marker-end="url(#g)"/>
+  <rect x="150" y="302" width="220" height="54" rx="7" fill="#FFFFFF" stroke="#C6D3C9" stroke-width="1.8"/>
+  <text x="260.0" y="326.0" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">EV charger</text>
+  <text x="260.0" y="344.0" font-size="12" fill="#7A8592" text-anchor="middle">OpenADR 3 VEN</text>
+  <line x1="300" y1="262" x2="490" y2="300" stroke="#2a6e3f" stroke-width="1.8" marker-end="url(#g)"/>
+  <rect x="380" y="302" width="220" height="54" rx="7" fill="#FFFFFF" stroke="#C6D3C9" stroke-width="1.8"/>
+  <text x="490.0" y="326.0" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">Water heater</text>
+  <text x="490.0" y="344.0" font-size="12" fill="#7A8592" text-anchor="middle">OpenADR 3 VEN</text>
+  <line x1="300" y1="262" x2="720" y2="300" stroke="#2a6e3f" stroke-width="1.8" marker-end="url(#g)"/>
+  <rect x="610" y="302" width="220" height="54" rx="7" fill="#FFFFFF" stroke="#C6D3C9" stroke-width="1.8"/>
+  <text x="720.0" y="326.0" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">HVAC</text>
+  <text x="720.0" y="344.0" font-size="12" fill="#7A8592" text-anchor="middle">OpenADR 3 VEN</text>
+  <text x="461" y="378" font-size="13" fill="#2a6e3f" text-anchor="middle">Each appliance finds the gateway by itself over mDNS. No aggregator, no vendor cloud.</text>
+</svg>

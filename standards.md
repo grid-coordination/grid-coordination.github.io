@@ -28,15 +28,15 @@ Grid Coordination is an active participant in the OpenADR Alliance. We proposed 
 
 Matter runs over the home network and does not reach the utility, which is exactly right: paired with OpenADR 3 it completes the path, with prices and limits arriving from the grid over the Internet and reaching every device over Wi-Fi, Ethernet or Thread.
 
-## eBus
+## Electrification Bus
 
 **The home's energy infrastructure, coordinating with itself.**
 
-[eBus, the Electrification Bus](https://ebus.energy), is an open framework for the devices that make up a home's electrical system: the panel, the meter, inverters, batteries, EV charging equipment and the microgrid interconnect device. These are not consumer smart home products, and they have a coordination problem Matter was never meant to solve. Today each one meters what it can and shares nothing, control paths run through vendor clouds that fail during the outages when local coordination matters most, and every device-to-device integration is a bespoke project.
+The [Electrification Bus](https://ebus.energy), eBus for short, is an open framework for the devices that make up a home's electrical system: the panel, the meter, inverters, batteries, EV charging equipment and the microgrid interconnect device. These are not consumer smart home products, and they have a coordination problem Matter was never meant to solve. Today each one meters what it can and shares nothing, control paths run through vendor clouds that fail during the outages when local coordination matters most, and every device-to-device integration is a bespoke project.
 
-eBus defines how these devices discover each other, publish what they measure, and coordinate locally without the cloud in the loop.
+The Electrification Bus defines how these devices discover each other, publish what they measure, and coordinate locally without the cloud in the loop.
 
-Grid Coordination developed the eBus framework. The [specification](https://github.com/electrification-bus/specification) and reference work are public.
+Grid Coordination developed the Electrification Bus. The [specification](https://github.com/electrification-bus/specification) and reference work are public.
 
 ## The three together
 
@@ -44,7 +44,7 @@ Grid Coordination developed the eBus framework. The [specification](https://gith
 |---|---|---|
 | **OpenADR 3** | Utility to the customer's own equipment | The Internet |
 | **Matter** | Home energy manager to consumer devices | The home network |
-| **eBus** | Home energy infrastructure devices to each other | The home network |
+| **Electrification Bus** | Home energy infrastructure devices to each other | The home network |
 
 Each is open, each is implementable on inexpensive hardware, and none of them requires an aggregator or a manufacturer's cloud.
 

@@ -8,7 +8,7 @@ permalink: /standards/other
 
 Beyond the three we back, several standards address parts of grid coordination. This is an honest assessment of each: what it does, and where it stops. Our test throughout is simple. **Does the open interface reach the appliance itself, can the customer choose which server it talks to, and does it carry a price and a limit?**
 
-See [Related Standards](/standards) for OpenADR 3, Matter and eBus.
+See [Related Standards](/standards) for OpenADR 3, Matter and the Electrification Bus.
 
 ## S2
 

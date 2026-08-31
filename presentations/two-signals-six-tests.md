@@ -494,7 +494,7 @@ Thermostats, EV charging and home batteries are still open. <span class="do">Mak
 ## Why some standards are hurting, not helping
 
 - **CTA-2045, marketed as EcoPort.** Washington, Oregon, Colorado and New York require the socket on new electric water heaters. Nothing above it was ever standardized, so every vendor's module speaks its own language upstream, and the module a customer has to buy and install runs well over $150. **The open interface stops at the socket. The standard is obsolete and should be retired, not written into new rules.**
-- **AHRI 1380.** In the implementations I have examined, vendors satisfy it by routing the equipment through their own cloud over a private protocol. **It certifies the cloud, not the appliance.**
+- **AHRI 1380.** The standard permits local interfaces over Ethernet or CTA-2045-A. **No shipping product implements either.** Vendors satisfy it by routing the equipment through their own cloud over a private protocol, so it certifies the cloud, not the appliance.
 - **IEEE 2030.5.** Strong at commanding one inverter. But one inverter is the wrong unit for a house with solar, a battery and two bidirectional chargers: control each separately and nobody manages the total. **What belongs there is one import and export limit for the whole connection.**
 - **OCPP.** Built for commercial and public EV charging. **Almost no** US residential chargers implement it, and where it is supported the connection is not offered to the customer: it points at the vendor cloud. **There is no need for a protocol unique to EV chargers.**
 

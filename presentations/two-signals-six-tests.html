@@ -432,7 +432,7 @@ section img { display: block; margin: 0 auto; }
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
 ;" data-marpit-pagination-total="24">
 <h2 id="the-grid-has-two-problems-and-they-are-not-the-same-problem">The grid has two problems, and they are not the same problem</h2>
-<p><img src="images/cpuc/two-problems.svg" alt="" style="width:940px;" /></p>
+<p><img src="../images/diagrams/two-problems.svg" alt="" style="width:940px;" /></p>
 <div class="cap">
 <p>Balancing the state is an <span class="green">economics</span> problem. Protecting the wire to a house is a <span class="copper">physics</span> problem. <strong>Both land on the bill.</strong> <a href="https://www.utilizecoalition.org/untapped-grid">Peak we cannot shift</a> is generation and transmission somebody has to build; a transformer we cannot protect is a street somebody has to dig up. Ratepayers fund both.</p>
 </div>
@@ -2880,7 +2880,7 @@ section img { display: block; margin: 0 auto; }
 <h2 id="the-same-house-with-the-door-open">The same house, with the door open</h2>
 <p><img src="images/cpuc/proposed.svg" alt="" style="width:800px;" /></p>
 <div class="cap">
-<p><strong>Half of this is already running.</strong> A <a href="https://github.com/grid-coordination/price-server-user-guide">free, public server</a> carries real hourly California prices and grid emissions on an open standard, and <a href="https://github.com/grid-coordination/openadr3-ven-hass">free open-source home automation software</a> receives it and orchestrates the household's loads against it. No account, no contract, no enrollment. PG&amp;E is piloting the other half with AMI 2.0 (HomeBoost and PanelBoost).</p>
+<p><strong>Half of this is already running.</strong> A <a href="https://github.com/grid-coordination/price-server-user-guide">free, public server</a> carries real hourly California prices and grid emissions on an open standard, and <a href="https://github.com/grid-coordination/openadr3-ven-hass">free open-source home automation software</a> receives it and orchestrates the household's loads against it. No account, no contract, no enrollment. <a href="https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload">PG&amp;E is piloting the other half with AMI 2.0</a> (HomeBoost and PanelBoost).</p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -4717,7 +4717,7 @@ section img { display: block; margin: 0 auto; }
 <h2 id="why-some-standards-are-hurting-not-helping">Why some standards are hurting, not helping</h2>
 <ul>
 <li><strong>CTA-2045, marketed as EcoPort.</strong> Washington, Oregon, Colorado and New York require the socket on new electric water heaters. Nothing above it was ever standardized, so every vendor's module speaks its own language upstream, and the module a customer has to buy and install runs well over $150. <strong>The open interface stops at the socket. The standard is obsolete and should be retired, not written into new rules.</strong></li>
-<li><strong>AHRI 1380.</strong> In the implementations I have examined, vendors satisfy it by routing the equipment through their own cloud over a private protocol. <strong>It certifies the cloud, not the appliance.</strong></li>
+<li><strong>AHRI 1380.</strong> The standard permits local interfaces over Ethernet or CTA-2045-A. <strong>No shipping product implements either.</strong> Vendors satisfy it by routing the equipment through their own cloud over a private protocol, so it certifies the cloud, not the appliance.</li>
 <li><strong>IEEE 2030.5.</strong> Strong at commanding one inverter. But one inverter is the wrong unit for a house with solar, a battery and two bidirectional chargers: control each separately and nobody manages the total. <strong>What belongs there is one import and export limit for the whole connection.</strong></li>
 <li><strong>OCPP.</strong> Built for commercial and public EV charging. <strong>Almost no</strong> US residential chargers implement it, and where it is supported the connection is not offered to the customer: it points at the vendor cloud. <strong>There is no need for a protocol unique to EV chargers.</strong></li>
 </ul>

@@ -30,7 +30,9 @@ S2 and OpenADR 3 are complementary rather than competing, and S2 occupies roughl
 
 AHRI 1380 is the Air-Conditioning, Heating, and Refrigeration Institute's standard for demand-responsive residential HVAC. In principle it defines how HVAC equipment receives and responds to external signals.
 
-In the implementations we have examined, manufacturers satisfy it by connecting the equipment to their own cloud over a private protocol, then exposing a grid interface from that cloud. The appliance in the home still speaks nothing open, the customer cannot point it anywhere else, and the capability disappears if the manufacturer stops running the service.
+The standard permits local interfaces, over Ethernet or CTA-2045-A. **As of August 2026 no shipping product implements either.** Manufacturers satisfy the standard by connecting the equipment to their own cloud over a private protocol, then exposing a grid interface from that cloud. The appliance in the home still speaks nothing open, the customer cannot point it anywhere else, and the capability disappears if the manufacturer stops running the service.
+
+That gap is the lesson. A standard that *permits* an open local interface, with nothing shipping that uses it, is the clearest argument there is for writing the capability as a requirement rather than an option.
 
 Grid Coordination participates in the AHRI 1380 working group and argues for a revision that puts an open interface on the equipment itself.
 

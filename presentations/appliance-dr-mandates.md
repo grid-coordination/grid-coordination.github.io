@@ -144,9 +144,9 @@ DC Jackson · grid-coordination.energy
 
 ## Why coordinate water heaters with the grid?
 
-- **What.** Give high-load appliances the ability to shift *when* they consume, and to back off when the grid needs them to. **An electric storage water heater is the cheapest thermal battery in the house**, and the best candidate there is: it already stores energy, and nobody notices when it heats.
-- **Cost.** Deliver that flexibility affordably, and put the cost where it will actually get paid. Every approach puts it somewhere: on the manufacturer as unit and development cost, on the utility as program cost, or on the customer as money and effort. **The question is never whether there is a cost. It is who pays it, and whether they notice.**
-- **Control.** Let the flexibility be managed from wherever produces the most benefit: by the utility or load-serving entity, by a demand response provider, **or by the customer's own energy management system.** The appliance may ship pre-configured for any of the three. **The customer must be able to change which one manages it, and from where.**
+- **What.**<br>Give high-load appliances the ability to shift *when* they consume, and to back off when the grid needs them to. **An electric storage water heater is the cheapest thermal battery in the house**, and the best candidate there is: it already stores energy, and nobody notices when it heats.
+- **Cost.**<br>Deliver that flexibility affordably, and put the cost where it will actually get paid. Every approach puts it somewhere: on the manufacturer as unit and development cost, on the utility as program cost, or on the customer as money and effort. **The question is never whether there is a cost. It is who pays it, and whether they notice.**
+- **Control.**<br>Let the flexibility be managed from wherever produces the most benefit: by the utility or load-serving entity, by a demand response provider, **or by the customer's own energy management system.** The appliance may ship pre-configured for any of the three. **The customer must be able to change which one manages it, and from where.**
 
 ---
 
@@ -156,9 +156,9 @@ DC Jackson · grid-coordination.energy
 
 ## The problem was real, and the 2013 design fit it
 
-- **The problem was real and it still is.** An electric storage water heater is the cheapest thermal battery in the house. Getting it to shift is worth doing, and in 2013 essentially nothing in a house could receive an outside signal at all.
+- **The problem was real and it still is.**<br>An electric storage water heater is the cheapest thermal battery in the house. Getting it to shift is worth doing, and in 2013 essentially nothing in a house could receive an outside signal at all.
 - **The engineering answer was correct for 2013.** A water heater lasts twelve to fifteen years. Home networking did not stay still for twelve to fifteen years. Putting the radio in a replaceable module, and standardizing the socket between the module and the appliance, is the textbook answer to a component whose lifetime is shorter than its host's.
-- **Ex ante, this seemed like a good solution.** The problem is not in the **standard**. It is in the **rule** that names it, and in what happened above the socket.
+- **Ex ante, this seemed like a good solution.**<br>The problem is not in the **standard**. It is in the **rule** that names it, and in what happened above the socket.
 
 <div class="band">
 
@@ -188,10 +188,10 @@ The appliance carries the socket. The module carries the radio. **The link at th
 </div>
 <div>
 
-- **SGD, the appliance.** The CTA-2045 socket and the microcontroller behind it. The appliance's behavior in response to a signal is deliberately not specified: the committee left that to the manufacturer on purpose.
-- **UCM, the module.** The other half of the socket, a network interface (Wi-Fi, cellular or Ethernet), a microcontroller of its own, and a link upstream to a demand response provider.
+- **SGD, the appliance.**<br>The CTA-2045 socket and the microcontroller behind it. The appliance's behavior in response to a signal is deliberately not specified: the committee left that to the manufacturer on purpose.
+- **UCM, the module.**<br>The other half of the socket, a network interface (Wi-Fi, cellular or Ethernet), a microcontroller of its own, and a link upstream to a demand response provider.
 - **The premise, in CTA's own words:** "Consumers select an appropriate communications module to plug into their appliances based on the networking system... in their homes."
-- **That premise has two halves.** The appliance half is a socket, and it got built. The customer half is a market of modules to select from.
+- **That premise has two halves.**<br>The appliance half is a socket, and it got built. The customer half is a market of modules to select from.
 
 </div>
 </div>
@@ -286,6 +286,13 @@ An open protocol in the appliance, a network interface, and a server address the
 
 <!-- _class: tight -->
 
+<style scoped>
+li { font-size: 20px; padding: 1px 0; }
+ul { margin: 6px 0; }
+.band, .bandc { font-size: 19px; }
+.cap { font-size: 17px; }
+</style>
+
 ### WHAT STANDS BETWEEN THE PORT AND A CONNECTED APPLIANCE
 
 ## Every connected water heater costs a module and a visit
@@ -293,9 +300,9 @@ An open protocol in the appliance, a network interface, and a server address the
 <div class="columns">
 <div>
 
-- **A module.** Bought by the program operator at volume pricing, not by the customer at retail. Assume roughly **$100**, or **$150** for cellular. **Every new enrollment costs another one.**
-- **An installation.** In the garage, in a closet, behind the furnace.
-- **A network join.** Which nobody notices failing later, because nothing else stops working.
+- **A module.**<br>Bought by the program operator at volume pricing, not by the customer at retail. Assume roughly **$100**, or **$150** for cellular. **Every new enrollment costs another one.**
+- **An installation.**<br>In the garage, in a closet, behind the furnace.
+- **A network join.**<br>Which nobody notices failing later, because nothing else stops working.
 
 </div>
 <div>
@@ -313,7 +320,7 @@ An open protocol in the appliance, a network interface, and a server address the
 
 <div class="ask">
 
-**A per-unit cost caps program size.** Washington's largest utility launched at 2,000 units in 2025, giving the module away and paying $20 toward the install. **A client already in the appliance costs nothing per unit.**
+**A per-unit cost caps program size.**<br>Washington's largest utility launched at 2,000 units in 2025, giving the module away and paying $20 toward the install. **A client already in the appliance costs nothing per unit.**
 
 </div>
 
@@ -360,11 +367,11 @@ li { font-size: 21px; padding: 3px 0; }
 
 - **The 2013 premise was that an appliance could not be assumed to have a network connection.** So put the radio in a replaceable module and standardize the socket.
 - **Rheem's ProTerra page lists both on one model:** "Built-in Wi-Fi Powered by EcoNet" **and** a "built-in EcoPort (CTA-2045 port)." **The customer paid for two connections, and exactly one of them is reachable by anyone other than Rheem.**
-- **And a physical port splits the product line.** The mandate is why any of these models exist, and nobody would have built them otherwise. But a port costs money and four states require it, so it ships as a demand-response variant: Rheem's compliance bulletin lists eight, by state, and the cheapest carries the port and **no Wi-Fi at all**. **Firmware does not split a product line.**
+- **And a physical port splits the product line.**<br>The mandate is why any of these models exist, and nobody would have built them otherwise. But a port costs money and four states require it, so it ships as a demand-response variant: Rheem's compliance bulletin lists eight, by state, and the cheapest carries the port and **no Wi-Fi at all**. **Firmware does not split a product line.**
 
 <div class="band">
 
-**In 2013 a radio in every appliance was the expensive option.** On a tank that already ships with Wi-Fi, the module is a second computer doing what the first one already does. **Mandating the socket is now the more expensive way to reach the same appliance.**
+**In 2013 a radio in every appliance was the expensive option.**<br>On a tank that already ships with Wi-Fi, the module is a second computer doing what the first one already does. **Mandating the socket is now the more expensive way to reach the same appliance.**
 
 </div>
 
@@ -449,7 +456,7 @@ table td, table th { padding: 6px 10px; }
 
 <div class="cap">
 
-**Matter is a home-network protocol.** For a Matter-only water heater to act on a price, an energy manager the customer has to acquire must already have one. **That is the same shape of failure as the socket:** the appliance is ready, and a second purchase stands between it and participation. The distance is shorter and closing. Shorter is not zero.
+**Matter is a home-network protocol.**<br>For a Matter-only water heater to act on a price, an energy manager the customer has to acquire must already have one. **That is the same shape of failure as the socket:** the appliance is ready, and a second purchase stands between it and participation. The distance is shorter and closing. Shorter is not zero.
 
 </div>
 
@@ -482,7 +489,7 @@ table td, table th { padding: 6px 10px; }
 
 <div class="bandc">
 
-**The same gap exists inside the standard I am recommending.** The Matter Water Heater device type does not require Device Energy Management at all, and inside DEM every adjustment feature is optional. **A fully certified Matter water heater can ship with no forecast and no shiftability**, which is exactly why a rule must name the capability and not the protocol.
+**The same gap exists inside the standard I am recommending.**<br>The Matter Water Heater device type does not require Device Energy Management at all, and inside DEM every adjustment feature is optional. **A fully certified Matter water heater can ship with no forecast and no shiftability**, which is exactly why a rule must name the capability and not the protocol.
 
 </div>
 
@@ -492,10 +499,10 @@ table td, table th { padding: 6px 10px; }
 
 ## My proposal
 
-- **Retire CTA-2045 as a water heater requirement.** Not an additional compliance path. Not a fix to the link above the socket. **Retire it.** The port competes with the better answer for the same dollars and the same engineering attention.
+- **Retire CTA-2045 as a water heater requirement.**<br>Not an additional compliance path. Not a fix to the link above the socket. **Retire it.** The port competes with the better answer for the same dollars and the same engineering attention.
 - **Require instead, of the appliance itself, three things. One: both protocols.** OpenADR 3 to the grid, and Matter inside the house covering **both** Water Heater Management and Device Energy Management. **Two: at least one network interface**, integrated. Everyone will choose Wi-Fi, and that is fine. **Three: support for adding another**, as a USB-C host port for a class-compliant adapter. Ethernet or cellular becomes the customer's choice, without putting three radios in every unit.
 - **Write the capability and the test method. Put standards in an appendix.** Name OpenADR 3 and Matter. Name no edition of either, and no version number anywhere in the requirement itself. **Naming a protocol is not the mistake. Freezing an edition of it is**, and that is the mistake in force today.
-- **This needs no new legislation to start.** Washington and Oregon already let a manufacturer ask the state to accept an equivalent open standard. **Nobody has ever asked.** The rules and the empty list are in the appendix.
+- **This needs no new legislation to start.**<br>Washington and Oregon already let a manufacturer ask the state to accept an equivalent open standard. **Nobody has ever asked.** The rules and the empty list are in the appendix.
 
 ---
 
@@ -514,13 +521,18 @@ table td, table th { padding: 6px 10px; }
 ## Obsolescence, and the patch obligation
 
 - **The obsolescence argument still holds, and it is the strongest part of the 2013 case.** A water heater lasts twelve to fifteen years and home networking does not stand still for twelve to fifteen years. Putting the radio in a replaceable module is the textbook answer to a component whose lifetime is shorter than its host's.
-- **The answer is that the replaceable part got smaller and cheaper.** The USB-C host port is the replaceable radio, at $4.76 for an adapter instead of a $100 module, and a configurable server address is the replaceable cloud. **What has to survive fifteen years is a URL and an HTTPS client, not a radio.**
-- **The cost objection I take seriously is not the silicon.** It is that a client in the appliance is a fifteen-year patch obligation on a company whose service organization exists to replace anodes.
-- **The answer is that the obligation already exists.** The manufacturer accepted it the moment it shipped a cloud-connected model, and a second, open client on the same stack does not double it.
+- **The answer is that the replaceable part got smaller and cheaper.**<br>The USB-C host port is the replaceable radio, at $4.76 for an adapter instead of a $100 module, and a configurable server address is the replaceable cloud. **What has to survive fifteen years is a URL and an HTTPS client, not a radio.**
+- **The cost objection I take seriously is not the silicon.**<br>It is that a client in the appliance is a fifteen-year patch obligation on a company whose service organization exists to replace anodes.
+- **The answer is that the obligation already exists.**<br>The manufacturer accepted it the moment it shipped a cloud-connected model, and a second, open client on the same stack does not double it.
 
 ---
 
 <!-- _class: dense2 tight -->
+
+<style scoped>
+li { font-size: 17px; padding: 2px 0; }
+.cap { font-size: 15px; }
+</style>
 
 ### Connectivity, which is its own subject
 
@@ -529,11 +541,11 @@ table td, table th { padding: 6px 10px; }
 <div class="columns">
 <div>
 
-- **Garage, basement, utility closet, behind the furnace.** Concrete, ductwork, and the far end of the house from the router.
+- **Garage, basement, utility closet, behind the furnace.**<br>Concrete, ductwork, and the far end of the house from the router.
 - **PGE, to the Oregon PUC, on its own water heater DR pilot:** "cell-enabled switches have a higher connectivity rate (**79% season average**) than wi-fi connected switches (**50% season average**)... showing constant signal degradation."
 - **PGE stopped retrofitting water heaters with Wi-Fi in October 2019.** Those were retrofit switches, not CTA-2045 modules. Same radio, same basement.
 - **An SSID or password change disconnects the module silently**, and nobody notices, because nothing else stops working.
-- **The remedy is boring: Ethernet.** Water heaters are not mobile. Incentivize a drop at installation and require one near high-amperage outlets in code. **A USB-C Ethernet adapter is $4.76.**
+- **The remedy is boring: Ethernet.**<br>Water heaters are not mobile. Incentivize a drop at installation and require one near high-amperage outlets in code. **A USB-C Ethernet adapter is $4.76.**
 
 </div>
 <div>
@@ -568,7 +580,7 @@ table td, table th { padding: 6px 10px; }
 
 **These are small-quantity retail listings. Program operators, not customers, buy these modules, and they buy at volume.** **The working assumption in this deck is roughly $100 a unit for Wi-Fi or Ethernet and roughly $150 for cellular**, stated as an assumption because no volume price list is public. The retail figures above are the upper bound. In a program the customer often pays nothing: Puget Sound Energy gives the module away from the PSE Marketplace and adds a $20 installation incentive. **That is a real answer to the price objection, and it does not remove the cost. It moves it to the program budget, where it competes with every other measure for the same dollars.**
 
-**The recurring fee is the part that has no equivalent in firmware.** A client in the appliance reuses the radio, the TLS stack and the credential store the customer already paid for, and carries no annual platform fee at all. **These are public store prices, so they are what a homeowner would pay, not what a program pays.**
+**The recurring fee is the part that has no equivalent in firmware.**<br>A client in the appliance reuses the radio, the TLS stack and the credential store the customer already paid for, and carries no annual platform fee at all. **These are public store prices, so they are what a homeowner would pay, not what a program pays.**
 
 </div>
 
@@ -585,11 +597,11 @@ li { padding: 6px 0; font-size: 17px; }
 
 ## What the client actually has to implement
 
-- **Transport and identity.** HTTPS over TLS, JSON payloads, OAuth 2 client credentials for the token. **Explicitly not PKI:** provisioning X.509 certificates into consumer devices is "daunting at best, or simply not supportable."
+- **Transport and identity.**<br>HTTPS over TLS, JSON payloads, OAuth 2 client credentials for the token. **Explicitly not PKI:** provisioning X.509 certificates into consumer devices is "daunting at best, or simply not supportable."
 - **A price-consuming client is a token fetch and two authenticated GETs**, `/programs` and `/events`, or MQTT push where the appliance sits behind a home router. **A server offering only public tariff information may accept unauthenticated requests, so all the tank holds is a URL.**
-- **That the owner can change it is already a normative MUST.** Verbatim: "A VEN MUST support end-user configuration of: VTN URL, clientID and clientSecret... but MUST support end-user reconfiguration." **The rule's job is to make an existing MUST testable**, not to invent a new requirement.
-- **A price is not a number, it is a schedule.** A start, an ISO 8601 duration, and an ordered list of intervals: a day ahead in one object.
-- **The specification names this appliance.** Verbatim: "VENs may be implemented within on-site customer devices such as **a water heater**..."
+- **That the owner can change it is already a normative MUST.**<br>Verbatim: "A VEN MUST support end-user configuration of: VTN URL, clientID and clientSecret... but MUST support end-user reconfiguration." **The rule's job is to make an existing MUST testable**, not to invent a new requirement.
+- **A price is not a number, it is a schedule.**<br>A start, an ISO 8601 duration, and an ordered list of intervals: a day ahead in one object.
+- **The specification names this appliance.**<br>Verbatim: "VENs may be implemented within on-site customer devices such as **a water heater**..."
 - **What the appliance already has, and does not buy twice:** the microcontroller, the TLS stack, the JSON parser and the credential store, all shipped the moment the manufacturer added its own cloud client. **The cost that does not amortize is support: a patch obligation for the life of the product.**
 
 <div class="cap">
@@ -603,9 +615,10 @@ Both quotations are verbatim. The appliance is a VEN in OpenADR terms; the deman
 <!-- _class: dense tight -->
 
 <style scoped>
-table { font-size: 14.5px; }
-table td { padding: 5px 12px 5px 0; }
-.cap { font-size: 14px; }
+table { font-size: 14px; }
+table td { padding: 4px 12px 4px 0; }
+.cap { font-size: 13.5px; }
+li { font-size: 15px; }
 </style>
 
 ### THE DRAFTING LANGUAGE
@@ -623,13 +636,13 @@ table td { padding: 5px 12px 5px 0; }
 
 <div class="cap">
 
-**ENERGY STAR already built the alternative door.** Residential Water Heaters Version 5.0, effective April 18, 2023, section 4.D.a: the connected product "shall meet the communication and equipment performance standards for **CTA-2045 or OpenADR 2.0b (Virtual End Node), or both**." An open-protocol client in the appliance has been an accepted alternative for three years. **The version named is a cloud-to-cloud protocol that was never designed to live in an appliance, so the door was open onto a wall.**
+**ENERGY STAR already built the alternative door.**<br>Residential Water Heaters Version 5.0, effective April 18, 2023, section 4.D.a: the connected product "shall meet the communication and equipment performance standards for **CTA-2045 or OpenADR 2.0b (Virtual End Node), or both**." An open-protocol client in the appliance has been an accepted alternative for three years. **The version named is a cloud-to-cloud protocol that was never designed to live in an appliance, so the door was open onto a wall.**
 
 </div>
 
 <div class="cap">
 
-**The equivalency route, verbatim.** WAC 194-24-180(3) and OAR 330-092-0020(16)(b) both direct the department, **on written request by a manufacturer**, to determine whether an alternative standard that is "open and widely available" is equivalent, and to publish any it accepts. Oregon's rule adds that it encourages manufacturers to ask other states too. **Neither department has published a determination. That list is empty.**
+**The equivalency route, verbatim.**<br>WAC 194-24-180(3) and OAR 330-092-0020(16)(b) both direct the department, **on written request by a manufacturer**, to determine whether an alternative standard that is "open and widely available" is equivalent, and to publish any it accepts. Oregon's rule adds that it encourages manufacturers to ask other states too. **Neither department has published a determination. That list is empty.**
 
 </div>
 
@@ -658,10 +671,10 @@ The quoted feature list is the OpenADR Alliance's own: **CTA-2045-B Level 2 Guid
 
 ## CTA-2045-C is a live project, not yet a document
 
-- **The project is real.** CTA's R7.8 subcommittee launched CTA-2045-C in January 2025, to "provide improvements to the standard interface for energy management signals and messages to reach devices." CTA-2045.4, an implementation guide, is also active.
+- **The project is real.**<br>CTA's R7.8 subcommittee launched CTA-2045-C in January 2025, to "provide improvements to the standard interface for energy management signals and messages to reach devices." CTA-2045.4, an implementation guide, is also active.
 - **Nineteen months on, both are still listed under Active Projects. Nothing is published.** Nineteen months is not slow for a standards project. It is normal, and the people doing it are volunteers.
-- **Its announced scope is improvements to the same socket-side interface.** It says nothing about the link above the module.
-- **A rule can only be written against a published document.** What -C will contain, beyond its published scope statement, is not yet knowable.
+- **Its announced scope is improvements to the same socket-side interface.**<br>It says nothing about the link above the module.
+- **A rule can only be written against a published document.**<br>What -C will contain, beyond its published scope statement, is not yet knowable.
 
 <div class="cap">
 
@@ -677,9 +690,9 @@ CTA standards news, **"CTA Launched Project CTA-2045-C, Modular Communications I
 
 ## It closes the behavior gap, not the reach gap
 
-- **What it is, stated fairly.** AHRI 1430-2022 builds on CTA-2045 rather than replacing it. It adds test procedures, conformance conditions and appliance behavior requirements above the message set. Colorado and New York name it; Rheem's compliance bulletin treats the three as one family, "ANSI/CTA-2045-A, ANSI/CTA-2045-B or AHRI 1430."
-- **It fixes something real, and something CTA-2045 left open on purpose.** NEEA: within CTA-2045 "the lack of descriptive SGD behavior in response to messaging was intentional," so two compliant water heaters could answer the same Shed request differently. 1430 constrains that. **It is a genuine improvement and I am not arguing against it.**
-- **It does not change what is on the other side of the socket.** A 1430-compliant water heater still has a port and no radio. The customer still buys a module, installs it and joins it to Wi-Fi. **Nothing above the module is standardized by either document.**
+- **What it is, stated fairly.**<br>AHRI 1430-2022 builds on CTA-2045 rather than replacing it. It adds test procedures, conformance conditions and appliance behavior requirements above the message set. Colorado and New York name it; Rheem's compliance bulletin treats the three as one family, "ANSI/CTA-2045-A, ANSI/CTA-2045-B or AHRI 1430."
+- **It fixes something real, and something CTA-2045 left open on purpose.**<br>NEEA: within CTA-2045 "the lack of descriptive SGD behavior in response to messaging was intentional," so two compliant water heaters could answer the same Shed request differently. 1430 constrains that. **It is a genuine improvement and I am not arguing against it.**
+- **It does not change what is on the other side of the socket.**<br>A 1430-compliant water heater still has a port and no radio. The customer still buys a module, installs it and joins it to Wi-Fi. **Nothing above the module is standardized by either document.**
 - **So it makes the appliance behave predictably once something is talking to it.** It does not make anything talk to it, and it does not let the customer choose who does.
 
 <div class="cap">
@@ -696,9 +709,9 @@ The same is true of any future edition. **Testing behavior below the socket and 
 
 ## The same proposal, on a CEC docket in 2024
 
-- **The failure mode was named then, not in hindsight.** A 2024 response in **CEC Docket 24-FDAS-03** put it in a footnote: CTA-2045 "hasn't been an unqualified success," and "its dependence on aftermarket, costly UCMs has posed significant obstacles to widespread use and adoption."
-- **So was the fix, including the protocol.** Same footnote: "The solution is to mandate the control and status-reporting capabilities (defined first by CTA-2045) into modern open standard protocols (e.g. OpenADR3) that can be incorporated into the integrated network interfaces (especially Wi-Fi) that new water-heaters typically provide."
-- **What has changed since is the evidence, not the argument.** Two more model years, four jurisdictions still, and the participation record in these exhibits.
+- **The failure mode was named then, not in hindsight.**<br>A 2024 response in **CEC Docket 24-FDAS-03** put it in a footnote: CTA-2045 "hasn't been an unqualified success," and "its dependence on aftermarket, costly UCMs has posed significant obstacles to widespread use and adoption."
+- **So was the fix, including the protocol.**<br>Same footnote: "The solution is to mandate the control and status-reporting capabilities (defined first by CTA-2045) into modern open standard protocols (e.g. OpenADR3) that can be incorporated into the integrated network interfaces (especially Wi-Fi) that new water-heaters typically provide."
+- **What has changed since is the evidence, not the argument.**<br>Two more model years, four jurisdictions still, and the participation record in these exhibits.
 
 <div class="cap">
 
@@ -714,14 +727,14 @@ Public, and still on the docket. **The ask in this deck is two years old, and no
 
 ## "You are trading a tested standard for an untested one"
 
-- **The concession, first and without hedging.** The Matter energy clusters are largely specification today, with little shipping product behind them. Water Heater Management arrived with Matter 1.4. **That part of the objection is correct.**
-- **The two gaps are not the same kind.** CTA-2045's gap is structural: the premise requires a module market, and thirteen years and four mandates produced **four modules from three vendors against fifty-eight certified appliances**. Matter's gap is maturity in a platform whose owners have already committed: Apple, Google, Amazon, Samsung, LG and roughly 400 member companies.
+- **The concession, first and without hedging.**<br>The Matter energy clusters are largely specification today, with little shipping product behind them. Water Heater Management arrived with Matter 1.4. **That part of the objection is correct.**
+- **The two gaps are not the same kind.**<br>CTA-2045's gap is structural: the premise requires a module market, and thirteen years and four mandates produced **four modules from three vendors against fifty-eight certified appliances**. Matter's gap is maturity in a platform whose owners have already committed: Apple, Google, Amazon, Samsung, LG and roughly 400 member companies.
 - **This industry has already made exactly this bet, in the other direction.** Washington made the socket law for units manufactured on or after **January 1, 2021**. The first EcoPort certified products were announced **October 26, 2022**: the socket was law twenty-two months before there was a way to certify a product against it.
-- **And half the ask does not depend on any of this.** OpenADR 3 is HTTPS, TLS, JSON and OAuth 2, already running in every water heater that talks to its manufacturer's cloud. That half is available now, with no ecosystem required. The half still arriving only adds.
+- **And half the ask does not depend on any of this.**<br>OpenADR 3 is HTTPS, TLS, JSON and OAuth 2, already running in every water heater that talks to its manufacturer's cloud. That half is available now, with no ecosystem required. The half still arriving only adds.
 
 <div class="cap">
 
-**A known failure is not the safer bet against an uncertain one.** And a profile that moves can be met with a firmware update; a port that was the wrong bet cannot.
+**A known failure is not the safer bet against an uncertain one.**<br>And a profile that moves can be met with a firmware update; a port that was the wrong bet cannot.
 
 </div>
 
@@ -759,16 +772,17 @@ Public, and still on the docket. **The ask in this deck is two years old, and no
 - **62 certified listings.** 58 Smart Grid Devices, mostly heat pump water heaters. **4 Universal Communication Modules**, from Steffes, e-Radio and SkyCentrics. 60 of the 62 are certified at CTA-2045-B Level 2.
 - **Certification is voluntary and no mandate requires it**, so 62 is a floor, not a census. It is the only public count there is.
 - **The premise was consumer choice**: the customer selects a module suited to their home. After thirteen years and four mandates, that is what there is to select from. Three vendors built for a market of four states with no committed volume.
-- **Each module terminates in its own vendor's head end.** Steffes into the Steffes head end, e-Radio into e-Radio's cloud, SkyCentrics into SkyCentrics' platform. **Two compliant water heaters with modules from different vendors are not reachable by the same demand response provider.**
+- **Each module terminates in its own vendor's head end.**<br>Steffes into the Steffes head end, e-Radio into e-Radio's cloud, SkyCentrics into SkyCentrics' platform. **Two compliant water heaters with modules from different vendors are not reachable by the same demand response provider.**
 
 ---
 
 <!-- _class: dense tight -->
 
 <style scoped>
-table { font-size: 15.5px; }
-table td { padding: 6px 14px 6px 0; }
-.cap { font-size: 15px; }
+table { font-size: 15px; }
+table td { padding: 5px 14px 5px 0; }
+.cap { font-size: 14.5px; }
+li { font-size: 15.5px; }
 </style>
 
 ### PARTICIPATION
@@ -777,7 +791,7 @@ table td { padding: 6px 14px 6px 0; }
 
 <div class="cap" style="margin-top:0">
 
-**No published rate exists.** Not at NEEA, BPA, EPRI, PNNL, DOE, the Oregon PUC, the Washington UTC, EIA, AHRI, or the Alliance's own product database.
+**No published rate exists.**<br>Not at NEEA, BPA, EPRI, PNNL, DOE, the Oregon PUC, the Washington UTC, EIA, AHRI, or the Alliance's own product database.
 
 </div>
 
@@ -791,9 +805,9 @@ table td { padding: 6px 14px 6px 0; }
 
 <div class="cap">
 
-**Line 7 is annual additions, not stock, and not CTA-2045 specifically.** A floor, not a census.
+**Line 7 is annual additions, not stock, and not CTA-2045 specifically.**<br>A floor, not a census.
 
-**Five independent sources point one way and none points the other.** Against roughly five million units a year, the connected count is not one percent, and not a tenth of one percent. **If it were otherwise, one of these five would show it.**
+**Five independent sources point one way and none points the other.**<br>Against roughly five million units a year, the connected count is not one percent, and not a tenth of one percent. **If it were otherwise, one of these five would show it.**
 
 </div>
 
@@ -817,9 +831,9 @@ table td { padding: 6px 14px 6px 0; }
 
 <div class="cap">
 
-**The socket was written into law before there was a way to certify it.** Washington's statute named 2021; the first certifications came in October 2022, and Commerce had by then moved the operative date to 2023. The certification program ran about two years behind the Alliance's own published schedule.
+**The socket was written into law before there was a way to certify it.**<br>Washington's statute named 2021; the first certifications came in October 2022, and Commerce had by then moved the operative date to 2023. The certification program ran about two years behind the Alliance's own published schedule.
 
-**Federal: nothing.** S.4061 and H.R.7962 would have had DOE decide by December 31, 2024 whether to require demand response capability on electric storage water heaters. Both died in committee. **DOE has never been asked the question.**
+**Federal: nothing.**<br>S.4061 and H.R.7962 would have had DOE decide by December 31, 2024 whether to require demand response capability on electric storage water heaters. Both died in committee. **DOE has never been asked the question.**
 
 </div>
 
@@ -831,7 +845,7 @@ table td { padding: 6px 14px 6px 0; }
 
 ## The semantics are already expressible somewhere else
 
-- **The other standard's own text says so.** OpenADR 3 User Guide, section 8.11: "OpenADR 3 is well suited to be a standard external protocol for CTA-2045B... For many capabilities of CTA-2045, e.g. sending prices, an emergency signal, or reporting energy use, there are existing mechanisms in OpenADR that implement the functionality. For a few capabilities, enumeration values specific to CTA-2045 have been added."
+- **The other standard's own text says so.**<br>OpenADR 3 User Guide, section 8.11: "OpenADR 3 is well suited to be a standard external protocol for CTA-2045B... For many capabilities of CTA-2045, e.g. sending prices, an emergency signal, or reporting energy use, there are existing mechanisms in OpenADR that implement the functionality. For a few capabilities, enumeration values specific to CTA-2045 have been added."
 - **Those enumerations are in the payload registry**, `CTA2045_REBOOT` and `CTA2045_SET_OVERRIDE_STATUS`, both pass-through for resources that support CTA-2045-B, and the user guide says a document giving an unambiguous mapping between the two standards is forthcoming. **Retiring the socket delivers the same semantics without the $209 part.**
 
 ---
@@ -842,7 +856,7 @@ table td { padding: 6px 14px 6px 0; }
 
 <div class="cap" style="margin-top:0">
 
-**A capability nobody can test is a capability nobody will adopt.** Appliance rules run on test methods. Each line below is measurable on a bench in an afternoon, with no help from the manufacturer, and every one of them is something Washington's current rule explicitly does not do.
+**A capability nobody can test is a capability nobody will adopt.**<br>Appliance rules run on test methods. Each line below is measurable on a bench in an afternoon, with no help from the manufacturer, and every one of them is something Washington's current rule explicitly does not do.
 
 </div>
 
@@ -884,9 +898,9 @@ li { padding: 7px 0; font-size: 18px; }
 
 ## The energy clusters, and why both families are needed
 
-- **Device Energy Management, 0x0098, and DEM Mode.** The appliance publishes a `Forecast` and the manager reshapes it: `PowerAdjustRequest`, `StartTimeAdjustRequest`, `ModifyForecastRequest`, `PauseRequest`, `ResumeRequest`. `ESAType` value 2 is `WaterHeating`, alongside EVSE, space heating, battery storage, solar and pool pumps. **One data model types the whole house.**
-- **Neither cluster family is sufficient alone.** Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a tank is.
-- **Consent is recorded per adjustment.** Every DEM adjustment records whether the house or the grid asked for it, so the customer can refuse grid-driven optimization and keep local optimization, and that setting has no network write access at all.
+- **Device Energy Management, 0x0098, and DEM Mode.**<br>The appliance publishes a `Forecast` and the manager reshapes it: `PowerAdjustRequest`, `StartTimeAdjustRequest`, `ModifyForecastRequest`, `PauseRequest`, `ResumeRequest`. `ESAType` value 2 is `WaterHeating`, alongside EVSE, space heating, battery storage, solar and pool pumps. **One data model types the whole house.**
+- **Neither cluster family is sufficient alone.**<br>Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a tank is.
+- **Consent is recorded per adjustment.**<br>Every DEM adjustment records whether the house or the grid asked for it, so the customer can refuse grid-driven optimization and keep local optimization, and that setting has no network write access at all.
 - **Matter is local by construction:** there is no cloud-mediated Matter, so this is a home-network capability and cannot cross the grid boundary by itself. **Matter 1.5, November 2025, added an electrical energy tariff device type**, so Matter has somewhere to put a price and still no way to fetch one from the grid. **Something in the house still has to hold the grid connection.**
 
 ---
@@ -923,7 +937,7 @@ Left to right: a USB-C to Gigabit Ethernet adapter at **$15.19**, an unlocked 4G
 
 <div class="ask">
 
-**The requirement was never a bill of materials.** At least one integrated network interface, plus a USB-C host port that accepts a class-compliant adapter, and whoever needs that basement online supplies the adapter. **This is not a like-for-like comparison:** a module price includes a cloud service, a certification and a support relationship, and a dongle is cheap precisely because the appliance supplies the client. **Move the client, and the radio becomes a commodity.** For scale, the Wi-Fi module is $209 and the cellular module $249 plus a $36 annual platform fee.
+**The requirement was never a bill of materials.**<br>At least one integrated network interface, plus a USB-C host port that accepts a class-compliant adapter, and whoever needs that basement online supplies the adapter. **This is not a like-for-like comparison:** a module price includes a cloud service, a certification and a support relationship, and a dongle is cheap precisely because the appliance supplies the client. **Move the client, and the radio becomes a commodity.** For scale, the Wi-Fi module is $209 and the cellular module $249 plus a $36 annual platform fee.
 
 </div>
 
@@ -935,7 +949,7 @@ Left to right: a USB-C to Gigabit Ethernet adapter at **$15.19**, an unlocked 4G
 
 <div class="cap" style="margin-top:0">
 
-**I maintain these.** They are open source, and I take no money for any of them.
+**I maintain these.**<br>They are open source, and I take no money for any of them.
 
 </div>
 

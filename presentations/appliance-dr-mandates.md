@@ -321,21 +321,38 @@ An open protocol in the appliance, a network interface, and a server address the
 
 <!-- _class: tight -->
 
+<style scoped>
+.ask li { font-size: 20.5px; padding: 0; }
+.ask ul { margin: 6px 0; }
+.ask { margin-top: 10px; }
+</style>
+
 ## When the gap is too wide to jump
 
-![w:620](images/car-jumping-crash.jpg)
+![w:480](images/car-jumping-crash.jpg)
 
 <div class="ask">
 
-Four jurisdictions required the port. The distance from the port to a connected appliance turned out to be those three steps: **a $209 second computer, an installation, and a network credential typed in a basement.** Every one of them had to be crossed voluntarily, by a customer who did not know the port existed.
+Four jurisdictions required the port. The distance from the port to a connected appliance turned out to be three steps:
 
-**Nobody designing this in 2013 could have known the jump was that wide. We know now.**
+- **A $209 second computer**
+- **An installation**
+- **A network credential typed in a basement**
+
+Every one of them had to be crossed voluntarily, by a customer who did not know the port existed.
+
+**Nobody designing this in 2013 could have known the jump was that wide.**<br>**We know now.**
 
 </div>
 
 ---
 
 <!-- _class: tight -->
+
+<style scoped>
+li { font-size: 21px; padding: 3px 0; }
+.band { font-size: 19.5px; padding: 12px 18px; }
+</style>
 
 ### THE PREMISE, AND WHAT HAPPENED TO IT
 
@@ -413,6 +430,13 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 
 <!-- _class: tight -->
 
+<style scoped>
+table { font-size: 17.5px; }
+table td, table th { padding: 6px 10px; }
+.cap { font-size: 16px; }
+.band { font-size: 17px; padding: 12px 18px; }
+</style>
+
 ### WHY BOTH, AND NOT EITHER ONE ALONE
 
 ## Matter alone is enabled, not ensured
@@ -439,6 +463,12 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 
 <!-- _class: tight -->
 
+<style scoped>
+table { font-size: 18.5px; }
+table td, table th { padding: 6px 10px; }
+.bandc { font-size: 17.5px; padding: 12px 18px; }
+</style>
+
 ### Testable language. No version numbers.
 
 ## Write the capability, not the standard
@@ -463,8 +493,8 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 ## My proposal
 
 - **Retire CTA-2045 as a water heater requirement.** Not an additional compliance path. Not a fix to the link above the socket. **Retire it.** The port competes with the better answer for the same dollars and the same engineering attention.
-- **Require instead, of the appliance itself:** an open-protocol client that receives a price with a forward schedule; a server address the owner can change; retention and action on the last schedule with no network; **the ability to reach Wi-Fi, Ethernet or cellular at the customer's choice**, delivered as one integrated interface plus a USB-C host port for a class-compliant adapter, not three radios in every unit; and local control covering **both** the water-heater-specific and the generic energy-management semantics.
-- **Write the capability and the test method. Put standards in an appendix.** No version numbers in the requirement, including no version number on the protocol I am recommending.
+- **Require instead, of the appliance itself, three things. One: both protocols.** OpenADR 3 to the grid, and Matter inside the house covering **both** Water Heater Management and Device Energy Management. **Two: at least one network interface**, integrated. Everyone will choose Wi-Fi, and that is fine. **Three: support for adding another**, as a USB-C host port for a class-compliant adapter. Ethernet or cellular becomes the customer's choice, without putting three radios in every unit.
+- **Write the capability and the test method. Put standards in an appendix.** Name OpenADR 3 and Matter. Name no edition of either, and no version number anywhere in the requirement itself. **Naming a protocol is not the mistake. Freezing an edition of it is**, and that is the mistake in force today.
 - **This needs no new legislation to start.** Washington and Oregon already let a manufacturer ask the state to accept an equivalent open standard. **Nobody has ever asked.** The rules and the empty list are in the appendix.
 
 ---
@@ -557,6 +587,7 @@ li { padding: 6px 0; font-size: 17px; }
 
 - **Transport and identity.** HTTPS over TLS, JSON payloads, OAuth 2 client credentials for the token. **Explicitly not PKI:** provisioning X.509 certificates into consumer devices is "daunting at best, or simply not supportable."
 - **A price-consuming client is a token fetch and two authenticated GETs**, `/programs` and `/events`, or MQTT push where the appliance sits behind a home router. **A server offering only public tariff information may accept unauthenticated requests, so all the tank holds is a URL.**
+- **That the owner can change it is already a normative MUST.** Verbatim: "A VEN MUST support end-user configuration of: VTN URL, clientID and clientSecret... but MUST support end-user reconfiguration." **The rule's job is to make an existing MUST testable**, not to invent a new requirement.
 - **A price is not a number, it is a schedule.** A start, an ISO 8601 duration, and an ordered list of intervals: a day ahead in one object.
 - **The specification names this appliance.** Verbatim: "VENs may be implemented within on-site customer devices such as **a water heater**..."
 - **What the appliance already has, and does not buy twice:** the microcontroller, the TLS stack, the JSON parser and the credential store, all shipped the moment the manufacturer added its own cloud client. **The cost that does not amortize is support: a patch obligation for the life of the product.**
@@ -566,16 +597,15 @@ li { padding: 6px 0; font-size: 17px; }
 Both quotations are verbatim. The appliance is a VEN in OpenADR terms; the demand response provider runs the VTN.
 
 </div>
-- **In OpenADR 3 this is already a normative MUST:** "A VEN MUST support end-user configuration of: VTN URL, clientID and clientSecret... but MUST support end-user reconfiguration." **Make that existing MUST testable in a rule.**
 
 ---
 
 <!-- _class: dense tight -->
 
 <style scoped>
-table { font-size: 15.5px; }
-table td { padding: 6px 14px 6px 0; }
-.cap { font-size: 15px; }
+table { font-size: 14.5px; }
+table td { padding: 5px 12px 5px 0; }
+.cap { font-size: 14px; }
 </style>
 
 ### THE DRAFTING LANGUAGE

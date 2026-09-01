@@ -40,9 +40,9 @@ Grid Coordination participates in the AHRI 1380 working group and argues for a r
 
 **The open interface stops at the socket.**
 
-CTA-2045 standardizes a physical communications port on an appliance, most commonly an electric storage water heater. Washington, Oregon, Colorado and New York now require it on new units.
+CTA-2045 standardizes a physical communications port on an appliance, most commonly an electric storage water heater. Washington, Oregon and Colorado prohibit the sale of covered units without it, and New York reaches new construction at permit through its building energy code.
 
-The socket is standardized. Nothing above it is. Each vendor's plug-in module speaks its own language upstream, so two compliant water heaters need not interoperate and neither is reachable by anyone but its module's vendor. The module a customer has to buy and install runs well over $150, which has proven an insurmountable deployment obstacle in practice.
+The socket is standardized. Nothing above it is. Each vendor's plug-in module speaks its own language upstream, so two compliant water heaters need not interoperate and neither is reachable by anyone but its module's vendor. The module a customer has to buy and install runs well over $150, which has proven an insurmountable deployment obstacle in practice. And because the port costs money while only a few states require it, it ships as a demand-response model variant rather than across a manufacturer's line, so the capability stops where the mandate does.
 
 The assumptions behind CTA-2045, that appliances lack microcontrollers and that network interfaces are too expensive to integrate, are no longer true. **It should be retired, not written into new rules.**
 

@@ -111,6 +111,7 @@ style: |
   .cta strong { color: #FFFFFF; }
   .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
               text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
+
 ---
 
 <!-- _class: alt -->
@@ -197,32 +198,6 @@ The appliance carries the socket. The module carries the radio. **The link at th
 
 ---
 
-<!-- _class: tight -->
-
-### WASHINGTON'S RULE, WAC 194-24-180, VERBATIM
-
-## No test method. No listing. A label.
-
-| | |
-| --- | --- |
-| **(4) Testing** | "There is no test method required for this product" |
-| **(5) Listing** | "There is no listing requirement for this product" |
-| **(6) Marking** | Every unit "must have a label or marking indicating compliance with the standard in this section" |
-
-<div class="cap">
-
-**The certification behind that label stops in the same place, and correctly so.** EcoPort examines the socket interface and nothing above it, because the socket is the whole scope of the standard. The Alliance's own policy and guidance, quoted, are in the appendix.
-
-</div>
-
-<div class="bandc">
-
-**It is a defect in a rule that relies on it.** The mark on the appliance certifies that a module will plug in and exchange messages. It certifies nothing about whether a module was ever bought, or whether anything upstream will ever talk to it. **The rule cannot tell whether anything above the socket exists.**
-
-</div>
-
----
-
 <!-- _class: dense2 tight tighter -->
 
 <style scoped>
@@ -237,6 +212,7 @@ p { margin: 0; }
 ![w:840](images/cpuc/open-stops-short.svg)
 
 - **The price object is in the message set. Nothing standardizes how a real tariff reaches it.** Which price arrives, and from whom, is decided by whichever cloud the module vendor runs. **That is outside CTA-2045 by design, and the design is the problem.**
+- **The Alliance's own architecture figure labels the segment above the module "Any Communication System."** Deliberately, and correctly: it is outside the standard's scope. **A rule that stops where the standard stops inherits that boundary.**
 
 ---
 
@@ -366,8 +342,8 @@ Four jurisdictions required the port. The distance from the port to a connected 
 ## The premise is gone, and the cost case inverted with it
 
 - **The 2013 premise was that an appliance could not be assumed to have a network connection.** So put the radio in a replaceable module and standardize the socket.
-- **An appliance can now carry the whole stack, and many already do**, on the customer's receipt: a microcontroller, a radio, a TLS stack, a JSON parser and a credential store, because the manufacturer wanted a cloud client of its own.
 - **Rheem's ProTerra page lists both on one model:** "Built-in Wi-Fi Powered by EcoNet" **and** a "built-in EcoPort (CTA-2045 port)." **The customer paid for two connections, and exactly one of them is reachable by anyone other than Rheem.**
+- **And a physical port splits the product line.** The mandate is why any of these models exist, and nobody would have built them otherwise. But a port costs money and four states require it, so it ships as a demand-response variant: Rheem's compliance bulletin lists eight, by state, and the cheapest carries the port and **no Wi-Fi at all**. **Firmware does not split a product line.**
 
 <div class="band">
 
@@ -410,60 +386,52 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 
 ---
 
-<!-- _class: tight tighter -->
+<!-- _class: tight -->
 
-<style scoped>
-img { margin: 0 auto; }
-.columns { grid-template-columns: 1.45fr 1fr; gap: 2rem; }
-</style>
+### WHAT IS ALREADY IN THE APPLIANCE, AND WHAT TO ADD
 
-### INTERFACE A, IN THE APPLIANCE
+## The hardware is already there. This is firmware.
 
-## No new part, no new silicon, and one real cost
+<div class="cap" style="margin-top:0">
 
-<div class="columns">
-<div>
-
-- **Ordinary web technology.** HTTPS over TLS, JSON, OAuth 2 client credentials. **Explicitly not PKI.**
-- **The whole client is a token fetch and two authenticated GETs**, and against a public tariff server, **all the tank holds is a URL.**
-- **A price is not a number, it is a schedule**: a day ahead in one object.
-
-</div>
-<div>
-
-![h:240](images/DRP-OA3-SGD-unpinned.png)
-
-<div class="cap">
-
-Same appliance, same demand response provider, one fewer party, no part to buy.
+**Many water heaters already ship with a microcontroller and a Wi-Fi interface**, because the manufacturer wanted a cloud client of its own. **The ask is firmware on hardware the customer has already paid for**: no new part, no new silicon, no second computer.
 
 </div>
 
-</div>
-</div>
+| | |
+| --- | --- |
+| **OpenADR 3**, to the grid | A price with a forward schedule, a day ahead in one object, from **a server address the owner can change**. Ordinary web technology: HTTPS over TLS, JSON, OAuth 2. **Explicitly not PKI.** Against a public tariff server, all the tank holds is a URL |
+| **Matter**, inside the house | Local control by whatever energy manager the customer runs, **and the tank appearing in the home ecosystem app the customer already uses.** **Water Heater Management** for the tank's own controls, **Device Energy Management** for the energy semantics a manager negotiates against |
 
 <div class="ask">
 
-**No incremental hardware cost on an appliance that already has a radio.** It reuses the microcontroller, TLS stack, JSON parser and credential store the manufacturer already shipped. **Engineering and certification amortize across the production run. Support does not: a client in the appliance is a patch obligation for the life of the product.**
+**The manufacturer's own cloud, over whatever protocol it likes, is the manufacturer's business and is not in scope here.** Keep it, make it the default. **The ask is only that it not be the only way in.**
 
 </div>
 
 ---
 
-<!-- _class: dense2 tight tighter -->
+<!-- _class: tight -->
 
-### INTERFACE B, AND IT TAKES TWO CLUSTER FAMILIES, NOT ONE
+### WHY BOTH, AND NOT EITHER ONE ALONE
 
-## Name both, or the energy manager gets half a water heater
+## Matter alone is enabled, not ensured
 
-- **Water Heater Management (0x0094) and Water Heater Mode (0x009E).** What only a tank has: which heat source is firing, tank volume and percentage, the energy required to reheat, a bounded boost with a duration and a target fill, and the operating modes. **Released in Matter 1.4, November 2024: non-provisional and certifiable today.**
-- **Device Energy Management (0x0098) and DEM Mode.** The appliance publishes a **Forecast** and the manager reshapes it: `PowerAdjustRequest`, `StartTimeAdjustRequest`, `ModifyForecastRequest`, `PauseRequest`, `ResumeRequest`. `ESAType` value 2 is `WaterHeating`, alongside EVSE, space heating, battery storage, solar and pool pumps. **One data model types the whole house.**
-- **Neither is sufficient alone.** Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a tank is.
-- **Consent is recorded per adjustment, not delegated to a button.** Every DEM adjustment records whether the house or the grid asked for it, so **the customer can refuse grid-driven optimization and keep local optimization**, and that setting has no network write access at all.
+| | Matter only | OpenADR 3 only | Both |
+| --- | :--: | :--: | :--: |
+| **Can it get a price?** | Only if something on the home network already has one | Yes, directly | Yes, either way |
+| **Can an energy manager drive it?** | Fully | Weakly | Fully |
+| **Verdict** | **Enabled** | **Ensured, for price** | **Ensured, and controllable** |
 
-<div class="bandc">
+<div class="cap">
 
-**And the same gap exists inside the standard I am recommending.** The Matter Water Heater device type mandates Water Heater Management, Water Heater Mode and Thermostat. **It does not require DEM at all**, and inside DEM every adjustment feature is optional. A fully certified Matter water heater can ship with no forecast and no shiftability. **Which is exactly why a rule must name the capability, not the protocol.**
+**Matter is a home-network protocol.** For a Matter-only water heater to act on a price, an energy manager the customer has to acquire must already have one. **That is the same shape of failure as the socket:** the appliance is ready, and a second purchase stands between it and participation. The distance is shorter and closing. Shorter is not zero.
+
+</div>
+
+<div class="band">
+
+**With both, an energy manager has three ways to work:** publish the local price over Matter's own price clusters, publish it over OpenADR 3 as a local server, or drive the tank directly over Device Energy Management. **And a house with no energy manager is still served.**
 
 </div>
 
@@ -482,11 +450,9 @@ Same appliance, same demand response provider, one fewer party, no part to buy.
 | **Action on the last schedule with no network** | Nothing, which is what these rules say today about outages |
 | **Both** the water-heater-specific and the generic energy-management semantics | "Shall support [a smart home standard]" |
 
-<div class="cap">
+<div class="bandc">
 
-**Every line on the left is testable, and none of them names a version**, including the protocol I am recommending. The remaining requirements and the full drafting language are in the appendix.
-
-**ENERGY STAR opened this door in April 2023**: a connected water heater may meet CTA-2045 **or OpenADR 2.0b** instead. The version it names is a cloud-to-cloud protocol that was never designed to live in an appliance, **so the door was open onto a wall.**
+**The same gap exists inside the standard I am recommending.** The Matter Water Heater device type does not require Device Energy Management at all, and inside DEM every adjustment feature is optional. **A fully certified Matter water heater can ship with no forecast and no shiftability**, which is exactly why a rule must name the capability and not the protocol.
 
 </div>
 
@@ -494,12 +460,12 @@ Same appliance, same demand response provider, one fewer party, no part to buy.
 
 <!-- _class: dense2 tight tighter -->
 
-## The ask
+## My proposal
 
 - **Retire CTA-2045 as a water heater requirement.** Not an additional compliance path. Not a fix to the link above the socket. **Retire it.** The port competes with the better answer for the same dollars and the same engineering attention.
 - **Require instead, of the appliance itself:** an open-protocol client that receives a price with a forward schedule; a server address the owner can change; retention and action on the last schedule with no network; **the ability to reach Wi-Fi, Ethernet or cellular at the customer's choice**, delivered as one integrated interface plus a USB-C host port for a class-compliant adapter, not three radios in every unit; and local control covering **both** the water-heater-specific and the generic energy-management semantics.
 - **Write the capability and the test method. Put standards in an appendix.** No version numbers in the requirement, including no version number on the protocol I am recommending.
-- **Washington and Oregon do not need new legislation to start.** WAC 194-24-180(3) and OAR 330-092-0020(16)(b) already direct the department, **on written request by a manufacturer**, to determine whether an alternative "open and widely available" standard is equivalent, and to publish any it accepts. **Neither department has published a determination. That list is empty.**
+- **This needs no new legislation to start.** Washington and Oregon already let a manufacturer ask the state to accept an equivalent open standard. **Nobody has ever asked.** The rules and the empty list are in the appendix.
 
 ---
 
@@ -580,6 +546,11 @@ Same appliance, same demand response provider, one fewer party, no part to buy.
 
 <!-- _class: dense2 -->
 
+<style scoped>
+li { padding: 6px 0; font-size: 17px; }
+.cap { font-size: 15.5px; }
+</style>
+
 ### INTERFACE A, IN DETAIL
 
 ## What the client actually has to implement
@@ -602,8 +573,9 @@ Both quotations are verbatim. The appliance is a VEN in OpenADR terms; the deman
 <!-- _class: dense tight -->
 
 <style scoped>
-table { font-size: 17px; }
-.cap { margin-top: 6px; }
+table { font-size: 15.5px; }
+table td { padding: 6px 14px 6px 0; }
+.cap { font-size: 15px; }
 </style>
 
 ### THE DRAFTING LANGUAGE
@@ -625,18 +597,11 @@ table { font-size: 17px; }
 
 </div>
 
----
+<div class="cap">
 
-<!-- _class: dense2 -->
+**The equivalency route, verbatim.** WAC 194-24-180(3) and OAR 330-092-0020(16)(b) both direct the department, **on written request by a manufacturer**, to determine whether an alternative standard that is "open and widely available" is equivalent, and to publish any it accepts. Oregon's rule adds that it encourages manufacturers to ask other states too. **Neither department has published a determination. That list is empty.**
 
-### WASHINGTON'S RULE, AND THE CERTIFICATION IT RELIES ON
-
-## Where the verification stops, in the source text
-
-- **WAC 194-24-180, verbatim.** "(4) Testing. There is no test method required for this product." "(5) Listing. There is no listing requirement for this product." "(6) Marking. Every unit of every electric storage water heater must have a label or marking indicating compliance with the standard in this section."
-- **EcoPort certification stops at the same place.** The OpenADR Alliance's certification policy: the program "only examines the socket interface parameters," and "functionality of either the UCM or the SGD beyond the interface is not evaluated."
-- **The Alliance's architecture figure labels the segment above the module "Any Communication System," deliberately and correctly.** A rule that stops in the same place inherits that boundary.
-- **The scope is correct, and it was chosen on purpose.** The standard's scope is the socket, and that is what a certification can test. The Alliance's Level 2 guidance says the same about behavior: "the water heater behavior is not specified in the standard. This was done by the CTA-2045 committee on purpose."
+</div>
 
 ---
 
@@ -695,6 +660,43 @@ The same is true of any future edition. **Testing behavior below the socket and 
 
 ---
 
+<!-- _class: dense2 -->
+
+### THE RECORD
+
+## The same proposal, on a CEC docket in 2024
+
+- **The failure mode was named then, not in hindsight.** A 2024 response in **CEC Docket 24-FDAS-03** put it in a footnote: CTA-2045 "hasn't been an unqualified success," and "its dependence on aftermarket, costly UCMs has posed significant obstacles to widespread use and adoption."
+- **So was the fix, including the protocol.** Same footnote: "The solution is to mandate the control and status-reporting capabilities (defined first by CTA-2045) into modern open standard protocols (e.g. OpenADR3) that can be incorporated into the integrated network interfaces (especially Wi-Fi) that new water-heaters typically provide."
+- **What has changed since is the evidence, not the argument.** Two more model years, four jurisdictions still, and the participation record in these exhibits.
+
+<div class="cap">
+
+Public, and still on the docket. **The ask in this deck is two years old, and nothing since has cut against it.**
+
+</div>
+
+---
+
+<!-- _class: dense2 -->
+
+### THE OBJECTION
+
+## "You are trading a tested standard for an untested one"
+
+- **The concession, first and without hedging.** The Matter energy clusters are largely specification today, with little shipping product behind them. Water Heater Management arrived with Matter 1.4. **That part of the objection is correct.**
+- **The two gaps are not the same kind.** CTA-2045's gap is structural: the premise requires a module market, and thirteen years and four mandates produced **four modules from three vendors against fifty-eight certified appliances**. Matter's gap is maturity in a platform whose owners have already committed: Apple, Google, Amazon, Samsung, LG and roughly 400 member companies.
+- **This industry has already made exactly this bet, in the other direction.** Washington made the socket law for units manufactured on or after **January 1, 2021**. The first EcoPort certified products were announced **October 26, 2022**: the socket was law twenty-two months before there was a way to certify a product against it.
+- **And half the ask does not depend on any of this.** OpenADR 3 is HTTPS, TLS, JSON and OAuth 2, already running in every water heater that talks to its manufacturer's cloud. That half is available now, with no ecosystem required. The half still arriving only adds.
+
+<div class="cap">
+
+**A known failure is not the safer bet against an uncertain one.** And a profile that moves can be met with a firmware update; a port that was the wrong bet cannot.
+
+</div>
+
+---
+
 <!-- _class: dense tight -->
 
 ### The mandate record
@@ -734,8 +736,9 @@ The same is true of any future edition. **Testing behavior below the socket and 
 <!-- _class: dense tight -->
 
 <style scoped>
-table { font-size: 17.5px; }
-.cap { margin-top: 6px; }
+table { font-size: 15.5px; }
+table td { padding: 6px 14px 6px 0; }
+.cap { font-size: 15px; }
 </style>
 
 ### PARTICIPATION
@@ -826,13 +829,35 @@ table { font-size: 17.5px; }
 
 <!-- _class: dense2 -->
 
-## The clusters, by name and by content
+<style scoped>
+li { padding: 7px 0; font-size: 18px; }
+</style>
+
+### MATTER, INTERFACE B
+
+## The water heater clusters, by name and by content
 
 - **Water Heater Management, 0x0094, revision 2.** Read `HeaterTypes` (immersion element 1, immersion element 2, heat pump, boiler, other), `HeatDemand` (which is firing now), `BoostState`, and with the optional EnergyManagement feature `TankVolume`, `EstimatedHeatRequired` in mWh and `TankPercentage`. Commands: `Boost` (duration, one-shot, emergency, temporary setpoint, target percentage, target reheat percentage) and `CancelBoost`. Events: `BoostStarted`, `BoostEnded`.
 - **Water Heater Mode, 0x009E.** `SupportedModes` and a read/write `CurrentMode`, from mode tags including Auto, Quick, LowEnergy, Vacation, Off, Manual, Timed. `StartUpMode`, `OnMode` and the OnOff dependency are explicitly disallowed.
-- **A controller can see how hot the tank is**,  how much energy reheating would take, which element is firing, and can set the mode or call for a bounded boost with a temperature and a target fill.
-- **Matter is local by construction:** there is no cloud-mediated Matter, so this is a home-network capability and cannot cross the grid boundary by itself. **Matter 1.5, November 2025, added an electrical energy tariff device type**, so Matter now has somewhere to put a price and still no way to fetch one from the grid. **Something in the house still has to hold the grid connection. That is the whole reason there are two interfaces.**
-- **The clusters are released and the device type is certifiable today.** **I could not establish that a Matter-certified water heater is shipping. If anyone here has certified one, I would like to know that too.**
+- **A controller can see how hot the tank is**, how much energy reheating would take, which element is firing, and can set the mode or call for a bounded boost with a temperature and a target fill.
+- **Released in Matter 1.4, November 2024: non-provisional and certifiable today.** I could not establish that a Matter-certified water heater is shipping. **If anyone here has certified one, I would like to know.**
+
+---
+
+<!-- _class: dense2 -->
+
+<style scoped>
+li { padding: 7px 0; font-size: 18px; }
+</style>
+
+### MATTER, INTERFACE B
+
+## The energy clusters, and why both families are needed
+
+- **Device Energy Management, 0x0098, and DEM Mode.** The appliance publishes a `Forecast` and the manager reshapes it: `PowerAdjustRequest`, `StartTimeAdjustRequest`, `ModifyForecastRequest`, `PauseRequest`, `ResumeRequest`. `ESAType` value 2 is `WaterHeating`, alongside EVSE, space heating, battery storage, solar and pool pumps. **One data model types the whole house.**
+- **Neither cluster family is sufficient alone.** Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a tank is.
+- **Consent is recorded per adjustment.** Every DEM adjustment records whether the house or the grid asked for it, so the customer can refuse grid-driven optimization and keep local optimization, and that setting has no network write access at all.
+- **Matter is local by construction:** there is no cloud-mediated Matter, so this is a home-network capability and cannot cross the grid boundary by itself. **Matter 1.5, November 2025, added an electrical energy tariff device type**, so Matter has somewhere to put a price and still no way to fetch one from the grid. **Something in the house still has to hold the grid connection.**
 
 ---
 

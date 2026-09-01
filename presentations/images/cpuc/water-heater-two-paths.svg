@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="wg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#2A6E3F"/></marker>
+    <marker id="wc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#B25B27"/></marker>
+  </defs>
+  <rect width="1000" height="430" fill="#FFFFFF"/>
+
+  <rect x="296" y="34" width="689" height="330" rx="14" fill="#F4F8F5" stroke="#2A6E3F" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="975" y="60" font-size="13" font-weight="600" letter-spacing="2.2" fill="#2A6E3F" text-anchor="end">THE CUSTOMER'S HOME</text>
+
+  <rect x="16" y="152" width="196" height="94" rx="8" fill="#EEF0F2" stroke="#7A8592" stroke-width="1.8"/>
+  <text x="114" y="188" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">Your utility, or</text>
+  <text x="114" y="210" font-size="16" font-weight="600" fill="#16212E" text-anchor="middle">a provider</text>
+  <text x="114" y="230" font-size="13" fill="#7A8592" text-anchor="middle">the customer chose</text>
+
+  <!-- path 1: straight to the appliance -->
+  <path d="M214,222 L400,296 L724,296" fill="none" stroke="#2A6E3F" stroke-width="3" marker-end="url(#wg)"/>
+  <text x="450" y="326" font-size="16" font-weight="600" fill="#2A6E3F" text-anchor="middle">OpenADR 3, straight to the tank</text>
+  <text x="450" y="348" font-size="13" fill="#5E7A68" text-anchor="middle">no hub, no module, nothing else to buy</text>
+
+  <!-- path 2: via an energy manager -->
+  <path d="M214,176 L300,140 L352,140" fill="none" stroke="#2A6E3F" stroke-width="2.4" stroke-dasharray="7 5" marker-end="url(#wg)"/>
+  <text x="286" y="118" font-size="14" font-weight="600" fill="#2A6E3F" text-anchor="middle">OpenADR 3</text>
+
+  <rect x="356" y="98" width="238" height="86" rx="8" fill="#FFFFFF" stroke="#2A6E3F" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="475" y="132" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">An energy manager</text>
+  <text x="475" y="155" font-size="13.5" fill="#2A6E3F" text-anchor="middle">optional, and the customer's choice</text>
+  <text x="475" y="173" font-size="13.5" fill="#2A6E3F" text-anchor="middle">of hub, appliance or service</text>
+
+  <path d="M598,141 L700,141 L700,214" fill="none" stroke="#B25B27" stroke-width="2.6" marker-end="url(#wc)"/>
+  <text x="716" y="150" font-size="16" font-weight="600" fill="#B25B27">Matter</text>
+  <text x="716" y="170" font-size="13" fill="#B25B27">price, or direct control</text>
+
+  <rect x="600" y="218" width="330" height="112" rx="8" fill="#FFFFFF" stroke="#2A6E3F" stroke-width="2.8"/>
+  <text x="765" y="256" font-size="19" font-weight="600" fill="#16212E" text-anchor="middle">The water heater</text>
+  <text x="765" y="281" font-size="13.5" fill="#2A6E3F" text-anchor="middle">an OpenADR 3 client, a Matter node,</text>
+  <text x="765" y="300" font-size="13.5" fill="#2A6E3F" text-anchor="middle">and a server address the owner can change</text>
+
+  <text x="500" y="404" font-size="15" fill="#16212E" text-anchor="middle">Either path. <tspan font-weight="600">The appliance does not care which one the house has, and works when it has neither.</tspan></text>
+</svg>

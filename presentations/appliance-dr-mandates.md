@@ -387,7 +387,7 @@ li { font-size: 21px; padding: 3px 0; }
 
 - **A DR event is addressed to one appliance, so the model starts from a list of houses.**<br>Somebody has to know it exists, be permitted to reach it, and keep that path alive for twelve to fifteen years.
 - **A price is appliance agnostic, addressed to nobody in particular.**<br>One signal, the same for everyone on the tariff, and nobody enrolled in anything.<br>**The water heater reads it and decides for itself.**
-- **Control can be local, or in the cloud.**<br>A customer operating their own equipment, through a controller they chose, is exactly right.<br>**Act on a price it reads for itself, rather than wait to be addressed by name.**
+- **Control can be local, or in the cloud.**<br>A customer operating their own equipment, through a controller they chose, is exactly right.<br>**The appliance acts on a price it reads for itself, rather than waiting to be addressed by name.**
 
 ---
 

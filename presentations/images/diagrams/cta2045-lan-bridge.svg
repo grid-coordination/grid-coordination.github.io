@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 290" width="1000" height="290" font-family="Avenir Next, Avenir, -apple-system, Helvetica Neue, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">A CTA-2045 water heater driven over the LAN by a local energy manager</title>
+  <desc id="d">A water heater with a CTA-2045 socket connects to a SkyCentrics Ethernet UCM. The UCM connects over ordinary Ethernet, inside the house, to a SPAN smart panel, which sends CTA-2045 commands back down to shift the water heater's energy. The usual path from the module up to the vendor's head end in the cloud is drawn in gray, crossed out, and labeled not used.</desc>
+  <defs>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#B25B27"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#2A6E3F"/></marker>
+  </defs>
+  <rect width="1000" height="290" fill="#FFFFFF"/>
+
+  <!-- the home -->
+  <rect x="12" y="96" width="976" height="160" rx="14" fill="#F4F8F5" stroke="#2A6E3F" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="974" y="120" font-size="13" font-weight="600" letter-spacing="2.2" fill="#2A6E3F" text-anchor="end">THE CUSTOMER'S HOME</text>
+
+  <!-- the path that is not used: vendor head end, in the cloud -->
+  <rect x="296" y="10" width="228" height="54" rx="8" fill="#F1F3F5" stroke="#C3CAD1" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text x="410" y="34" font-size="15" font-weight="600" fill="#9AA3AD" text-anchor="middle">Vendor head end</text>
+  <text x="410" y="53" font-size="13" fill="#9AA3AD" text-anchor="middle">where a UCM normally reports</text>
+  <line x1="410" y1="64" x2="410" y2="140" stroke="#C3CAD1" stroke-width="2.2" stroke-dasharray="7 6"/>
+  <line x1="398" y1="84" x2="422" y2="108" stroke="#B25B27" stroke-width="3.2"/>
+  <line x1="422" y1="84" x2="398" y2="108" stroke="#B25B27" stroke-width="3.2"/>
+  <text x="434" y="80" font-size="13" font-weight="600" fill="#B25B27">not used</text>
+
+  <!-- water heater -->
+  <rect x="20" y="140" width="200" height="76" rx="8" fill="#FFFFFF" stroke="#C6D3C9" stroke-width="1.8"/>
+  <text x="120" y="172" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Water heater</text>
+  <text x="120" y="193" font-size="13" fill="#7A8592" text-anchor="middle">SGD, CTA-2045 socket</text>
+
+  <!-- socket link -->
+  <line x1="222" y1="178" x2="290" y2="178" stroke="#B25B27" stroke-width="2.6" marker-end="url(#ac)"/>
+  <text x="256" y="166" font-size="13" font-weight="600" fill="#B25B27" text-anchor="middle">CTA-2045</text>
+  <text x="256" y="196" font-size="13" fill="#7A8592" text-anchor="middle">the socket</text>
+
+  <!-- the UCM -->
+  <rect x="296" y="140" width="228" height="76" rx="8" fill="#FFFFFF" stroke="#B25B27" stroke-width="2.4"/>
+  <text x="410" y="172" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">SkyCentrics UCM</text>
+  <text x="410" y="193" font-size="13" fill="#7A8592" text-anchor="middle">the Ethernet model</text>
+
+  <!-- the LAN -->
+  <line x1="526" y1="178" x2="640" y2="178" stroke="#2A6E3F" stroke-width="2.6" marker-end="url(#ag)"/>
+  <text x="583" y="166" font-size="13" font-weight="600" fill="#2A6E3F" text-anchor="middle">ordinary LAN</text>
+  <text x="583" y="196" font-size="13" fill="#7A8592" text-anchor="middle">stays in the house</text>
+
+  <!-- the energy manager -->
+  <rect x="648" y="140" width="250" height="76" rx="8" fill="#FFFFFF" stroke="#2A6E3F" stroke-width="2.6"/>
+  <text x="773" y="172" font-size="17" font-weight="600" fill="#16212E" text-anchor="middle">Local energy manager</text>
+  <text x="773" y="193" font-size="13" fill="#2A6E3F" text-anchor="middle">a SPAN smart panel</text>
+
+  <!-- commands back down -->
+  <path d="M773,218 L773,242 L120,242 L120,220" fill="none" stroke="#B25B27" stroke-width="2.2" marker-end="url(#ac)"/>
+  <text x="450" y="234" font-size="14" font-weight="600" fill="#B25B27" text-anchor="middle">CTA-2045 commands shift the water heater</text>
+
+  <text x="500" y="278" font-size="14" fill="#7A8592" text-anchor="middle">The socket does its job. The only part left out is the link from the module up to the vendor.</text>
+</svg>

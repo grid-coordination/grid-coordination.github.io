@@ -120,17 +120,15 @@ style: |
 
 ### Advanced Water Heater Initiative · Connectivity Working Group
 
-# Water heaters:<br>time to move on from CTA-2045
+# Water heaters:<br>is it time to move on from CTA-2045?
 
 <div class="big muted">
 
-This was the right design for 2013. The world it was designed for no longer exists.
+The design was right for 2013, but the world has changed.
 
 </div>
 
 <div class="cap">
-
-Thirteen years, four jurisdictions, and one number no rule ever required anyone to collect.
 
 DC Jackson · grid-coordination.energy
 
@@ -154,15 +152,15 @@ DC Jackson · grid-coordination.energy
 
 ### The 2013 design
 
-## The problem was real, and the 2013 design fit it
+## The opportunity was real, and the design was right for its time
 
-- **The problem was real and it still is.**<br>An electric storage water heater is the cheapest thermal battery in the house. Getting it to shift is worth doing, and in 2013 essentially nothing in a house could receive an outside signal at all.
-- **The engineering answer was correct for 2013.** A water heater lasts twelve to fifteen years. Home networking did not stay still for twelve to fifteen years. Putting the radio in a replaceable module, and standardizing the socket between the module and the appliance, is the textbook answer to a component whose lifetime is shorter than its host's.
-- **Ex ante, this seemed like a good solution.**<br>The problem is not in the **standard**. It is in the **rule** that names it, and in what happened above the socket.
+- **The opportunity was real, and still important.**<br>An electric storage water heater is the cheapest thermal battery in the house. Getting it to shift is worth doing, and in 2013 essentially nothing in a house could receive an outside signal at all.
+- **The engineering solution was correct for 2013.**<br>A water heater lasts twelve to fifteen years. Putting the network interface in a replaceable module and standardizing the socket between the module and the appliance was a good cost tradeoff.
+- **Ex ante, this seemed like a good solution.**<br>The challenge was not the standard, but what happened above the UCM, and the mandates that named the standard.
 
 <div class="band">
 
-**Thirteen years have passed. Let's assess how it has worked, and whether to change course.**
+**Thirteen years have passed. Let's assess how it has worked, and whether a course correction might be called for.**
 
 </div>
 
@@ -181,7 +179,7 @@ DC Jackson · grid-coordination.energy
 
 <div class="cap">
 
-The appliance carries the socket. The module carries the radio. **The link at the top is whatever the module vendor chose.**
+The appliance carries the socket. The module carries the network interface. **The link at the top is whatever the module vendor chose.**
 
 </div>
 
@@ -212,7 +210,7 @@ p { margin: 0; }
 ![w:840](images/cpuc/open-stops-short.svg)
 
 - **The price object is in the message set. Nothing standardizes how a real tariff reaches it.** Which price arrives, and from whom, is decided by whichever cloud the module vendor runs. **That is outside CTA-2045 by design, and the design is the problem.**
-- **The Alliance's own architecture figure labels the segment above the module "Any Communication System."** Deliberately, and correctly: it is outside the standard's scope. **A rule that stops where the standard stops inherits that boundary.**
+- **CTA-2045's own architecture figure labels the segment above the module "Any Communication System."** Deliberately, and correctly: the standard scopes itself to the socket and says so. **A rule that stops where the standard stops inherits that boundary.**
 
 ---
 
@@ -237,7 +235,7 @@ p { margin: 0; }
 
 <div class="cap">
 
-No published participation rate exists, at NEEA, BPA, EPRI, PNNL, DOE, either state commission, EIA, AHRI or the Alliance's own product database. These are the numbers that do. **Against five million a year, none of them is within sight of the goal.** Sources and caveats in the appendix.
+No published participation rate exists, at NEEA, BPA, EPRI, PNNL, DOE, either state commission, EIA, AHRI or the EcoPort certified product database. These are the numbers that do. **Against five million a year, none of them is within sight of the goal.** Sources and caveats in the appendix.
 
 </div>
 
@@ -262,7 +260,7 @@ img { margin: 0; }
 
 <div class="cap">
 
-A port on the tank, and a promise that some other device the customer has not bought yet will do the rest. **Success left to chance.**
+A port on the appliance, and a promise that some other device the customer has not bought yet will do the rest. **Success left to chance.**
 
 </div>
 
@@ -336,19 +334,19 @@ ul { margin: 6px 0; }
 
 ## When the gap is too wide to jump
 
-![w:480](images/car-jumping-crash.jpg)
+![w:410](images/car-jumping-crash.jpg)
 
 <div class="ask">
 
 Four jurisdictions required the port. The distance from the port to a connected appliance turned out to be three steps:
 
-- **A $209 second computer**
+- **A $100+ second computer**
 - **An installation**
 - **A network credential typed in a basement**
 
-Every one of them had to be crossed voluntarily, by a customer who did not know the port existed.
+Every one of them had to be crossed by a customer who did not know (or care) that the port existed, and was under no obligation to use it.
 
-**Nobody designing this in 2013 could have known the jump was that wide.**<br>**We know now.**
+**Nobody designing this in 2013 could have known the jump was that wide, or could have done substantially differently. We know now.**
 
 </div>
 
@@ -363,17 +361,33 @@ li { font-size: 21px; padding: 3px 0; }
 
 ### THE PREMISE, AND WHAT HAPPENED TO IT
 
-## The premise is gone, and the cost case inverted with it
+## The premise is gone, and the cost case has inverted
 
-- **The 2013 premise was that an appliance could not be assumed to have a network connection.** So put the radio in a replaceable module and standardize the socket.
+- **In 2013 appliances did not have a network connection.** So put the network interface in a replaceable module and standardize the socket.
 - **Rheem's ProTerra page lists both on one model:** "Built-in Wi-Fi Powered by EcoNet" **and** a "built-in EcoPort (CTA-2045 port)." **The customer paid for two connections, and exactly one of them is reachable by anyone other than Rheem.**
-- **And a physical port splits the product line.**<br>The mandate is why any of these models exist, and nobody would have built them otherwise. But a port costs money and four states require it, so it ships as a demand-response variant: Rheem's compliance bulletin lists eight, by state, and the cheapest carries the port and **no Wi-Fi at all**. **Firmware does not split a product line.**
+- **And a physical port splits the product line.**<br>The mandate is why any of these models exist, and nobody would have built them otherwise. But a port costs money and four states require it, so it ships as a demand-response variant: Rheem's compliance bulletin lists eight, by state, and the cheapest carries the port and **no Wi-Fi at all**. **Firmware does not split a product line, but a significant BOM cost does.**
 
 <div class="band">
 
-**In 2013 a radio in every appliance was the expensive option.**<br>On a tank that already ships with Wi-Fi, the module is a second computer doing what the first one already does. **Mandating the socket is now the more expensive way to reach the same appliance.**
+**In 2013 a radio in every appliance was the expensive option.**<br>On a water heater that already ships with Wi-Fi, the module is a second computer doing what the first one already does. **Mandating the socket is now the more expensive way to reach the same appliance.**
 
 </div>
+
+---
+
+<!-- _class: tight -->
+
+<style scoped>
+li { font-size: 21px; padding: 3px 0; }
+</style>
+
+### THE RIGHT LEVEL FOR A GRID SIGNAL
+
+## The grid should be concerned with a customer's total demand, not individual appliances
+
+- **A DR event is addressed to one appliance, so the model starts from a list of houses.**<br>Somebody has to know it exists, be permitted to reach it, and keep that path alive for twelve to fifteen years.
+- **A price is appliance agnostic, addressed to nobody in particular.**<br>One signal, the same for everyone on the tariff, and nobody enrolled in anything.<br>**The water heater reads it and decides for itself.**
+- **Control can be local, or in the cloud.**<br>A customer operating their own equipment, through a controller they chose, is exactly right.<br>**Act on a price it reads for itself, rather than wait to be addressed by name.**
 
 ---
 
@@ -397,20 +411,24 @@ A **price with a forward schedule**, over an open protocol, from a server the cu
 
 #### Interface B, inside the house
 
-If the customer runs an energy manager, it should be able to **drive the tank directly, over the home network**.
+If the customer runs an energy manager, it should be able to **drive the appliance directly, over the home network**.
 
 </div>
 </div>
 
 <div class="ask">
 
-**The appliance should be able to do either, in the same product, so the customer chooses.** Receive the price and decide for itself, or take direction from something in the house that has the price.
+**The appliance should be able to do either, so the customer chooses.** Receive the price and decide for itself, or take direction from something in the house that has the price.
 
 </div>
 
 ---
 
 <!-- _class: tight -->
+
+<style scoped>
+table td:first-child { white-space: nowrap; }
+</style>
 
 ### WHAT IS ALREADY IN THE APPLIANCE, AND WHAT TO ADD
 
@@ -424,8 +442,8 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 
 | | |
 | --- | --- |
-| **OpenADR 3**, to the grid | A price with a forward schedule, a day ahead in one object, from **a server address the owner can change**. Ordinary web technology: HTTPS over TLS, JSON, OAuth 2. **Explicitly not PKI.** Against a public tariff server, all the tank holds is a URL |
-| **Matter**, inside the house | Local control by whatever energy manager the customer runs, **and the tank appearing in the home ecosystem app the customer already uses.** **Water Heater Management** for the tank's own controls, **Device Energy Management** for the energy semantics a manager negotiates against |
+| **OpenADR 3**<br>to the grid | A price with a forward schedule, a day ahead in one object, from **a server address the owner can change**. Ordinary web technology: HTTPS over TLS, JSON, OAuth 2. **Explicitly not PKI.** Against a public tariff server, all the appliance holds is a URL |
+| **Matter**<br>inside the house | Local control by whatever energy manager the customer runs, **and the appliance appearing in the home ecosystem app the customer already uses.** **Water Heater Management** for the appliance's own controls, **Device Energy Management** for the energy semantics a manager negotiates against |
 
 <div class="ask">
 
@@ -440,6 +458,7 @@ If the customer runs an energy manager, it should be able to **drive the tank di
 <style scoped>
 table { font-size: 17.5px; }
 table td, table th { padding: 6px 10px; }
+table td:first-child { white-space: nowrap; }
 .cap { font-size: 16px; }
 .band { font-size: 17px; padding: 12px 18px; }
 </style>
@@ -451,18 +470,18 @@ table td, table th { padding: 6px 10px; }
 | | Matter only | OpenADR 3 only | Both |
 | --- | :--: | :--: | :--: |
 | **Can it get a price?** | Only if something on the home network already has one | Yes, directly | Yes, either way |
-| **Can an energy manager drive it?** | Fully | Weakly | Fully |
+| **Can an energy manager drive it?** | Fully | Via price | Fully |
 | **Verdict** | **Enabled** | **Ensured, for price** | **Ensured, and controllable** |
 
 <div class="cap">
 
-**Matter is a home-network protocol.**<br>For a Matter-only water heater to act on a price, an energy manager the customer has to acquire must already have one. **That is the same shape of failure as the socket:** the appliance is ready, and a second purchase stands between it and participation. The distance is shorter and closing. Shorter is not zero.
+**Matter is local by construction. There is no cloud-mediated Matter.**<br>For a Matter-only water heater to act on a price, an energy manager the customer has to acquire must already have one. **That is the same shape of failure as the socket:** the appliance is ready, and a second purchase stands between it and participation. The distance is shorter and closing. Shorter is not zero.
 
 </div>
 
 <div class="band">
 
-**With both, an energy manager has three ways to work:** publish the local price over Matter's own price clusters, publish it over OpenADR 3 as a local server, or drive the tank directly over Device Energy Management. **And a house with no energy manager is still served.**
+**With both, an energy manager has three ways to work:** publish the local price over Matter's own price clusters, publish it over OpenADR 3 as a local server, or drive the appliance directly over Device Energy Management. **And a house with no energy manager is still served.**
 
 </div>
 
@@ -482,14 +501,14 @@ table td, table th { padding: 6px 10px; }
 
 | Write this, in the rule | Not this |
 | --- | --- |
-| A price with a forward schedule, over an open protocol, **received in the appliance itself** | "A modular port compliant with [named standard, named edition]" |
+| A price with a forward schedule, over an open protocol, **received by the appliance itself** | "A modular port compliant with [named standard, named edition]" |
 | A server address **the owner can change** | "The manufacturer shall provide a demand response interface" |
 | **Action on the last schedule with no network** | Nothing, which is what these rules say today about outages |
 | **Both** the water-heater-specific and the generic energy-management semantics | "Shall support [a smart home standard]" |
 
 <div class="bandc">
 
-**The same gap exists inside the standard I am recommending.**<br>The Matter Water Heater device type does not require Device Energy Management at all, and inside DEM every adjustment feature is optional. **A fully certified Matter water heater can ship with no forecast and no shiftability**, which is exactly why a rule must name the capability and not the protocol.
+**The same gap exists with Matter.**<br>The Matter Water Heater device type does not require Device Energy Management at all, and inside DEM every adjustment feature is optional. **A fully certified Matter water heater can ship with no forecast and no shiftability**, which is exactly why a rule must name the capability and not the protocol.
 
 </div>
 
@@ -500,9 +519,94 @@ table td, table th { padding: 6px 10px; }
 ## My proposal
 
 - **Retire CTA-2045 as a water heater requirement.**<br>Not an additional compliance path. Not a fix to the link above the socket. **Retire it.** The port competes with the better answer for the same dollars and the same engineering attention.
-- **Require instead, of the appliance itself, three things. One: both protocols.** OpenADR 3 to the grid, and Matter inside the house covering **both** Water Heater Management and Device Energy Management. **Two: at least one network interface**, integrated. Everyone will choose Wi-Fi, and that is fine. **Three: support for adding another**, as a USB-C host port for a class-compliant adapter. Ethernet or cellular becomes the customer's choice, without putting three radios in every unit.
+- **Require instead, of the appliance itself, three things.**<br>**One: both protocols.** OpenADR 3 to the grid, and Matter inside the house covering **both** Water Heater Management and Device Energy Management.<br>**Two: at least one network interface**, integrated. Everyone will choose Wi-Fi, and that is fine.<br>**Three: support for adding another**, as a USB-C host port for a class-compliant adapter. Ethernet or cellular becomes the customer's choice, without putting three radios in every unit.
 - **Write the capability and the test method. Put standards in an appendix.** Name OpenADR 3 and Matter. Name no edition of either, and no version number anywhere in the requirement itself. **Naming a protocol is not the mistake. Freezing an edition of it is**, and that is the mistake in force today.
 - **This needs no new legislation to start.**<br>Washington and Oregon already let a manufacturer ask the state to accept an equivalent open standard. **Nobody has ever asked.** The rules and the empty list are in the appendix.
+
+---
+
+<!-- _class: tight -->
+
+<style scoped>
+img { margin: 0 auto; }
+p { margin: 0; }
+.cap { font-size: 17px; margin-top: 12px; line-height: 1.5; }
+</style>
+
+### MY PRICE SERVER, AND THE HOME ASSISTANT INTEGRATION
+
+## OpenADR 3 price servers are here today, via EMS
+
+![w:800](images/diagrams/demo-architecture.svg)
+
+<div class="cap">
+
+**One device knows the retailer and the tariff, and the rest of the house reads the price from it.**
+**The price server**, with client tutorials: github.com/grid-coordination/price-server-user-guide
+**Home Assistant integration**, in the HACS default repository: github.com/grid-coordination/openadr3-ven-hass
+
+</div>
+
+---
+
+<!-- _class: tight -->
+
+<style scoped>
+img { margin: 0 auto; }
+p { margin: 0; }
+.cap { font-size: 17.5px; margin-top: 14px; line-height: 1.5; }
+</style>
+
+### INTERFACE A, WITHOUT A GATEWAY
+
+## OpenADR 3 price servers are here today, direct to appliance
+
+![w:820](images/diagrams/direct-to-appliance.svg)
+
+<div class="cap">
+
+**The Harvest heat pump runs the OpenADR 3 client itself, so all it holds is a URL.** No gateway to buy, nothing to enroll in, and no vendor cloud in the path.
+
+</div>
+
+---
+
+<!-- _class: tight -->
+
+<style scoped>
+img { margin: 0; }
+p { margin: 0; }
+.cap { font-size: 18px; margin-top: 16px; line-height: 1.45; }
+</style>
+
+### HACKING CTA-2045
+
+## Local control via CTA-2045
+
+![w:900](images/diagrams/cta2045-lan-bridge.svg)
+
+<div class="cap">
+
+**I put a SkyCentrics Ethernet UCM on a CTA-2045 water heater and reached it over the home network.**
+SPAN's PowerUp energy manager, in a smart panel on the same LAN, sent CTA-2045 commands, and the water heater shifted energy.
+**The UCM never reached a vendor cloud.**
+
+</div>
+
+---
+
+<!-- _class: tight -->
+
+<style scoped>
+li { font-size: 20px; padding: 6px 0; }
+</style>
+
+### THE CODE THAT DID IT
+
+## Both libraries are open source
+
+- **github.com/electrification-bus/python-cta2045**<br>Encodes and decodes the SGD-to-UCM message set, including shed, end shed, load up, critical peak and grid emergency.
+- **github.com/electrification-bus/cta2045-proxy**<br>Proxies the UCM to MQTT, and supports an appliance-agnostic data model.
 
 ---
 
@@ -520,7 +624,7 @@ table td, table th { padding: 6px 10px; }
 
 ## Obsolescence, and the patch obligation
 
-- **The obsolescence argument still holds, and it is the strongest part of the 2013 case.** A water heater lasts twelve to fifteen years and home networking does not stand still for twelve to fifteen years. Putting the radio in a replaceable module is the textbook answer to a component whose lifetime is shorter than its host's.
+- **The obsolescence argument still holds, and it is the strongest part of the 2013 case.** A water heater lasts twelve to fifteen years and home networking does not stand still for twelve to fifteen years. Putting the network interface in a replaceable module is the textbook answer to a component whose lifetime is shorter than its host's.
 - **The answer is that the replaceable part got smaller and cheaper.**<br>The USB-C host port is the replaceable radio, at $4.76 for an adapter instead of a $100 module, and a configurable server address is the replaceable cloud. **What has to survive fifteen years is a URL and an HTTPS client, not a radio.**
 - **The cost objection I take seriously is not the silicon.**<br>It is that a client in the appliance is a fifteen-year patch obligation on a company whose service organization exists to replace anodes.
 - **The answer is that the obligation already exists.**<br>The manufacturer accepted it the moment it shipped a cloud-connected model, and a second, open client on the same stack does not double it.
@@ -598,7 +702,7 @@ li { padding: 6px 0; font-size: 17px; }
 ## What the client actually has to implement
 
 - **Transport and identity.**<br>HTTPS over TLS, JSON payloads, OAuth 2 client credentials for the token. **Explicitly not PKI:** provisioning X.509 certificates into consumer devices is "daunting at best, or simply not supportable."
-- **A price-consuming client is a token fetch and two authenticated GETs**, `/programs` and `/events`, or MQTT push where the appliance sits behind a home router. **A server offering only public tariff information may accept unauthenticated requests, so all the tank holds is a URL.**
+- **A price-consuming client is a token fetch and two authenticated GETs**, `/programs` and `/events`, or MQTT push where the appliance sits behind a home router. **A server offering only public tariff information may accept unauthenticated requests, so all the appliance holds is a URL.**
 - **That the owner can change it is already a normative MUST.**<br>Verbatim: "A VEN MUST support end-user configuration of: VTN URL, clientID and clientSecret... but MUST support end-user reconfiguration." **The rule's job is to make an existing MUST testable**, not to invent a new requirement.
 - **A price is not a number, it is a schedule.**<br>A start, an ISO 8601 duration, and an ordered list of intervals: a day ahead in one object.
 - **The specification names this appliance.**<br>Verbatim: "VENs may be implemented within on-site customer devices such as **a water heater**..."
@@ -692,7 +796,7 @@ CTA standards news, **"CTA Launched Project CTA-2045-C, Modular Communications I
 
 - **What it is, stated fairly.**<br>AHRI 1430-2022 builds on CTA-2045 rather than replacing it. It adds test procedures, conformance conditions and appliance behavior requirements above the message set. Colorado and New York name it; Rheem's compliance bulletin treats the three as one family, "ANSI/CTA-2045-A, ANSI/CTA-2045-B or AHRI 1430."
 - **It fixes something real, and something CTA-2045 left open on purpose.**<br>NEEA: within CTA-2045 "the lack of descriptive SGD behavior in response to messaging was intentional," so two compliant water heaters could answer the same Shed request differently. 1430 constrains that. **It is a genuine improvement and I am not arguing against it.**
-- **It does not change what is on the other side of the socket.**<br>A 1430-compliant water heater still has a port and no radio. The customer still buys a module, installs it and joins it to Wi-Fi. **Nothing above the module is standardized by either document.**
+- **It does not change what is on the other side of the socket.**<br>A 1430-compliant water heater still has a port and no network interface. The customer still buys a module, installs it and joins it to Wi-Fi. **Nothing above the module is standardized by either document.**
 - **So it makes the appliance behave predictably once something is talking to it.** It does not make anything talk to it, and it does not let the customer choose who does.
 
 <div class="cap">
@@ -846,7 +950,7 @@ li { font-size: 15.5px; }
 ## The semantics are already expressible somewhere else
 
 - **The other standard's own text says so.**<br>OpenADR 3 User Guide, section 8.11: "OpenADR 3 is well suited to be a standard external protocol for CTA-2045B... For many capabilities of CTA-2045, e.g. sending prices, an emergency signal, or reporting energy use, there are existing mechanisms in OpenADR that implement the functionality. For a few capabilities, enumeration values specific to CTA-2045 have been added."
-- **Those enumerations are in the payload registry**, `CTA2045_REBOOT` and `CTA2045_SET_OVERRIDE_STATUS`, both pass-through for resources that support CTA-2045-B, and the user guide says a document giving an unambiguous mapping between the two standards is forthcoming. **Retiring the socket delivers the same semantics without the $209 part.**
+- **Those enumerations are in the payload registry**, `CTA2045_REBOOT` and `CTA2045_SET_OVERRIDE_STATUS`, both pass-through for resources that support CTA-2045-B, and the user guide says a document giving an unambiguous mapping between the two standards is forthcoming. **Retiring the socket delivers the same semantics without the $100+ part.**
 
 ---
 
@@ -865,7 +969,7 @@ li { font-size: 15.5px; }
 | **Open protocol in the appliance** | Point the water heater at a reference server on the bench. It connects and acts, with the manufacturer's cloud unreachable |
 | **Customer-configurable server** | Change the server address using only the appliance's own interface, with no vendor account and no vendor app. Time it |
 | **The price is consumed** | Publish a day-ahead price schedule. Observe the heating decision change |
-| **Local survival** | Deliver a schedule, then cut the WAN. The tank keeps acting on the retained schedule for the full horizon |
+| **Local survival** | Deliver a schedule, then cut the WAN. The appliance keeps acting on the retained schedule for the full horizon |
 | **Network interfaces** | Present Ethernet, Wi-Fi and cellular in turn, integrated or over USB-C. Each reaches the configured server |
 | **No enrollment** | Connect to a reference server with no account creation, no program enrollment and no intermediary. It receives and acts |
 
@@ -899,7 +1003,7 @@ li { padding: 7px 0; font-size: 18px; }
 ## The energy clusters, and why both families are needed
 
 - **Device Energy Management, 0x0098, and DEM Mode.**<br>The appliance publishes a `Forecast` and the manager reshapes it: `PowerAdjustRequest`, `StartTimeAdjustRequest`, `ModifyForecastRequest`, `PauseRequest`, `ResumeRequest`. `ESAType` value 2 is `WaterHeating`, alongside EVSE, space heating, battery storage, solar and pool pumps. **One data model types the whole house.**
-- **Neither cluster family is sufficient alone.**<br>Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a tank is.
+- **Neither cluster family is sufficient alone.**<br>Water Heater Management without DEM gives a manager appliance controls and no way to negotiate a plan against a price. DEM without Water Heater Management gives it energy semantics and no idea what a water heater is.
 - **Consent is recorded per adjustment.**<br>Every DEM adjustment records whether the house or the grid asked for it, so the customer can refuse grid-driven optimization and keep local optimization, and that setting has no network write access at all.
 - **Matter is local by construction:** there is no cloud-mediated Matter, so this is a home-network capability and cannot cross the grid boundary by itself. **Matter 1.5, November 2025, added an electrical energy tariff device type**, so Matter has somewhere to put a price and still no way to fetch one from the grid. **Something in the house still has to hold the grid connection.**
 

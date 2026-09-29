@@ -99,8 +99,8 @@ nav .nav-links a.active {
 
 .banner {
   background: var(--nav-bg-raised);
-  color: var(--fg-inverse-muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--nav-fg);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   font-size: var(--text-sm);
   line-height: var(--leading-snug);
   /* The page column lives on the banner's own content box, because Jekyll
@@ -119,7 +119,15 @@ nav .nav-links a.active {
   font-weight: var(--weight-normal);
 }
 .banner a:hover { color: var(--accent-on-dark); }
-.banner + .banner { border-top: 1px solid rgba(255, 255, 255, 0.09); }
+.banner + .banner { border-top: 1px solid rgba(255, 255, 255, 0.14); }
+/* A dated announcement, set apart from the standing notice below it: an
+   accent-tinted surface, and an accent rule that also separates the stack
+   from the nav above. Both colors are mixed from existing tokens. */
+.banner--event {
+  background: color-mix(in srgb, var(--accent-dark) 38%, var(--nav-bg-raised));
+  box-shadow: inset 0 3px 0 var(--accent-on-dark);
+  color: var(--fg-inverse);
+}
 
 /* --- Headings ----------------------------------------------------------
    h1 carries an accent rule above it instead of being set in green, so the

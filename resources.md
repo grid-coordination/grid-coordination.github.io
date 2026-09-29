@@ -41,6 +41,16 @@ This is exactly the architecture Grid Coordination advocates: **dynamic power li
 
 *Grid Coordination's founder participates in this pilot through one of the partner organizations.*
 
+## Aligned work by others
+
+### The Utilize Coalition &mdash; measuring how well we use the grid we already have
+
+The [Utilize Coalition](https://www.utilizecoalition.org/) starts from an observation: "The power system is built to serve peak demand. However, electricity demand is near its peak in only a very limited number of hours per year. As a result, capacity across the entire power system often remains unused." Their answer is to define and measure utilization properly, so that spare capacity can be filled rather than duplicated. Their case is set out in [The Untapped Grid](https://www.utilizecoalition.org/untapped-grid), a 43-page analysis by [The Brattle Group](https://www.brattle.com/) published in March 2026, and developed further in [Beyond Peak: Defining, Measuring, and Optimizing Grid Utilization](https://www.utilizecoalition.org/defining-grid-utilization).
+
+**We endorse that premise without reservation, and the measurement agenda that follows from it.** Their closing recommendation is that transmission and distribution capacity ratings and limits are "frequently confidential", and that regulators and analysts should work with utilities and system operators to establish clear data definitions, confidentiality protections, and data-sharing processes. That is not an adjacent concern to this project. **A per-customer power limit cannot exist until somebody publishes what the limit is.** Their first recommendation is a precondition for our second signal.
+
+Where the two fit together is straightforward. Utilization is the **objective** and the metric. A dynamic price and a per-customer power limit are **one way** to get loads to move so that the objective is met, instead of overbuilding to a peak that occurs a few hours a year. That is our argument, not theirs.
+
 ## Past demonstrations
 
 Grid Coordination has demonstrated live OpenADR 3 dynamic pricing at the [2026 CEC/EPRI Electrification Summit](https://www.energy.ca.gov/event/workshop/2026-06/2026-cecepri-electrification-summit), the [CalFlexHub Symposium 2026](https://calflexhub.lbl.gov/events/) at Lawrence Berkeley National Lab, and the [2025 California Demand Flexibility Summit](https://www.energy.ca.gov/event/meeting/2025-05/2025-california-demand-flexibility-summit) hosted by the California Energy Commission. See [the demo](/demo) for what the system does and how it is built.

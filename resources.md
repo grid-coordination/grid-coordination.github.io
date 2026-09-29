@@ -45,11 +45,17 @@ This is exactly the architecture Grid Coordination advocates: **dynamic power li
 
 ### The Utilize Coalition &mdash; measuring how well we use the grid we already have
 
-The [Utilize Coalition](https://www.utilizecoalition.org/) starts from an observation: "The power system is built to serve peak demand. However, electricity demand is near its peak in only a very limited number of hours per year. As a result, capacity across the entire power system often remains unused." Their answer is to define and measure utilization properly, so that spare capacity can be filled rather than duplicated. Their case is set out in [The Untapped Grid](https://www.utilizecoalition.org/untapped-grid), a 43-page analysis by [The Brattle Group](https://www.brattle.com/) published in March 2026, and developed further in [Beyond Peak: Defining, Measuring, and Optimizing Grid Utilization](https://www.utilizecoalition.org/defining-grid-utilization).
+The [Utilize Coalition](https://www.utilizecoalition.org/) starts from an observation: "The power system is built to serve peak demand. However, electricity demand is near its peak in only a very limited number of hours per year. As a result, capacity across the entire power system often remains unused." Their answer is to define and measure utilization properly, so that spare capacity can be filled rather than duplicated. Their case is set out in [The Untapped Grid](https://www.utilizecoalition.org/untapped-grid), a 43-page analysis prepared by [The Brattle Group](https://www.brattle.com/) for GridLab and the Utilize Coalition in March 2026, and developed further in [Beyond Peak: Defining, Measuring, and Optimizing Grid Utilization](https://www.utilizecoalition.org/defining-grid-utilization).
 
 **We endorse that premise without reservation, and the measurement agenda that follows from it.** Their closing recommendation is that transmission and distribution capacity ratings and limits are "frequently confidential", and that regulators and analysts should work with utilities and system operators to establish clear data definitions, confidentiality protections, and data-sharing processes. That is not an adjacent concern to this project. **A per-customer power limit cannot exist until somebody publishes what the limit is.** Their first recommendation is a precondition for our second signal.
 
-Where the two fit together is straightforward. Utilization is the **objective** and the metric. A dynamic price and a per-customer power limit are **one way** to get loads to move so that the objective is met, instead of overbuilding to a peak that occurs a few hours a year. That is our argument, not theirs.
+Where the two fit together is straightforward, and the report draws the line itself: "Not a Policy Proposal. This paper quantifies the impact of increased system utilization, but does not propose specific policy mechanisms that could encourage increased utilization." Utilization is the **objective** and the metric. A dynamic price and a per-customer power limit are **one way** to get loads to move so that the objective is met, instead of overbuilding to a peak that occurs a few hours a year. That is our argument, not theirs.
+
+*Grid Coordination's founder works with one of the coalition's founding members on other projects.*
+
+## Upcoming
+
+**[CEC Commissioner Workshop on Interoperability](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability), November 4, 2026**, 9:00 a.m. to 1:00 p.m. Pacific, remote only. The California Energy Commission is convening stakeholders on alignment among OpenADR 3.1, Matter, IEEE 2030.5, ISO 15118, OCPI and OCPP, under [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02). Grid Coordination will attend, and our founder has been invited to present. See [Policy & Advocacy](/policy) for what the notice says and why it matters here.
 
 ## Past demonstrations
 

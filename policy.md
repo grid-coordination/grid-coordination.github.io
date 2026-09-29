@@ -40,6 +40,16 @@ A customer has a right to the real-time data their own meter produces, locally, 
 
 - **[Two Signals, Six Tests](/presentations/two-signals-six-tests.html)** &mdash; prepared for California PUC and CEC staff. The two problems, the two signals that answer them, and six tests for judging any flexibility proposal. [PDF](/presentations/two-signals-six-tests.pdf) &middot; [one-page handout](/presentations/two-signals-six-tests-onepager.pdf).
 
+### Upcoming: CEC Commissioner Workshop on Interoperability
+
+**Wednesday, November 4, 2026, 9:00 a.m. to 1:00 p.m. Pacific. Remote only, via Zoom.** [Event page](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability) &middot; [Notice and agenda](https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=120537&tn=272800) (TN 272800) &middot; [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02), Load Flexibility Policy & Planning.
+
+This is the proceeding this project exists to inform. The CEC's own notice says the workshop "will focus on alignment among communication protocols and standards, including OpenADR 3.1, Matter, IEEE 2030.5, ISO 15118, Open Charge Point Interface (OCPI), and Open Charge Point Protocol (OCPP), to support scalable, privacy-preserving automation and consumer-authorized control." Its background section states that the CEC is considering an approach that "supports dynamic signals, including price, greenhouse gas emissions, and grid conditions" and "enables consumer-authorized control."
+
+Two of the three standards advocated here are named in that list. The two things the CEC says it wants, dynamic signals including price and control the customer authorizes, are what the first and third of our [six tests](/presentations/two-signals-six-tests.html) ask of any flexibility proposal.
+
+Grid Coordination will attend, and our founder has been invited to present. A detailed agenda is expected in the docket before the workshop.
+
 ### California Energy Commission &mdash; Flexible Demand Appliance Standards
 
 We have contributed formal responses to CEC proceedings on flexible demand standards:

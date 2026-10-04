@@ -443,6 +443,10 @@ This has been in the standard since 3.1.0. Nothing needs to be invented. **What 
 
 <!-- _class: dense2 tight -->
 
+<style scoped>
+li { font-size: 17px; }
+</style>
+
 ### IEEE 2030.5
 
 ## Built to control inverters, not to manage a house
@@ -454,7 +458,7 @@ This has been in the standard since 3.1.0. Nothing needs to be invented. **What 
 </div>
 
 - **The unit is one inverter.** A modern house has solar, a battery and one or two bidirectional chargers. Control each separately and **nobody is managing the total.**
-- **CSIP does express export limits at a point of common coupling.** The unit available there is the inverter or the aggregate of inverters. **It is not the whole service connection including load**, which is what a transformer actually sees.
+- **CSIP does express export limits at a point of common coupling.** The unit available there is the inverter or the aggregate of inverters. **It is not the whole service connection including load**, which is what a transformer actually sees. CSIP puts communications below the aggregator or the site management system **out of scope**.
 - **In US residential practice the customer is not in the path.** Manufacturers translate 2030.5 into proprietary commands or proxy it to their own client. No seller of electricity offers one a direct connection to its 2030.5 server.
 - **And the identity model is why.** Every client needs an X.509 certificate the utility's PKI will accept. Reasonable for an inverter the utility answers for. **It structurally excludes a customer running their own client, or an open-source one.**
 
@@ -817,12 +821,12 @@ This is why the translation belongs in the house. **Only the house knows the car
 | --- | --- |
 | **Highly dynamic prices** | Thin. Price servers exist, MIDAS in California. Neither is a path an appliance can rely on |
 | **Demand response events** | OpenADR 2.0b, cloud to cloud. Some IEEE 2030.5 |
-| **Functional control of devices** | IEEE 2030.5, **inverters only** |
+| **Functional control of devices** | IEEE 2030.5. CSIP certifies **DER clients, aggregator clients and utility servers** |
 | **Grid alerts** | No machine path |
-| **Distribution: per-device control** | IEEE 2030.5, **inverters only** |
-| **Distribution: per-site control** | Thin. IEEE 2030.5 where it exists at all |
+| **Distribution: per-device control** | IEEE 2030.5, through CSIP, at the aggregator and the inverter control unit |
+| **Distribution: per-site control** | Thin. The connection-point limit is a **CSIP-AUS extension**, absent from base IEEE 2030.5 |
 
-> **This is the answer to "why not just use what commercial and grid-scale already use."** The one solid entry is inverters, the unit of management is wrong for a house, and 2.0b is a cloud-to-cloud protocol that was never meant to reach an appliance.
+> **This is the answer to "why not just use what commercial and grid-scale already use."** CSIP puts everything below the aggregator or the site management system **out of scope**, so none of this reaches the appliances in a house, and 2.0b is a cloud-to-cloud protocol that was never meant to try.
 
 ---
 
@@ -949,7 +953,7 @@ The standard permits a local interface. **Everything on the left conforms to it,
 ## What the partial marks are conceding
 
 - **OCPP 2.1 defines tariff messages.** That is real and current, and it is why OCPP scores partial on price rather than blank. The unit of management is still one charger.
-- **CSIP and IEEE 2030.5 can set an export limit at the point of common coupling.** Also real, and also why that cell is partial rather than blank. The limit governs the inverter rather than the service connection, and it is offered to a utility program rather than to a residential customer.
+- **CSIP and IEEE 2030.5 can set an export limit at the point of common coupling.** Also real, and also why that cell is partial rather than blank. **The connection-point limit is a CSIP-AUS extension**, absent from IEEE's 2013, 2018 and 2023 model builds, and it is offered to a utility program rather than to a residential customer.
 - **Both are conceded before they are raised.** Neither carries a price and a connection limit to every appliance in the house, over one open protocol, to a server the customer can point somewhere else. That is what the scorecard is scoring.
 
 ---

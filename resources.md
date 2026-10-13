@@ -55,6 +55,8 @@ Where the two fit together is straightforward, and the report draws the line its
 
 ## Upcoming
 
+**[Connected Home Energy Forum](https://www.openadr.org/connected-home-energy-forum), October 26&ndash;27, 2026**, JW Marriott Berlin, co-located with the Connectivity Standards Alliance Member Meeting. Convened by the OpenADR Alliance on how Matter and OpenADR work together as EV chargers, heat pumps, batteries, solar inverters and appliances come to need each other. Registration is free and open to everybody. Our founder will be participating.
+
 **[CEC Commissioner Workshop on Interoperability](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability), November 4, 2026**, 9:00 a.m. to 1:00 p.m. Pacific, remote only. The California Energy Commission is convening stakeholders on alignment among OpenADR 3.1, Matter, IEEE 2030.5, ISO 15118, OCPI and OCPP, under [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02). Grid Coordination will attend, and our founder has been invited to present. See [Policy & Advocacy](/policy) for what the notice says and why it matters here.
 
 ## Past demonstrations

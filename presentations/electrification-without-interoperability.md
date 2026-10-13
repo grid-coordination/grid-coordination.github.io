@@ -216,7 +216,7 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 | | An import and export capacity limit for the site |
 | --- | --- |
-| **OpenADR 3** | Yes, as event payloads |
+| **OpenADR 3** | A **dynamic operating envelope**: a schedule of limits, with a default the device falls back to when communications are lost |
 | **EEBUS** | **Power Envelope**, defined at "the building's grid connection point", import and export, time-varying, with a declared fallback |
 | **Matter** | A power threshold is defined in the Application Cluster specification |
 

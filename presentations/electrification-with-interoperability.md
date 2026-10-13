@@ -304,12 +304,12 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 ## The customer agrees to the capacity limit, and is paid for it
 
 - **Nobody is telling anyone what they may draw in their own house.** A capacity limit is something a customer opts into: accept a cap, and get connected sooner, or cheaper, or get paid for the flexibility.
-- **Regulators are already ordering it.** California has directed its two largest utilities to establish a standardized tariffed flexible connection.
+- **Regulators are already mandating it.** California has directed its two largest utilities to establish a standardized tariffed flexible connection.
 - **The commercial model is not the gap.** The customer signs the agreement, and then nothing tells the equipment in the house what was agreed.
 
 <div class="band">
 
-**The carrier is the gap.** A limit that lives only in a contract is enforced by the customer, by hand, or not at all.
+**Communicating the limit is the gap.** A limit that lives only in a contract is enforced by the customer, by hand, or not at all.
 
 </div>
 

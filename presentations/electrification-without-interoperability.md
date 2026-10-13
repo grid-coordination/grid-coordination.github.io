@@ -273,8 +273,8 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 | Test | Verdict | In the released specification |
 | --- | --- | --- |
 | **1. An objective, not operation** | <span class="copper">**Not met**</span> | A Charging Schedule Function with default and **dispatch** schedules |
-| **2. Open all the way to the appliance** | <span class="green">**Met**</span> | Mapped onto an open protocol that terminates on the charger |
-| **3. A server the customer chooses** | <span class="copper">**Not met**</span> | "server address" and "endpoint": zero occurrences |
+| **2. Open all the way to the appliance** | <span class="copper">**Not met**</span> | The open protocol runs only upstream: the charger must have internet access, and connects to "the dedicated server, as described by the OEM". Nothing on the customer's own network can reach it |
+| **3. A server the customer chooses** | <span class="copper">**Not met**</span> | A new manager is allowed only after the vendor's cloud has been dark for seven days, and only another upstream manager |
 | **4. Direct from the utility** | <span class="copper">**Not met**</span> | Aggregator mediated throughout |
 | **5. A limit that holds locally** | <span class="copper">**Not met**</span> | "capacity limit", "import limit", "export limit": zero occurrences |
 | **6. The customer who cannot respond** | <span class="green">**Met**</span> | A local override, which expires every time the vehicle is unplugged |

@@ -212,9 +212,9 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <!-- _class: dense -->
 
-## Three standards already define a connection limit
+## Three standards already define a capacity limit
 
-| | A connection-level import/export limit |
+| | An import and export capacity limit for the site |
 | --- | --- |
 | **OpenADR 3** | Yes, as event payloads |
 | **EEBUS** | **Power Envelope**, defined at "the building's grid connection point", import and export, time-varying, with a declared fallback |
@@ -281,15 +281,17 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 ---
 
-## Yes, and also capacity
+<!-- _class: dense2 -->
 
-- **Everything you will hear tomorrow is right, and none of it is enough on its own.** Matter makes the home coherent and does it locally: one commissioning experience across vendors, a price cluster already in the specification, and no cloud in the middle. OpenADR carries the grid's need to the customer's own equipment. Open source removes the cost of implementing both.
-- **The price half is converging.** Four of the standards in this room carry a price today, and one of them is serving real prices to anybody who asks, right now, with no account.
-- **The capacity half is defined in several specifications, required by none, certified by none, and absent from the marks.**
+## The customer agrees to the capacity limit, and is paid for it
+
+- **Nobody is telling anyone what they may draw in their own house.** A capacity limit is something a customer opts into: accept a cap, and get connected sooner, or cheaper, or get paid for the flexibility.
+- **Regulators are already ordering it.** California has directed its two largest utilities to establish a standardized tariffed flexible connection.
+- **The commercial model is not the gap.** The customer signs the agreement, and then nothing tells the equipment in the house what was agreed.
 
 <div class="band">
 
-**This is not a gap in anyone's design. It is a gap in what we ask for.**
+**The carrier is the gap.** A limit that lives only in a contract is enforced by the customer, by hand, or not at all.
 
 </div>
 
@@ -302,7 +304,7 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 ## When you write a program, a tariff or a procurement, ask for both
 
 - **Ask for a price the device can read**, from a server the customer can point somewhere else.
-- **Ask for a connection limit the device must respect**, that holds when the network is down.
+- **Ask for a capacity limit the device must respect**, that holds when the network is down.
 - **Then certify that it does.** A mark that certifies dispatch and neither signal tells a buyer nothing about whether the grid can be protected.
 
 <div class="cta">
@@ -322,7 +324,7 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 ## Four questions I would like your answers to
 
 - **What is the biggest blocker:** the specification, the obligation, or the business model?
-- **Who should own the connection limit?** The DNO publishes it, the customer lives under it, the device obeys it, and today no one carries it between them.
+- **Who should own the capacity limit?** The DNO publishes it, the customer lives under it, the device obeys it, and today no one carries it between them.
 - **What evidence would unlock investment?** Name the specific proof your organization would need.
 - **If a limit arrived at the house tomorrow, what in your product would act on it?**
 

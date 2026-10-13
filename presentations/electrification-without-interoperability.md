@@ -217,23 +217,20 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 | --- | --- |
 | **OpenADR 3** | Yes, as event payloads |
 | **EEBUS** | **Power Envelope**, defined at "the building's grid connection point", import and export, time-varying, with a declared fallback |
-| **Matter** | `PowerThresholdStruct` is defined in the Application Cluster specification |
-| **S2 / EN 50491-12-2** | No site-level construct, and the design FAQ rules out faking one by aggregating devices |
-| **HCA Energy Management 1.0** | No power quantity of any kind occurs in the specification |
+| **Matter** | A power threshold is defined in the Application Cluster specification |
 
 ---
 
 <!-- _class: dense2 -->
 
-## The design work is done. The requirement is missing.
+## We know how to do this. Now we have to require it.
 
-- **This room specified the object years ago.** EEBUS defines a Power Envelope at the building's grid connection point, import and export, time-varying, with a declared fallback. That is the right object, defined in the right place, and it predates most of this conversation.
-- **Nothing obliges a device to receive one.** Not a standard, not a programme, not a procurement.
-- **What does get fielded caps the enrolled devices rather than the connection.** A limit that binds only the appliances in a scheme leaves the transformer exposed to everything else in the house.
+- **Nothing obliges a device to receive one.** Not a standard, not a program, not a procurement.
+- **The limit must be on the connection, not the device.** Today's programs cap the appliances you enrolled, which leaves the transformer exposed to everything else in the house.
 
 <div class="band">
 
-**The gap is not invention. It is obligation.** The objects exist in several of the standards represented in this room. Nothing requires a device to receive one, and nothing certifies that it does.
+**No certification program tests whether a device can receive a limit.**
 
 </div>
 
@@ -241,22 +238,22 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <!-- _class: dense2 -->
 
-### WHAT HAPPENS WHEN THE INSTRUMENT LEAVES THE INTERFACE OUT OF SCOPE
+### OF 376 PRODUCTS REGISTERED UNDER THE EU CODE OF CONDUCT
 
-## 92.57 per cent
+## 92.57 percent
 
 - The **EU Code of Conduct on interoperability of energy smart appliances** declares the communication layer out of scope.
-- The Commission's own JRC evaluation counted **376 registered compliant products**.
+- The Commission's own evaluation counted **376 registered compliant products**.
 
 | How the capability is implemented | Share |
 | --- | --- |
-| **Manufacturer cloud digital twin** | **92.57%** |
+| **A vendor proprietary protocol to their own cloud** | **92.57%** |
 | Built into the appliance | 6.90% |
 | Dongle | 0.53% |
 
 <div class="cap">
 
-Published by the regulator that wrote the instrument. **Leave the interface out of scope and the market fills it with a cloud you do not control and cannot certify.** The structural answer is a standard that is local by construction, which is what makes tomorrow's Matter session worth your attention.
+These are the Commission's own numbers, about its own rule. **Say nothing about how the appliance connects, and the market answers with a vendor cloud.** Matter is the counter-example, because it is local by construction, which is what makes tomorrow's session worth your attention.
 
 </div>
 
@@ -283,7 +280,7 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 - **Everything you will hear tomorrow is right, and none of it is enough on its own.** Matter makes the home coherent and does it locally: one commissioning experience across vendors, a price cluster already in the specification, and no cloud in the middle. OpenADR carries the grid's need to the customer's own equipment. Open source removes the cost of implementing both.
 - **The price half is converging.** Four of the standards in this room carry a price today, and one of them is serving real prices to anybody who asks, right now, with no account.
-- **The capacity half has objects and no obligations.** It is defined in several specifications, required by none, certified by none, and absent from the marks.
+- **The capacity half is defined in several specifications, required by none, certified by none, and absent from the marks.**
 
 <div class="band">
 
@@ -297,7 +294,7 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 ### ONE ASK
 
-## When you write a programme, a tariff or a procurement, ask for both
+## When you write a program, a tariff or a procurement, ask for both
 
 - **Ask for a price the device can read**, from a server the customer can point somewhere else.
 - **Ask for a connection limit the device must respect**, that holds when the network is down.
@@ -307,7 +304,7 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 <span class="lbl">The ask</span>
 
-**Nobody in this room has to invent anything to do this.** The objects already exist in the standards you already build on. **Put them in the next requirement you write, and the market will deliver them inside two years.**
+**Nobody in this room has to invent anything to do this.** Both signals are already defined in the standards you already build on. **Put them in the next requirement you write, and the market will deliver them inside two years.**
 
 </div>
 
@@ -319,9 +316,9 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 ## Four questions I would like your answers to
 
-- **What is the biggest blocker:** the objects, the obligation, or the business model?
+- **What is the biggest blocker:** the specification, the obligation, or the business model?
 - **Who should own the connection limit?** The DNO publishes it, the customer lives under it, the device obeys it, and today no one carries it between them.
-- **What evidence would unlock investment?** Name the specific proof your organisation would need.
+- **What evidence would unlock investment?** Name the specific proof your organization would need.
 - **If a limit arrived at the house tomorrow, what in your product would act on it?**
 
 <div class="band">

@@ -1625,15 +1625,7 @@ section img { display: block; margin: 0 auto; }
 </tr>
 <tr>
 <td><strong>Matter</strong></td>
-<td><code>PowerThresholdStruct</code> is defined in the Application Cluster specification</td>
-</tr>
-<tr>
-<td><strong>S2 / EN 50491-12-2</strong></td>
-<td>No site-level construct, and the design FAQ rules out faking one by aggregating devices</td>
-</tr>
-<tr>
-<td><strong>HCA Energy Management 1.0</strong></td>
-<td>No power quantity of any kind occurs in the specification</td>
+<td>A power threshold is defined in the Application Cluster specification</td>
 </tr>
 </tbody>
 </table>
@@ -1852,14 +1844,13 @@ section img { display: block; margin: 0 auto; }
 .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
 ;" data-marpit-pagination-total="14">
-<h2 id="the-design-work-is-done-the-requirement-is-missing">The design work is done. The requirement is missing.</h2>
+<h2 id="we-know-how-to-do-this-now-we-have-to-require-it">We know how to do this. Now we have to require it.</h2>
 <ul>
-<li><strong>This room specified the object years ago.</strong> EEBUS defines a Power Envelope at the building's grid connection point, import and export, time-varying, with a declared fallback. That is the right object, defined in the right place, and it predates most of this conversation.</li>
-<li><strong>Nothing obliges a device to receive one.</strong> Not a standard, not a programme, not a procurement.</li>
-<li><strong>What does get fielded caps the enrolled devices rather than the connection.</strong> A limit that binds only the appliances in a scheme leaves the transformer exposed to everything else in the house.</li>
+<li><strong>Nothing obliges a device to receive one.</strong> Not a standard, not a program, not a procurement.</li>
+<li><strong>The limit must be on the connection, not the device.</strong> Today's programs cap the appliances you enrolled, which leaves the transformer exposed to everything else in the house.</li>
 </ul>
 <div class="band">
-<p><strong>The gap is not invention. It is obligation.</strong> The objects exist in several of the standards represented in this room. Nothing requires a device to receive one, and nothing certifies that it does.</p>
+<p><strong>No certification program tests whether a device can receive a limit.</strong></p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -2076,11 +2067,11 @@ section img { display: block; margin: 0 auto; }
 .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
 ;" data-marpit-pagination-total="14">
-<h3 id="what-happens-when-the-instrument-leaves-the-interface-out-of-scope">WHAT HAPPENS WHEN THE INSTRUMENT LEAVES THE INTERFACE OUT OF SCOPE</h3>
-<h2 id="9257-per-cent">92.57 per cent</h2>
+<h3 id="of-376-products-registered-under-the-eu-code-of-conduct">OF 376 PRODUCTS REGISTERED UNDER THE EU CODE OF CONDUCT</h3>
+<h2 id="9257-percent">92.57 percent</h2>
 <ul>
 <li>The <strong>EU Code of Conduct on interoperability of energy smart appliances</strong> declares the communication layer out of scope.</li>
-<li>The Commission's own JRC evaluation counted <strong>376 registered compliant products</strong>.</li>
+<li>The Commission's own evaluation counted <strong>376 registered compliant products</strong>.</li>
 </ul>
 <table>
 <thead>
@@ -2091,7 +2082,7 @@ section img { display: block; margin: 0 auto; }
 </thead>
 <tbody>
 <tr>
-<td><strong>Manufacturer cloud digital twin</strong></td>
+<td><strong>A vendor proprietary protocol to their own cloud</strong></td>
 <td><strong>92.57%</strong></td>
 </tr>
 <tr>
@@ -2105,7 +2096,7 @@ section img { display: block; margin: 0 auto; }
 </tbody>
 </table>
 <div class="cap">
-<p>Published by the regulator that wrote the instrument. <strong>Leave the interface out of scope and the market fills it with a cloud you do not control and cannot certify.</strong> The structural answer is a standard that is local by construction, which is what makes tomorrow's Matter session worth your attention.</p>
+<p>These are the Commission's own numbers, about its own rule. <strong>Say nothing about how the appliance connects, and the market answers with a vendor cloud.</strong> Matter is the counter-example, because it is local by construction, which is what makes tomorrow's session worth your attention.</p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -2584,7 +2575,7 @@ section img { display: block; margin: 0 auto; }
 <ul>
 <li><strong>Everything you will hear tomorrow is right, and none of it is enough on its own.</strong> Matter makes the home coherent and does it locally: one commissioning experience across vendors, a price cluster already in the specification, and no cloud in the middle. OpenADR carries the grid's need to the customer's own equipment. Open source removes the cost of implementing both.</li>
 <li><strong>The price half is converging.</strong> Four of the standards in this room carry a price today, and one of them is serving real prices to anybody who asks, right now, with no account.</li>
-<li><strong>The capacity half has objects and no obligations.</strong> It is defined in several specifications, required by none, certified by none, and absent from the marks.</li>
+<li><strong>The capacity half is defined in several specifications, required by none, certified by none, and absent from the marks.</strong></li>
 </ul>
 <div class="band">
 <p><strong>This is not a gap in anyone's design. It is a gap in what we ask for.</strong></p>
@@ -2805,7 +2796,7 @@ section img { display: block; margin: 0 auto; }
             text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
 ;" data-marpit-pagination-total="14">
 <h3 id="one-ask">ONE ASK</h3>
-<h2 id="when-you-write-a-programme-a-tariff-or-a-procurement-ask-for-both">When you write a programme, a tariff or a procurement, ask for both</h2>
+<h2 id="when-you-write-a-program-a-tariff-or-a-procurement-ask-for-both">When you write a program, a tariff or a procurement, ask for both</h2>
 <ul>
 <li><strong>Ask for a price the device can read</strong>, from a server the customer can point somewhere else.</li>
 <li><strong>Ask for a connection limit the device must respect</strong>, that holds when the network is down.</li>
@@ -2813,7 +2804,7 @@ section img { display: block; margin: 0 auto; }
 </ul>
 <div class="cta">
 <p><span class="lbl">The ask</span></p>
-<p><strong>Nobody in this room has to invent anything to do this.</strong> The objects already exist in the standards you already build on. <strong>Put them in the next requirement you write, and the market will deliver them inside two years.</strong></p>
+<p><strong>Nobody in this room has to invent anything to do this.</strong> Both signals are already defined in the standards you already build on. <strong>Put them in the next requirement you write, and the market will deliver them inside two years.</strong></p>
 </div>
 <footer>grid-coordination.energy<span class="who">DC Jackson</span></footer>
 </section>
@@ -3033,9 +3024,9 @@ section img { display: block; margin: 0 auto; }
 <h3 id="for-your-tables">FOR YOUR TABLES</h3>
 <h2 id="four-questions-i-would-like-your-answers-to">Four questions I would like your answers to</h2>
 <ul>
-<li><strong>What is the biggest blocker:</strong> the objects, the obligation, or the business model?</li>
+<li><strong>What is the biggest blocker:</strong> the specification, the obligation, or the business model?</li>
 <li><strong>Who should own the connection limit?</strong> The DNO publishes it, the customer lives under it, the device obeys it, and today no one carries it between them.</li>
-<li><strong>What evidence would unlock investment?</strong> Name the specific proof your organisation would need.</li>
+<li><strong>What evidence would unlock investment?</strong> Name the specific proof your organization would need.</li>
 <li><strong>If a limit arrived at the house tomorrow, what in your product would act on it?</strong></li>
 </ul>
 <div class="band">

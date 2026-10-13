@@ -178,7 +178,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 | **What it is** | What energy costs right now | How much power this connection may draw right now |
 | **Unit** | The entire grid | One service connection |
 | **What it solves** | Balancing the grid | Protecting the transformer |
-| **What it does** | Moves energy across time | Moves nothing. Caps power, immediately |
+| **What it does** | Moves energy across time | Caps power, immediately |
 | **Without it** | Nobody has a reason to shift | Nothing stops everyone shifting at once |
 
 <div class="cap">

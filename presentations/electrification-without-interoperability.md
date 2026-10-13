@@ -147,7 +147,7 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 | **What it is** | What energy costs right now | How much power this connection may draw right now |
 | **Unit** | The entire grid | One service connection |
 | **What it solves** | Balancing the grid | Protecting the transformer |
-| **What it does** | Moves energy across time | Moves nothing. Caps power, immediately |
+| **What it does** | Moves energy across time | Caps power, immediately |
 | **Without it** | Nobody has a reason to shift | Nothing stops everyone shifting at once |
 
 <div class="cap">
@@ -299,7 +299,7 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 <!-- _class: dense2 tight -->
 
-### ONE ASK
+### THE ASK
 
 ## What you can do next
 
@@ -309,9 +309,7 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 <div class="cta">
 
-<span class="lbl">The ask</span>
-
-**Or are you going to wait until a regulator mandates it?** Nobody here has to invent anything: both signals are already defined in the standards you already build on. **Put them in the next specification you write, and the market will have them inside two years.**
+**Why wait for a regulator to mandate it, and then have to react?** Nobody here has to invent anything: both signals are already defined in the standards you already build on. **Put them in the next specification you write, and the market will have them inside two years.**
 
 </div>
 

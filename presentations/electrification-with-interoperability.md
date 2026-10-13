@@ -106,7 +106,8 @@ style: |
   .do { color: var(--green); font-weight: 600; }
   .cta   { background: var(--ink); color: #FFFFFF; padding: 20px 28px 22px; border-radius: 6px;
            font-size: 22px; line-height: 1.4; margin-top: 6px; }
-  .cta p { margin: 0; color: #E7ECF0; }
+  .cta p { margin: 0 0 .5em; color: #E7ECF0; }
+  .cta p:last-child { margin-bottom: 0; }
   .cta strong { color: #FFFFFF; }
   .cta .lbl { display: block; font-size: 13px; font-weight: 600; letter-spacing: 2.8px;
               text-transform: uppercase; color: #7FB894; margin-bottom: 9px; }
@@ -118,7 +119,7 @@ style: |
 
 ### Connected Home Energy Forum &middot; Berlin, 26 October 2026
 
-# Electrification without<br>interoperability
+# Electrification with<br>interoperability
 
 <div class="cap" style="margin-top:28px">
 
@@ -217,8 +218,20 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 | | An import and export capacity limit for the site |
 | --- | --- |
 | **OpenADR 3** | A **dynamic operating envelope**: a schedule of limits, with a default the device falls back to when communications are lost |
+| **Matter** | A **power threshold** is defined in the Meter Identification cluster. Enhancements under consideration |
 | **EEBUS** | **Power Envelope**, defined at "the building's grid connection point", import and export, time-varying, with a declared fallback |
-| **Matter** | A power threshold is defined in the Application Cluster specification |
+
+---
+
+## Both signals must have a path to the appliance
+
+![w:950](../images/diagrams/two-paths-to-the-appliance.svg)
+
+<div class="cap">
+
+**The appliance should speak both: OpenADR 3, so the grid signal reaches it directly, and Matter, so a home energy manager can carry it over the LAN.** Build both, and the customer chooses which one their home uses: run an energy manager, or let each appliance take the signal itself.
+
+</div>
 
 ---
 
@@ -245,7 +258,7 @@ thead { display: none; }
 
 ### OF 376 PRODUCTS REGISTERED UNDER THE EU CODE OF CONDUCT
 
-## About 7% built it into the appliance
+## Only 7% built it into the appliance
 
 - The **EU Code of Conduct on interoperability of energy smart appliances** declares the communication layer out of scope.
 - The Commission's own evaluation counted **376 registered compliant products**.
@@ -268,7 +281,12 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 ### A CURRENT EVSE CERTIFICATION PROGRAM, SCORED AGAINST SIX TESTS
 
-## It certifies dispatch, and neither signal
+## When everything runs through the aggregator
+
+<style scoped>
+  table td:first-child, table th:first-child,
+  table td:nth-child(2),  table th:nth-child(2) { white-space: nowrap; width: 1%; }
+</style>
 
 | Test | Verdict | In the released specification |
 | --- | --- | --- |
@@ -303,13 +321,17 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 ## What you can do next
 
-- **If you write the standard:** make both signals conformance-testable rather than optional. A device type that *may* read a price is a device type that will not.
 - **If you build the product:** receive both. Read a price, respect a capacity limit, and let the customer point the server somewhere else.
-- **If you run the network or the service:** publish the limit, and ask for both in your next supplier requirement.
+- **If you run the network or the service:** publish the limit, and require both of your suppliers.
+- **If you write the standard:** make both signals conformance-testable. MAY is not MUST.
 
 <div class="cta">
 
-**Why wait for a regulator to mandate it, and then have to react?** Nobody here has to invent anything: both signals are already defined in the standards you already build on. **Put them in the next specification you write, and the market will have them inside two years.**
+**Why wait for a regulator to mandate it, and then have to react?**
+
+Both signals are already defined by existing standards.
+
+**Integrate OpenADR 3 and Matter into your products and services now.**
 
 </div>
 

@@ -301,36 +301,17 @@ These are the Commission's own numbers, about its own rule. **Require an open pr
 
 ### ONE ASK
 
-## When you write a program, a tariff or a procurement, ask for both
+## What you can do next
 
-- **Ask for a price the device can read**, from a server the customer can point somewhere else.
-- **Ask for a capacity limit the device must respect**, that holds when the network is down.
-- **Then certify that it does.** A mark that certifies dispatch and neither signal tells a buyer nothing about whether the grid can be protected.
+- **If you write the standard:** make both signals conformance-testable rather than optional. A device type that *may* read a price is a device type that will not.
+- **If you build the product:** receive both. Read a price, respect a capacity limit, and let the customer point the server somewhere else.
+- **If you run the network or the service:** publish the limit, and ask for both in your next supplier requirement.
 
 <div class="cta">
 
 <span class="lbl">The ask</span>
 
-**Nobody in this room has to invent anything to do this.** Both signals are already defined in the standards you already build on. **Put them in the next requirement you write, and the market will deliver them inside two years.**
-
-</div>
-
----
-
-<!-- _class: dense2 -->
-
-### FOR YOUR TABLES
-
-## Four questions I would like your answers to
-
-- **What is the biggest blocker:** the specification, the obligation, or the business model?
-- **Who should own the capacity limit?** The DNO publishes it, the customer lives under it, the device obeys it, and today no one carries it between them.
-- **What evidence would unlock investment?** Name the specific proof your organization would need.
-- **If a limit arrived at the house tomorrow, what in your product would act on it?**
-
-<div class="band">
-
-I am here for both days. **Come and tell me I am wrong.**
+**Or are you going to wait until a regulator mandates it?** Nobody here has to invent anything: both signals are already defined in the standards you already build on. **Put them in the next specification you write, and the market will have them inside two years.**
 
 </div>
 
@@ -347,7 +328,7 @@ I am here for both days. **Come and tell me I am wrong.**
 | **The price server** | `price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5` |
 | **User guide, tutorials, client libraries** | `github.com/grid-coordination` |
 | **The argument, in full** | `grid-coordination.energy` |
-| **The six tests** | `grid-coordination.energy/presentations/` |
+| **All the decks** | `grid-coordination.energy/presentations/` |
 
 <div class="cap">
 

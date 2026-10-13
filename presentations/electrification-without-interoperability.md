@@ -61,11 +61,11 @@ style: |
     background: var(--green); color: #fff; font-size: 16px; font-weight: 600;
     display: flex; align-items: center; justify-content: center; }
 
-  section table { display: table; border-collapse: collapse; width: 100%; font-size: 21px; margin: .3em 0 0; }
+  section table { display: table; border-collapse: collapse; width: 100%; font-size: 21px; margin: 1.1em 0 0; }
   section table th, section table td { border: 0 !important; background: transparent; }
   section tbody tr:nth-child(odd), section tbody tr:nth-child(even) { background: transparent; }
   section table th { font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--muted); text-align: left; border-bottom: 1.5px solid var(--ink) !important; padding: 0 20px 8px 0; }
+    color: var(--ink); text-align: left; border-bottom: 1.5px solid var(--ink) !important; padding: 0 20px 11px 0; }
   section table td { border-bottom: 1px solid var(--hair) !important; padding: 12px 20px 12px 0; vertical-align: top; }
 
   section blockquote { border: none; border-left: 3px solid var(--green); margin: 0; padding: 4px 0 4px 30px;
@@ -88,6 +88,7 @@ style: |
   .muted { color: var(--muted); }
   .green { color: var(--green); font-weight: 600; }
   .copper{ color: var(--copper); font-weight: 600; }
+  .green strong, .copper strong { color: inherit; }
   .cap   { font-size: 18px; color: var(--muted); letter-spacing: 0; line-height: 1.4; margin-top: 14px; }
   .ask   { font-size: 21px; color: var(--ink); font-weight: 600; line-height: 1.36; margin-top: 16px; }
   .rule  { height: 1px; background: var(--hair); margin: .9em 0; }
@@ -238,22 +239,26 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <!-- _class: dense2 -->
 
+<style scoped>
+thead { display: none; }
+</style>
+
 ### OF 376 PRODUCTS REGISTERED UNDER THE EU CODE OF CONDUCT
 
-## 92.57 percent
+## About 7% built it into the appliance
 
 - The **EU Code of Conduct on interoperability of energy smart appliances** declares the communication layer out of scope.
 - The Commission's own evaluation counted **376 registered compliant products**.
 
-| How the capability is implemented | Share |
+| | |
 | --- | --- |
-| **A vendor proprietary protocol to their own cloud** | **92.57%** |
-| Built into the appliance | 6.90% |
+| A vendor proprietary protocol to their own cloud | 92.57% |
+| **Built into the appliance** | **6.90%** |
 | Dongle | 0.53% |
 
 <div class="cap">
 
-These are the Commission's own numbers, about its own rule. **Say nothing about how the appliance connects, and the market answers with a vendor cloud.** Matter is the counter-example, because it is local by construction, which is what makes tomorrow's session worth your attention.
+These are the Commission's own numbers, about its own rule. **Require an open protocol on the appliance itself. Tunnel it back to your own cloud as well if you want to, but the cloud cannot be the thing that satisfies the requirement.** Matter is local by construction, which is what makes tomorrow's session worth your attention.
 
 </div>
 

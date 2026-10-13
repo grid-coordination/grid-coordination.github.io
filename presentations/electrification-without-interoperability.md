@@ -194,12 +194,12 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <!-- _class: dense2 -->
 
-### NOT A PROPOSAL. A RUNNING SERVICE.
+### A RUNNING SERVICE
 
 ## A free, public price server, no account required
 
-- **About 1,700 programs.** Real hourly prices for two large utilities across 105 distribution circuits and substations, plus prices computed from published rate schedules.
-- **Hourly marginal carbon, for 11 grid regions**, on the same server, in the same shape. A greenhouse-gas number is price-shaped: a device optimizes against it exactly as it does a price.
+- **Real hourly prices, running right now**, for two large utilities across their distribution circuits and substations, plus prices computed from published rate schedules.
+- **Hourly marginal carbon on the same server, in the same shape.** A greenhouse-gas number is price-shaped: a device optimizes against it exactly as it does a price.
 - **No authentication, no contract, no enrollment.** Open-source home automation receives it and orchestrates the house against it.
 
 <div class="band">

@@ -180,12 +180,12 @@ Every one of these is about protecting the transformer. **No signal in use today
 | | Carries a price today |
 | --- | --- |
 | **OpenADR 3** | Utility to the customer's own equipment, over the Internet |
-| **Matter** | Commodity Price cluster `0x0095`, inside the home |
+| **Matter** | The Commodity Price cluster, inside the home |
 | **EEBUS** | Time of Use Tariff: "the absolute price SHALL be included", currency per Wh |
 
 <div class="cap">
 
-Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half of the problem has an answer, and the answer is further along than most of this room thinks.**
+Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half of the problem has an answer.**
 
 </div>
 
@@ -203,7 +203,7 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <div class="band">
 
-**`price.grid-coordination.energy/openadr3/3.1.0/`**<br>Try it in a browser during the break. Demo at the tables this evening.
+**`price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5`**<br>Try it in a browser during the break.
 
 </div>
 
@@ -211,7 +211,7 @@ Tomorrow you will hear from Matter and from OpenADR on exactly this. **This half
 
 <!-- _class: dense -->
 
-## Capacity: the problem is not that nobody defined it
+## Three standards already define a connection limit
 
 | | A connection-level import/export limit |
 | --- | --- |
@@ -266,7 +266,7 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 ### A CURRENT EVSE CERTIFICATION PROGRAM, SCORED AGAINST SIX TESTS
 
-## Certification is not closing the gap either
+## It certifies dispatch, and neither signal
 
 | Test | Verdict | In the released specification |
 | --- | --- | --- |
@@ -326,7 +326,7 @@ Published by the regulator that wrote the instrument. **Leave the interface out 
 
 <div class="band">
 
-I am facilitating a table and I will be at the demos both evenings. **Come and tell me I am wrong.**
+I am here for both days. **Come and tell me I am wrong.**
 
 </div>
 
@@ -340,7 +340,7 @@ I am facilitating a table and I will be at the demos both evenings. **Come and t
 
 | | |
 | --- | --- |
-| **The price server** | `price.grid-coordination.energy/openadr3/3.1.0/` |
+| **The price server** | `price.grid-coordination.energy/openadr3/3.1.0/programs?limit=5` |
 | **User guide, tutorials, client libraries** | `github.com/grid-coordination` |
 | **The argument, in full** | `grid-coordination.energy` |
 | **The six tests** | `grid-coordination.energy/presentations/` |

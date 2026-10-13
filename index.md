@@ -10,7 +10,7 @@ title: Home
 
 ## Two problems, not one
 
-![The whole state hour by hour, an economics problem answered by a price; and one block right now, a physics problem answered by a limit](/images/diagrams/two-problems.svg)
+![The entire grid hour by hour, an economics problem answered by a price; and one block right now, a physics problem answered by a limit](/images/diagrams/two-problems.svg)
 
 The grid has to do two different things at once, and they are not the same job.
 

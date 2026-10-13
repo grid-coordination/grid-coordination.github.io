@@ -141,9 +141,9 @@ DC Jackson · grid-coordination.energy
 
 ## The grid has two problems, and they need two different signals
 
-- **Balancing the grid is economics.** The answer is a highly dynamic price. That is the right answer to problem 1, and where a jurisdiction is moving toward it, it should be pursued harder, not hedged.
-- **Protecting the wire to one house is physics.** The answer is a per-customer power limit on the whole service connection, import and export.
-- **Price reduces capacity problems. It cannot eliminate them**, because the price is a system-wide number and the constraint is on one street.
+- **Balancing the grid is economics.** The answer is a highly dynamic price. That is the right answer, and where a jurisdiction is moving toward it, it should be pursued harder, not hedged.
+- **Protecting the transformer is physics.** The answer is a per-customer power limit on the whole service connection, import and export.
+- **Price reduces capacity problems. It cannot eliminate them**, because a price is shared by everyone on the same asset. It cannot stop five houses on one transformer responding to the same number at the same moment.
 
 <div class="band">
 

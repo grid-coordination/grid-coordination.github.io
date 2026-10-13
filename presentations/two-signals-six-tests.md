@@ -80,6 +80,9 @@ style: |
   section img { display: block; margin: 0 auto; }
   .columns  { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; }
   .columns3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.9rem; }
+  .columns4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+  .columns4.lever { font-size: 17px; line-height: 1.4; }
+  .columns4.lever h4 { font-size: 18px; }
   .big   { font-size: 38px; font-weight: 500; line-height: 1.22; letter-spacing: -0.8px; color: var(--ink); }
   .huge  { font-size: 47px; font-weight: 600; line-height: 1.14; letter-spacing: -1.2px; color: var(--ink); }
   .muted { color: var(--muted); }
@@ -136,13 +139,13 @@ DC Jackson · grid-coordination.energy · August 2026
 
 <div class="cap">
 
-Balancing the state is an <span class="green">economics</span> problem. Protecting the wire to a house is a <span class="copper">physics</span> problem. **Both land on the bill.** [Peak we cannot shift](https://www.utilizecoalition.org/untapped-grid) is generation and transmission somebody has to build; a transformer we cannot protect is a street somebody has to dig up. Ratepayers fund both.
+Balancing the grid is an <span class="green">economics</span> problem. Protecting the transformer is a <span class="copper">physics</span> problem. **Both land on the bill.** [Peak we cannot shift](https://www.utilizecoalition.org/untapped-grid) is generation and transmission somebody has to build; a transformer we cannot protect is a street somebody has to dig up. Ratepayers fund both.
 
 </div>
 
 ---
 
-## The current answer to problem 2 is a service upgrade
+## Today, protecting the transformer means a service upgrade
 
 ![w:950](images/cpuc/service-upgrade.svg)
 
@@ -154,15 +157,15 @@ Balancing the state is an <span class="green">economics</span> problem. Protecti
 
 ---
 
-## Price solves problem 1. It cannot see problem 2.
+## Price balances the grid. It cannot see the transformer.
 
-![w:920](images/cpuc/price-alone.svg)
+![w:760](images/cpuc/price-alone.svg)
 
 <div class="band">
 
-**Highly dynamic pricing is the right answer to problem 1, and the most important thing California is doing here.**
+**Highly dynamic pricing is the right answer, and the most important thing California is doing on demand flexibility.**
 
-It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because the price is a statewide number and the constraint is on one street.
+It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because a price is shared by everyone on the same asset. It cannot stop five houses on one transformer responding to the same number at the same moment.
 
 </div>
 
@@ -173,7 +176,8 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 |  | A dynamic price | A per-customer power limit |
 | --- | --- | --- |
 | **What it is** | What energy costs right now | How much power this connection may draw right now |
-| **What it protects** | Statewide supply and demand | The physical limit of one wire |
+| **Unit** | The entire grid | One service connection |
+| **What it solves** | Balancing the grid | Protecting the transformer |
 | **What it does** | Moves energy across time | Moves nothing. Caps power, immediately |
 | **Without it** | Nobody has a reason to shift | Nothing stops everyone shifting at once |
 
@@ -191,7 +195,7 @@ Everyone in this room already lives with a power limit: it is the main breaker i
 
 ### The problem with aggregators and manufacturer clouds
 
-## Four companies must agree before one water heater turns down
+## Four companies must agree before one appliance turns down
 
 ![w:790](images/cpuc/today.svg)
 
@@ -321,53 +325,6 @@ The first objection to hourly prices and per-customer limits is that the affluen
 
 ---
 
-## What not to mandate
-
-| If the rule says | What you will actually get |
-| --- | --- |
-| "Must support [named standard, 2019 edition]" | Compliance frozen at the state of the art in 2019, and a vendor incentive to do nothing further |
-| "The manufacturer shall provide a grid interface" | A cloud interface. The appliance still speaks nothing open, and it dies when that cloud does |
-| "Customers participate through a program administrator" | Every customer needs a third party's permission before they can help the grid |
-| "Each inverter shall be controllable" | Five separate control paths into one house and nobody managing the total |
-| "The appliance shall run between 9 a.m. and 3 p.m." | A load shape frozen into regulation. It cannot follow a price, cannot respect a limit, and cannot change when the grid does |
-
-<div class="band">
-
-**Name the capability in the rule, and the standard in an appendix you can update without reopening the rule.** Write it at the appliance, not at somebody's server.
-
-</div>
-
----
-
-<!-- _class: dense -->
-
-### Pool controls, adopted 2023, the first in the nation
-
-## The rule wrote the answer, not the capability
-
-| The six tests | Pool controls, Title 20 sections 1690 to 1697 |
-| --- | --- |
-| **1. An objective, not operation** | **No objective is sent at all.** The rule fixes the hours instead: 9 a.m. to 3 p.m., nothing automatic 4 to 9 p.m. (1693(b)(2)(C)(1)) |
-| **2. Open to the appliance** | **Partial.** Open standards are required, for the **consent** functions only (1693(b)(6)(B)) |
-| **3. A server the customer chooses** | **Not addressed** |
-| **4. Direct from the utility** | **Not addressed.** A vendor-exclusive, cloud-only design complies |
-| **5. A limit that holds locally** | **No limit of any kind**, and no way to receive one |
-| **6. The customer who cannot respond** | **The only one it answers**, by brute force, while those remain the right hours |
-
-<div class="ask">
-
-A fixed clock cannot tell a house importing from a strained grid at 6 p.m. from a house running its pump off its own battery at 6 p.m. **It treats them identically.**
-
-</div>
-
-<div class="band">
-
-**The three still open have no proposed rule text yet.** That is where to write the capability instead of the clock.
-
-</div>
-
----
-
 <!-- _class: dense2 tight -->
 
 ### Flexible Demand Appliance Standards
@@ -389,6 +346,92 @@ We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC
 
 Every appliance in the house is wired to one electrical code. Nobody wrote a separate code for water heaters, and the signals that tell them what to do should arrive the same way.
 
+</div>
+
+---
+
+## What not to mandate
+
+| If the rule says | What you will actually get |
+| --- | --- |
+| "Must support [named standard, 2019 edition]" | Compliance frozen at the state of the art in 2019, and a vendor incentive to do nothing further |
+| "The manufacturer shall provide a grid interface" | A cloud interface. The appliance still speaks nothing open, and it dies when that cloud does |
+| "Customers participate through a program administrator" | Every customer needs a third party's permission before they can help the grid |
+| "Each inverter shall be controllable" | Five separate control paths into one house and nobody managing the total |
+| "The appliance shall run between 9 a.m. and 3 p.m." | A load shape frozen into regulation. It cannot follow a price, cannot respect a limit, and cannot change when the grid does |
+
+<div class="band">
+
+**Name the capability in the rule, and the standard in an appendix you can update without reopening the rule.** Write it at the appliance, not at somebody's server.
+
+</div>
+
+---
+
+<!-- _class: dense -->
+
+<style scoped>
+table { table-layout: fixed; }
+th:nth-child(1), td:nth-child(1) { width: 336px; }
+th:nth-child(2), td:nth-child(2) { width: 110px; }
+.vn { color: var(--copper); font-weight: 600; }
+.vp { color: var(--muted);  font-weight: 600; }
+.vy { color: var(--green);  font-weight: 600; }
+.band { margin-top: 20px; }
+</style>
+
+### Pool controls, the most recent FDAS ruling
+
+## It fails essentially all of these tests
+
+| The six tests | Verdict | Pool controls, Title 20 sections 1690 to 1697 |
+| --- | --- | --- |
+| **1. An objective, not operation** | <span class="vn">Not met</span> | The rule fixes the hours instead: 9 a.m. to 3 p.m., nothing automatic 4 to 9 p.m. |
+| **2. Open to the appliance** | <span class="vp">Partial</span> | Open standards required for the **consent** functions only |
+| **3. A server the customer chooses** | <span class="vn">Not met</span> | No customer-configurable server address |
+| **4. Direct from the utility** | <span class="vn">Not met</span> | A vendor-exclusive, cloud-only design complies |
+| **5. A limit that holds locally** | <span class="vn">Not met</span> | No limit of any kind, and no way to receive one |
+| **6. The customer who cannot respond** | <span class="vy">Met</span> | Answered, by brute force, for as long as those stay the right hours |
+
+<div class="band">
+
+**Thermostats, EV charging and home batteries have no rule text yet.** Write the capability there, not the clock.
+
+</div>
+
+---
+
+## Who needs to do what
+
+<div class="columns4 lever">
+<div>
+
+#### CPUC
+
+*TBD*
+
+</div>
+<div>
+
+#### CEC
+
+*TBD*
+
+</div>
+<div>
+
+#### Utilities
+
+*TBD*
+
+</div>
+<div>
+
+#### Appliance OEMs
+
+*TBD*
+
+</div>
 </div>
 
 ---
@@ -488,9 +531,9 @@ li { font-size: 17px; }
 ## Why some standards are hurting, not helping
 
 - **CTA-2045, marketed as EcoPort.** Washington, Oregon, Colorado and New York require the socket on new electric water heaters. Nothing above it was ever standardized, so every vendor's module speaks its own language upstream, and the module a customer has to buy and install runs well over $150. **The open interface stops at the socket. The standard is obsolete and should be retired, not written into new rules.**
-- **AHRI 1380.** The standard permits local interfaces over Ethernet or CTA-2045-A. **No shipping product implements either.** Vendors satisfy it by routing the equipment through their own cloud over a private protocol, so it certifies the cloud, not the appliance.
+- **AHRI 1380.** The standard permits a local interface. **Virtually every AHRI 1380 product is cloud-only**, and AHRI certifies nothing against the standard.
 - **IEEE 2030.5.** CSIP certifies aggregators and utility servers as well as inverters, but puts everything below the aggregator or site management system **out of scope**, so it stops at the edge of the house. One inverter is still the wrong unit for a house with solar, a battery and two bidirectional chargers: control each separately and nobody manages the total. **What belongs there is one import and export limit for the whole connection.**
-- **OCPP.** Built for commercial and public EV charging. **Almost no** US residential chargers implement it, and where it is supported the connection is not offered to the customer: it points at the vendor cloud. **There is no need for a protocol unique to EV chargers.**
+- **OCPP.** Built for commercial and public EV charging. **Almost no** US residential chargers implement it, and controlling one from a local server is not required and almost never supported in shipping products. **There is no need for a protocol unique to EV chargers.**
 
 **Two open standards already support every one of these principles, and both ship today.**
 

@@ -14,9 +14,9 @@ For most of its history, the grid had no way to coordinate with customer loads i
 
 That constraint no longer holds. **IP networking**, **open grid-coordination protocols**, and **low-cost networked microcontrollers and single-board computers** now make it practical to communicate dynamic prices and power limits to every flexible load in every home &mdash; and for those loads to respond autonomously.
 
-This changes what the grid has to do. It no longer needs to be sized for the worst case; it can be *coordinated* for the actual case. The two problems below &mdash; macro balancing and micro distribution protection &mdash; are both now tractable through communication rather than oversizing.
+This changes what the grid has to do. It no longer needs to be sized for the worst case; it can be *coordinated* for the actual case. The two problems below, balancing the grid and protecting the transformer, are both now tractable through communication rather than oversizing.
 
-## Problem 1: Macro Grid Coordination
+## Balance the grid
 
 The overall electric grid must continuously balance generation with consumption. Today, this is managed through a combination of static time-of-use rates, grid emergency alerts, and aggregator-mediated demand response.
 
@@ -28,7 +28,7 @@ The solution is **dynamic pricing** &mdash; hourly or sub-hourly price signals t
 
 No per-device enrollment. No proprietary protocols. No fragmentation. Just a price signal and a capable local EMS.
 
-## Problem 2: Micro Grid Coordination
+## Protect the transformer
 
 Price alone cannot solve the local problem of managing physical constraints on the distribution network. Even if every customer responds optimally to price signals, the distribution transformer serving a specific neighborhood has a finite capacity. When everyone arrives home and plugs in their EV, the transformer may overload regardless of price.
 
@@ -38,8 +38,8 @@ This requires **power limits** &mdash; explicit, per-customer caps on import (an
 
 | Mechanism | Solves | Granularity | Scope |
 |-----------|--------|-------------|-------|
-| **Dynamic pricing** | Grid-wide supply/demand balance | Economic &mdash; shifts energy in time | Macro: all customers |
-| **Power limits** | Distribution network protection | Physical &mdash; caps instantaneous power | Micro: per-transformer |
+| **Dynamic pricing** | Grid-wide supply/demand balance | Economic &mdash; shifts energy in time | Everyone on the tariff |
+| **Power limits** | Distribution network protection | Physical &mdash; caps instantaneous power | One connection at a time |
 
 **Price is necessary but not sufficient.** Without power limits, price-responsive customers on an overloaded transformer could still cause physical damage.
 

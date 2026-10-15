@@ -247,11 +247,17 @@ Everyone in this room already lives with a power limit: it is the main breaker i
 
 <!-- _class: tight -->
 
-### The problem with aggregators and manufacturer clouds
+<style scoped>
+  h2 { font-size: 29px; line-height: 1.3; margin-bottom: .35em; }
+  .ask { font-size: 18px; }
+  .cap { font-size: 16px; margin-top: 6px; }
+</style>
 
-## Four companies must agree before one appliance turns down
+### How it works today
 
-![w:790](images/cpuc/today.svg)
+## Four companies must agree before one appliance turns down<br>The problem with aggregators and manufacturer clouds
+
+![w:700](images/cpuc/today.svg)
 
 <div class="ask">
 

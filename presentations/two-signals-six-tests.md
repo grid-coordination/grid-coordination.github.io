@@ -295,7 +295,7 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 
 <div class="ask">
 
-We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC and IEEE 2030.5 for inverters: a protocol per appliance category, and a rulemaking behind each.
+We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC and IEEE 2030.5 for solar and storage: a protocol per appliance category, and a rulemaking behind each.
 
 </div>
 

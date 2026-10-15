@@ -157,7 +157,7 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 
 | | Static | Dynamic |
 | --- | --- | --- |
-| **The number** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power this one connection may import, and may export, right now |
+| **The number** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power a connection may import, and may export, right now |
 | **It changes** | Once, when somebody digs up the street | Every interval, with a schedule ahead and a default to fall back to |
 | **Who sets it** | The electrical code, at installation | The distribution utility, from what the shared transformer and conductors can carry |
 | **Who enforces it** | A breaker. Since NEC 705.13, also a **UL 3141** power control system | The same **UL 3141** power control system |
@@ -201,12 +201,17 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ---
 
+<style scoped>
+  table { font-size: 17.5px; }
+  .cap { font-size: 17px; }
+</style>
+
 ## But one signal cannot do both jobs
 
 |  | A dynamic price | A per-customer power limit |
 | --- | --- | --- |
-| **What it is** | What energy costs right now | How much power this connection may draw right now |
-| **Unit** | The entire grid | One service connection |
+| **What it is** | What energy costs right now | How much power a connection may draw right now |
+| **Scale** | The entire grid: hundreds of thousands of customers at once | The customers on one distribution transformer: five or six |
 | **What it solves** | Balancing the grid | Protecting the transformer |
 | **What it does** | Moves energy across time | Caps power, immediately |
 | **Without it** | Nobody has a reason to shift | Nothing stops everyone shifting at once |
@@ -216,6 +221,25 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 Everyone in this room already lives with a power limit: it is the main breaker in your garage, and nobody has ever called it tyranny. The transformer on your street is the same device one size up, shared with five or six neighbors, except it has no breaker. It just cooks quietly for years, and then fails on the hottest day.
 
 **These two can be legislated separately.** Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.
+
+</div>
+
+---
+
+<style scoped>
+  li { font-size: 19px; }
+  .band { margin-top: 14px; }
+</style>
+
+## The limit is on the connection, not the device
+
+- **Today we enroll one device at a time.** One thermostat program, one charger program, one inverter under IEEE 2030.5. A customer with all three is in three programs, none of which can see the other two.
+- **One customer, one connection, one limit** (import and export). A modern home has solar, a battery, one or two car chargers, a heat pump and a heat pump water heater, all at once. The limit belongs on the wire, not on any one appliance.
+- **Two things need to know it, and everything else in the house does not.** The **UL 3141 listed power control system** that enforces it, because enforcement has to happen where the whole site's draw is visible, not inside one appliance. And the **energy manager** that plans against it, so the house schedules inside the envelope instead of colliding with it. They can be the same device.
+
+<div class="band">
+
+**Every appliance a customer adds makes device-by-device coordination worse.** Control each one separately and nobody is managing the total impact to the transformer and distribution grid.
 
 </div>
 
@@ -251,37 +275,31 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 
 </div>
 
-1. Does the grid send the home **an objective**, or does it **operate the appliance**?
+1. Does the grid send the customer **an objective**, or does it **operate the appliance**?
 2. Does the open interface reach **the appliance itself**, or stop at **the manufacturer's cloud**?
 3. Can the customer choose **who optimizes their home**, including doing it themselves?
 4. Can the customer take **the signals** **directly from their utility**, or is a **middleman required**?
-5. Does the limit **hold at the customer's connection**, when the internet does not?
+5. Is **fail-safe behavior specified and mandated**: if the signal fails, is **a known default** held?
 6. Does the customer **who cannot respond** end up better off, or worse?
 
 ---
 
-## Test 5: the limit is on the connection, not the device
+<style scoped>
+  h2 { font-size: 29px; line-height: 1.3; margin-bottom: .35em; }
+  h2 .lbl { color: var(--green); }
+  .cap { font-size: 16.5px; margin-top: 4px; }
+  h3 { margin-bottom: 4px; }
+</style>
 
-- **One customer, one connection, one limit** (import and export). A modern home has solar, a battery, one or two car chargers, a heat pump and a heat pump water heater, all at once. The limit belongs on the wire, not on any one appliance.
-- **Two things need to know it, and everything else in the house does not.** The **UL 3141 listed power control system** that enforces it, because enforcement has to happen where the whole site's draw is visible, not inside one appliance. And the **energy manager** that plans against it, so the house schedules inside the envelope instead of colliding with it. They can be the same device.
-- **It must survive the network.** A home that already has today's prices and today's limit keeps behaving correctly with no connection at all.
+### What needs to happen
 
-<div class="pf">
+## <span class="lbl">Grid:</span> Both signals, one open protocol, direct to the customer<br><span class="lbl">Home:</span> One open protocol for local appliance control and orchestration
 
-<span class="p">PASSES</span> a limit for the whole service connection, retained and acted on locally.
-<span class="f">FAILS</span> a rule written for one device category that ignores the other five in the same house.
-
-</div>
-
----
-
-## The same house, with the door open
-
-![w:800](images/cpuc/proposed.svg)
+![w:775](images/cpuc/proposed.svg)
 
 <div class="cap">
 
-**Half of this is already running.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices and grid emissions on an open standard, and [free open-source home automation software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the household's loads against it. No account, no contract, no enrollment. [PG&E is piloting the other half with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) (HomeBoost and PanelBoost).
+**Half of this is already running.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices, and [free open-source software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the house: no account, no contract, no enrollment. [PG&E is piloting the other half with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) (HomeBoost and PanelBoost).
 
 </div>
 
@@ -289,7 +307,13 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 
 <!-- _class: dense2 tight -->
 
-### Flexible Demand Appliance Standards
+<style scoped>
+  li { font-size: 17px; padding: 5px 0; }
+  .ask { font-size: 18px; }
+  .band { font-size: 17px; margin-top: 12px; }
+</style>
+
+### Turning to the CEC's own rulemakings
 
 ## FDAS should be one standard for all appliances, not one per appliance
 
@@ -299,10 +323,11 @@ We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC
 
 </div>
 
+- **The Commission has built this shape before.** The Load Management Standards are one rule covering every large IOU, not a separate proceeding per utility. FDAS should be one rule covering every flexible appliance, not a separate proceeding per appliance.
 - **Every one of them needs the same two facts, and only those two.** What power costs now and next, and how much this connection may draw. A water heater does not need a water heater vocabulary to know either one.
-- **Grid to house, over the Internet.** One open protocol carrying both, with the server address a setting the customer controls. **OpenADR 3 does this today.**
-- **House to appliance, over the home network.** The same two facts to every device in the building, whatever it is. **Matter does this today.**
-- **This is less regulation, not more.** One capability written once, instead of a rulemaking per appliance forever, each going stale the day it is printed.
+- **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both facts, with the server address a setting the customer controls.
+- **House to appliance: Matter.** The same two facts to every device in the building, whatever it is.
+- **This is less regulation, not more.** Both protocols ship today. One capability written once, instead of a rulemaking per appliance forever, each going stale the day it is printed.
 
 <div class="band">
 
@@ -352,7 +377,7 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 | **2. Open to the appliance** | <span class="vp">Barely</span> | Open standards required for the **consent** functions only |
 | **3. A server the customer chooses** | <span class="vn">Not met</span> | No customer-configurable server address |
 | **4. Direct from the utility** | <span class="vn">Not met</span> | A vendor-exclusive, cloud-only design complies |
-| **5. A limit that holds locally** | <span class="vn">Not met</span> | No limit of any kind, and no way to receive one |
+| **5. Specified fail-safe behavior** | <span class="vn">Not met</span> | No signal to interrupt: the rule hardcodes a clock |
 | **6. The customer who cannot respond** | <span class="vy">Met</span> | Answered, by brute force, for as long as those stay the right hours |
 
 <div class="band">
@@ -594,6 +619,25 @@ li { font-size: 17px; }
 **[Matter](https://csa-iot.org/all-solutions/matter/)** carries the same information to every device inside the house, **over the home network**.
 
 </div>
+</div>
+
+---
+
+<!-- _class: dense -->
+
+### Where each signal is actually defined
+
+## Both signals already have a named home on both hops
+
+| | A price | A capacity limit |
+| --- | --- | --- |
+| **Grid to customer** | **OpenADR 3** | **OpenADR 3** |
+| **Inside the building** | **Matter** and **OpenADR 3**. Matter carries it in the Commodity Price cluster | **Matter** and **OpenADR 3**. Matter carries it in the PowerThreshold feature of the Meter Identification cluster |
+
+<div class="band">
+
+Everything above is already published. **The gap is not in the standards. It is that nobody is sending the limit.**
+
 </div>
 
 ---

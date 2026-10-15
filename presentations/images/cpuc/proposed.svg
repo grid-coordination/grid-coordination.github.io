@@ -22,7 +22,7 @@
   <line x1="638" y1="92" x2="720" y2="124" stroke="#B25B27" stroke-width="2.4" marker-end="url(#c)"/>
   <line x1="416" y1="178" x2="416" y2="244" stroke="#2A6E3F" stroke-width="2.4" marker-end="url(#g)"/>
   <line x1="732" y1="178" x2="732" y2="244" stroke="#B25B27" stroke-width="2.4" marker-end="url(#c)"/>
-  <text x="574" y="203" font-size="14" font-weight="600" letter-spacing="1.8" fill="#7A8592" text-anchor="middle">ONE OPEN PROTOCOL, OVER THE INTERNET</text>
+  <text x="574" y="203" font-size="14" font-weight="600" letter-spacing="1.8" fill="#7A8592" text-anchor="middle">OPENADR 3, OVER THE INTERNET</text>
   <text x="574" y="225" font-size="14" font-weight="600" letter-spacing="1.8" fill="#7A8592" text-anchor="middle">STRAIGHT TO THE CUSTOMER</text>
   <rect x="178" y="248" width="792" height="292" rx="14" fill="#F4F8F5" stroke="#2A6E3F" stroke-width="2" stroke-dasharray="8 6"/>
   <rect x="384" y="274" width="380" height="76" rx="8" fill="#FFFFFF" stroke="#2A6E3F" stroke-width="2.6"/>
@@ -43,8 +43,9 @@
   <line x1="574" y1="350" x2="874" y2="424" stroke="#2A6E3F" stroke-width="1.8" marker-end="url(#g)"/>
   <rect x="804" y="426" width="140" height="50" rx="8" fill="#FFFFFF" stroke="#C6D3C9" stroke-width="1.8"/>
   <text x="874.0" y="457.0" font-size="15" font-weight="600" fill="#16212E" text-anchor="middle">Solar</text>
+  <rect x="456" y="376" width="236" height="24" fill="#F4F8F5"/>
+  <text x="574" y="393" font-size="14" font-weight="600" letter-spacing="1.8" fill="#7A8592" text-anchor="middle">MATTER AND OPENADR 3</text>
   <text x="574" y="502" font-size="16" fill="#2A6E3F" text-anchor="middle">One house, coordinated as one house</text>
-  <text x="574" y="524" font-size="14" fill="#5E7A68" text-anchor="middle">over the home network: Wi-Fi, Ethernet or Thread</text>
   <rect x="880" y="128" width="204" height="50" rx="8" fill="#FFFFFF" stroke="#7A8592" stroke-width="1.8" stroke-dasharray="6 5"/>
   <text x="982" y="150" font-size="16" font-weight="600" fill="#7A8592" text-anchor="middle">An aggregator</text>
   <text x="982" y="168" font-size="13" fill="#7A8592" text-anchor="middle">optional, and your choice</text>

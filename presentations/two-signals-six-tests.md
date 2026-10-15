@@ -311,6 +311,29 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 
 ---
 
+<!-- _class: dense2 -->
+
+<style scoped>
+  li { font-size: 18.5px; }
+</style>
+
+### To close on capacity
+
+## One box enforces the limit.<br>Everything else only needs the price.
+
+- **Enforcement is one box's job, and it has to be one.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
+- **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
+- **Some may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **So the ask on an appliance vendor is one capability.** Read a price. It is the same capability for every product category, and OpenADR 3 and Matter already carry it.
+
+<div class="band">
+
+**The capacity signal has to exist, be published, and reach one box in the house.** That is the whole ask.
+
+</div>
+
+---
+
 <!-- _class: dense2 tight -->
 
 <style scoped>

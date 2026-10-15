@@ -103,6 +103,7 @@ style: |
   .lever { font-size: 19px; line-height: 1.42; }
   .lever p { margin: 0 0 .5em; }
   .do { color: var(--green); font-weight: 600; }
+  .nb { white-space: nowrap; }
   .cta   { background: var(--ink); color: #FFFFFF; padding: 20px 28px 22px; border-radius: 6px;
            font-size: 22px; line-height: 1.4; margin-top: 6px; }
   .cta p { margin: 0; color: #E7ECF0; }
@@ -127,7 +128,7 @@ The grid has two problems. Few proposals solve even one.
 
 <div class="cap">
 
-DC Jackson · grid-coordination.energy · August 2026
+DC Jackson · grid-coordination.energy · November 2026
 
 </div>
 
@@ -145,13 +146,42 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 
 ---
 
-## Today, protecting the transformer means a service upgrade
+<!-- _class: dense -->
 
-![w:950](images/cpuc/service-upgrade.svg)
+<style scoped>
+  table { table-layout: fixed; }
+  th:nth-child(1), td:nth-child(1) { width: 182px; }
+</style>
+
+## We have always had static capacity limits.<br>Dynamic limits are now possible.
+
+| | Static | Dynamic |
+| --- | --- | --- |
+| **The number** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power this one connection may import, and may export, right now |
+| **It changes** | Once, when somebody digs up the street | Every interval, with a schedule ahead and a default to fall back to |
+| **Who sets it** | The electrical code, at installation | The distribution utility, from what the shared transformer and conductors can carry |
+| **Who enforces it** | A breaker. Since NEC 705.13, also a **UL 3141** power control system | The same **UL 3141** power control system |
+| **How it arrives** | Built into the hardware | **<span class="copper">This is the gap</span>** |
+
+<div class="band">
+
+**What makes them possible is already in place.** A UL 3141 power control system holds a whole site under a number, and <span class="nb">D.26-02-025</span> put a dynamic limit into a California tariff. **The number has no way to reach the house.**
+
+</div>
+
+---
+
+<style scoped>
+  .cap { font-size: 16.5px; margin-top: 8px; }
+</style>
+
+## Today, electrifying a home means a service upgrade
+
+![w:800](images/cpuc/service-upgrade.svg)
 
 <div class="cap">
 
-**We charge customers for a peak that does not happen, because we have no way to promise that it will not.**
+**We charge customers for a peak that does not happen, because we have no way to promise that it will not.** And the upgrade answers only the customer's half of the problem: this house can electrify, and the shared transformer is handed more load to carry. Protecting that transformer means replacing it early. Both upgrades land in rates.
 
 </div>
 
@@ -163,7 +193,7 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 
 <div class="band">
 
-**Highly dynamic pricing is the right answer, and the most important thing California is doing on demand flexibility.**
+**Highly dynamic pricing is the right answer for balancing the grid, and the most important thing California is doing on demand flexibility.**
 
 It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because a price is shared by everyone on the same asset. It cannot stop five houses on one transformer responding to the same number at the same moment.
 
@@ -171,7 +201,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ---
 
-## One signal cannot do both jobs
+## But one signal cannot do both jobs
 
 |  | A dynamic price | A per-customer power limit |
 | --- | --- | --- |
@@ -213,25 +243,11 @@ And any of it can be switched off. On October 25, 2025 Google ended cloud suppor
 
 ---
 
-<!-- _class: dark -->
-
-### The Commission has already asked the question
-
-> "What hardware, software, or data sharing safeguards may be needed to ensure that customers can obtain a flexible connection without being restricted by proprietary arrangements?"
-
-<div class="cap">
-
-Assigned Commissioner and ALJ ruling, July 7, 2026, seeking comment on the Assigned Commissioner's Proposal on Flexible Service Connections. Grid modernization rulemaking R.21-06-017, Question 8 to parties.
-
-</div>
-
----
-
 ## Six tests for any flexibility proposal
 
 <div class="cap" style="margin-top:0">
 
-Rate designs, appliance standards, virtual power plant programs, capacity and interconnection proposals. Every one of them will use the words <em>flexible</em>, <em>smart</em>, and <em>customer choice</em>. **Many of them also insert a new gatekeeper between the grid and the customer.**
+Rate designs, appliance standards, VPP programs, capacity and interconnection proposals. Every one of them will use the words <em>flexible</em>, <em>smart</em>, and <em>customer choice</em>. **Many of them also insert a new gatekeeper between the grid and the customer.**
 
 </div>
 
@@ -241,38 +257,6 @@ Rate designs, appliance standards, virtual power plant programs, capacity and in
 4. Can the customer take **the signals** **directly from their utility**, or is a **middleman required**?
 5. Does the limit **hold at the customer's connection**, when the internet does not?
 6. Does the customer **who cannot respond** end up better off, or worse?
-
----
-
-## Test 1: send an objective, not a command
-
-![w:1000](images/cpuc/objective-vs-command.svg)
-
-<div class="cap">
-
-To be clear about which control is at issue: **a customer operating their own equipment, through a controller they chose, is exactly right.** What does not belong at the grid boundary is a grid party or a manufacturer holding that control instead.
-
-</div>
-
-<div class="pf">
-
-<span class="p">PASSES</span> an hourly price and a connection limit, published to everyone.
-<span class="f">FAILS</span> a program that needs the ability to command a named appliance in a named house.
-
-</div>
-
----
-
-## Tests 2, 3 and 4: open all the way to the appliance
-
-![w:915](images/cpuc/open-stops-short.svg)
-
-<div class="pf">
-
-<span class="p">PASSES</span> the server address is a setting the owner can change, and a tariff any customer can take without a third party.
-<span class="f">FAILS</span> an appliance that meets the standard only through a cloud the manufacturer can switch off.
-
-</div>
 
 ---
 
@@ -288,28 +272,6 @@ To be clear about which control is at issue: **a customer operating their own eq
 <span class="f">FAILS</span> a rule written for one device category that ignores the other five in the same house.
 
 </div>
-
----
-
-<!-- _class: dense2 -->
-
-## Test 6: the customer who cannot respond
-
-<div class="cap" style="margin-top:0">
-
-The first objection to hourly prices and per-customer limits is that the affluent optimize and everybody else gets rationed. It is the right question and it deserves the first answer, not the last.
-
-</div>
-
-| | To join a program today | To read a public signal |
-| --- | --- | --- |
-| **An enrollment** | Required | Nothing |
-| **A credit relationship with a third party** | Required | Nothing |
-| **A particular brand of device** | Usually | Any device that can reach the network |
-
-- **Nobody should have to watch a price.** The appliance watches the price. The customer sets a preference once.
-- **Many customers who cannot shift are paying today** for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.
-- **Dynamic pricing asks less of people than a virtual power plant does.** Everyone already pays for VPP incentives through rates. PNNL's DSO+T study found participants **and non-participants** both saw bills fall 10 to 16 percent.
 
 ---
 
@@ -380,14 +342,14 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 .band { margin-top: 20px; }
 </style>
 
-### Pool controls, the most recent FDAS ruling
+### The FDAS pool controls ruling
 
 ## It fails essentially all of these tests
 
 | The six tests | Verdict | Pool controls, Title 20 sections 1690 to 1697 |
 | --- | --- | --- |
 | **1. An objective, not operation** | <span class="vn">Not met</span> | The rule fixes the hours instead: 9 a.m. to 3 p.m., nothing automatic 4 to 9 p.m. |
-| **2. Open to the appliance** | <span class="vp">Partial</span> | Open standards required for the **consent** functions only |
+| **2. Open to the appliance** | <span class="vp">Barely</span> | Open standards required for the **consent** functions only |
 | **3. A server the customer chooses** | <span class="vn">Not met</span> | No customer-configurable server address |
 | **4. Direct from the utility** | <span class="vn">Not met</span> | A vendor-exclusive, cloud-only design complies |
 | **5. A limit that holds locally** | <span class="vn">Not met</span> | No limit of any kind, and no way to receive one |
@@ -395,43 +357,65 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 
 <div class="band">
 
-**Thermostats, EV charging and home batteries have no rule text yet.** Write the capability there, not the clock.
+**Thermostats, EV charging and home batteries have no rule text yet.** Pass the tests, and consolidate into a unified standard for all flexible demand appliances.
 
 </div>
 
 ---
+
+<style scoped>
+  .columns4.lever { font-size: 18.5px; }
+  .columns4.lever h4 { color: var(--ink); font-size: 20px; }
+  .band { margin-top: 18px; }
+</style>
 
 ## Who needs to do what
 
 <div class="columns4 lever">
 <div>
 
-#### CPUC
+#### CEC
 
-*TBD*
+<span class="do">One unified FDAS standard for all flexible demand appliances</span>, instead of a rulemaking per appliance category.
+
+<span class="do">Write the capability into it:</span> read a price, respect a connection limit, over an open protocol the customer can repoint.
 
 </div>
 <div>
 
-#### CEC
+#### CPUC
 
-*TBD*
+<span class="do">Make the flexible connection open.</span> The limit ordered in <span class="nb">D.26-02-025</span> has to reach the customer machine-readable, with no enrollment and no intermediary.
+
+<span class="do">Require every tariff filing to include a URPX rate plan</span>, so any rate becomes a price stream.
+
+<span class="do">Extend the standard offer</span> beyond PG&E and SCE.
 
 </div>
 <div>
 
 #### Utilities
 
-*TBD*
+<span class="do">Publish the limit and the price, via OpenADR 3.</span> A flexible connection the customer signs is worth nothing until the number reaches the equipment in the house.
+
+<span class="do">Require both signals of your suppliers</span>, in the next procurement you write.
 
 </div>
 <div>
 
 #### Appliance OEMs
 
-*TBD*
+<span class="do">Receive both.</span> Read a price, respect a limit, and let the customer point the server somewhere else.
+
+<span class="do">Ship it now.</span> OpenADR 3 and Matter both do this today, and neither waits on a regulator.
 
 </div>
+</div>
+
+<div class="band">
+
+Every one of these fits inside a proceeding that is already open, and uses a standard that already ships.
+
 </div>
 
 ---
@@ -447,60 +431,122 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 
 <!-- _class: dense2 -->
 
+<style scoped>
+  li { font-size: 18px; }
+  .band { font-size: 18px; }
+</style>
+
+### Static capacity, and the one thing that has changed
+
+## How a house electrifies past the rating of its own wire
+
+- **The static limit is three numbers that have to agree.** The service conductors from the transformer, the main breaker, and the panel busbar. The house may not draw more, and a breaker makes sure of it.
+- **A load calculation decides whether the new load may be installed at all.** NEC Article 220 adds up connected load with fixed demand factors and no knowledge of how that house actually behaves. A home adding a heat pump, a heat pump water heater, an induction range and EV charging can exceed its service on paper while never approaching it in practice.
+- **NEC 705.13 and UL 3141 changed the answer.** A listed power control system actively holds the site below the existing rating, so the load behind it comes out of the load calculation. The customer electrifies on the conductors and the service feed already there.
+- **California put that in a tariff.** D.26-02-025 excludes load managed behind a certified power control system from the connected load calculation.
+
+<div class="band">
+
+**The number the power control system holds the house under is still static.** It enforces what it was configured with. The hardware that respects a limit is listed, shipping, and recognized by code. Nothing outside the house can move the limit.
+
+</div>
+
+---
+
+<style scoped>
+  .cap { margin-top: 10px; }
+  .pf { margin-top: 12px; }
+  .band { margin-top: 14px; }
+</style>
+
+## Test 1: send an objective, not a command
+
+![w:760](images/cpuc/objective-vs-command.svg)
+
+<div class="cap">
+
+**A customer operating their own equipment, through a controller they chose, is exactly right.** What does not belong at the grid boundary is a grid party or a manufacturer holding that control instead.
+
+</div>
+
+<div class="pf">
+
+<span class="p">PASSES</span> an hourly price and a connection limit, published to everyone.
+<span class="f">FAILS</span> a program that needs the ability to command a named appliance in a named house.
+
+</div>
+
+<div class="band">
+
+**A price is a one-way number. A command is a key to somebody's house.**
+
+</div>
+
+---
+
+## Tests 2, 3 and 4: open all the way to the appliance
+
+![w:915](images/cpuc/open-stops-short.svg)
+
+<div class="pf">
+
+<span class="p">PASSES</span> the server address is a setting the owner can change, and a tariff any customer can take without a third party.
+<span class="f">FAILS</span> an appliance that meets the standard only through a cloud the manufacturer can switch off.
+
+</div>
+
+---
+
+<!-- _class: dense2 -->
+
+## Test 6: the customer who cannot respond
+
+<div class="cap" style="margin-top:0">
+
+The first objection to hourly prices and per-customer limits is that the affluent optimize and everybody else gets rationed. It is the right question and it deserves the first answer, not the last.
+
+</div>
+
+| | To join a program today | To read a public signal |
+| --- | --- | --- |
+| **An enrollment** | Required | Nothing |
+| **A credit relationship with a third party** | Required | Nothing |
+| **A particular brand of device** | Usually | Any device that can reach the network |
+
+- **Nobody should have to watch a price.** The appliance watches the price. The customer sets a preference once.
+- **Many customers who cannot shift are paying today** for a grid sized to everyone else's worst hour. Capital spending that never enters rates is their benefit, and it is the largest one.
+- **Dynamic pricing asks less of people than a virtual power plant does.** Everyone already pays for VPP incentives through rates. PNNL's DSO+T study found participants **and non-participants** both saw bills fall 10 to 16 percent.
+
+---
+
+<!-- _class: dark -->
+
+### The Commission has already asked the question
+
+> "What hardware, software, or data sharing safeguards may be needed to ensure that customers can obtain a flexible connection without being restricted by proprietary arrangements?"
+
+<div class="cap">
+
+Assigned Commissioner and ALJ ruling, July 7, 2026, seeking comment on the Assigned Commissioner's Proposal on Flexible Service Connections. Grid modernization rulemaking R.21-06-017, Question 8 to parties.
+
+</div>
+
+---
+
+<!-- _class: dense2 -->
+
 ### Making the price signal reach every customer
 
 ## A time-of-use rate is a price stream with fewer changes
 
 - **The signal carries what power costs now and over the coming hours.** A schedule, not a single number. That forward view is what lets a house plan ahead.
 - **Highly dynamic pricing is the destination, and nothing has to wait for it.** A flat rate is a price stream with no changes at all. Same mechanism, same appliance, same software, whatever tariff the customer is on. The appliance never needs a tariff engine, only an interval consumer.
-- **What that asks of the Commission:** require tariffs to be published in a machine-readable, computable form. The open **[Utility Rate Plan Exchange (URPX)](https://lfenergy.org/projects/utility-rate-plan-exchange-urpx/)** standard, hosted by LF Energy, is built for exactly this.
+- **What that asks of the Commission:** require every tariff filing to include a machine-readable rate plan. The open **[Utility Rate Plan Exchange (URPX)](https://urpx.org)** standard, hosted by LF Energy, is built for exactly this, and ships worked test cases built from published PG&E and Con Edison filings. I am modeling California residential rate plans in it, in the open, at **[grid-coordination/urpx-rate-plans](https://github.com/grid-coordination/urpx-rate-plans)**.
 - **And what it asks the Commission to retire:** tariff attributes a price stream cannot carry. A **demand charge** is the clearest example: it prices a peak after the fact, so no device can act on it from the signal alone.
 
 <div class="band">
 
 Every customer can be served by the same mechanism today, whatever tariff they are on. The rate can get more dynamic later without touching a single appliance.
-
-</div>
-
----
-
-## Three levers, three proceedings, all already open
-
-<div class="columns3 lever">
-<div>
-
-#### CPUC
-
-<span class="do">Attach an open-access condition</span> to the flexible service connection ordered in **D.26-02-025**: the limit must reach the customer in an open, machine-readable form, with no enrollment and no intermediary.
-
-<span class="do">Extend the standard offer</span> beyond PG&E and SCE.
-
-<span class="do">Require tariffs published machine-readable and computable</span>, so **any** rate becomes a price stream.
-
-</div>
-<div>
-
-#### CEC
-
-**The one adopted standard writes the answer into the rule.** Pool controls must ship a schedule running 9 a.m. to 3 p.m., never automatically 4 p.m. to 9 p.m. Nothing requires them to receive a price, a signal, or a limit over an open protocol, on the Internet or the home network.
-
-Thermostats, EV charging and home batteries are still open. <span class="do">Make tests 2, 3 and 5 explicit</span> there.
-
-</div>
-<div>
-
-#### The Legislature
-
-**AB 1787** is held in Senate Appropriations. It has been carried once, so it can be carried again, and it is one clause short: it gives the customer access to their **data**. Add access to the <span class="do">signals</span>, and the right to point their own equipment at a server of their choosing.
-
-</div>
-</div>
-
-<div class="cta">
-
-<span class="lbl">The ask</span>
-
-**None of this needs a new proceeding. It needs one sentence in the ones you already have open.** Tell me which, and I will draft it and file it this month, at no charge.
 
 </div>
 
@@ -516,7 +562,7 @@ Thermostats, EV charging and home batteries are still open. <span class="do">Mak
 | **Load Management Standards** | Large IOUs: an hourly, marginal cost-based rate for every customer class by January 1, 2027. Large CCAs: that rate or a qualifying program by July 1, 2027 |
 | **Rate design** | D.25-08-049, August 2025. Guidelines for designing demand flexibility rates; the rates themselves are still in testimony. Remaining issues moved to R.26-04-009, opened April 2026 |
 | **Flexible service connections** | D.26-02-025, February 10, 2026. PG&E and SCE to establish a standardized tariffed flexible connection. Load behind a certified power control system is excluded from the connected load calculation |
-| **Appliance standards** | One adopted: pool controls, September 29, 2025. It mandates a preconfigured schedule (1693(b)(2)(C)(1)) and open standards for the **consent** functions (1693(b)(6)(B)), but no ability to receive a price, a signal or a limit, and no customer-configurable server. Thermostats, EV charging and home batteries are open dockets with no rule text |
+| **Appliance standards** | One adopted: pool controls, September 29, 2025. It mandates a preconfigured schedule (1693(b)(2)(C)(1)) and open standards for the **consent** functions (1693(b)(6)(B)), but no ability to receive a price, a signal or a limit, and no customer-configurable server. Thermostats (24-FDAS-03), EV charging (24-FDAS-04) and home batteries (25-FDAS-01) are open dockets with no rule text |
 | **Legislation** | AB 1787 held under submission in Senate Appropriations, August 13, 2026. The regulators are moving; the statute is not |
 
 ---
@@ -569,21 +615,13 @@ The hard part was never the technology. It is that nobody is required to open th
 
 ---
 
-## Is a customer-configurable server a security hole? No.
-
-- **It is a setting**, in the same sense that choosing an email provider is a setting. The manufacturer still ships a working default. What changes is that the default is not a lock.
-- **The two signals have different risk profiles**, and that is the whole answer. Server choice affects **price** response, which is economic: a wrong price costs money, not safety. It does not affect the **limit**, which is enforced at the connection independently of anything the customer configured.
-- **Today's arrangement is the larger attack surface**: dozens of vendor clouds, none subject to utility-grade review, each holding the ability to operate appliances inside homes directly.
-
-<div class="band">
-
-A price is a one-way number. A command is a key to somebody's house.
-
-</div>
-
----
-
 <!-- _class: dense2 -->
+
+<style scoped>
+  table { font-size: 17.5px; }
+  table td { padding: 8px 20px 8px 0; }
+  .band { font-size: 17px; margin-top: 10px; }
+</style>
 
 ### Everything here is public and free
 
@@ -594,11 +632,12 @@ A price is a one-way number. A command is a key to somebody's house.
 | **This deck, and the one-page handout** | grid-coordination.energy/presentations |
 | **The price server**, with client tutorials | github.com/grid-coordination/price-server-user-guide |
 | **Home Assistant integration**, in the HACS default repository | github.com/grid-coordination/openadr3-ven-hass |
+| **URPX rate plans for California**, a public corpus of modeled tariffs | github.com/grid-coordination/urpx-rate-plans |
 | **Open-source libraries** (Clojure and Python) | github.com/grid-coordination |
 | **My CEC docket comments** and the California policy record | grid-coordination.energy/policy |
 | **OpenADR 3**, the grid-to-customer standard | openadr.org |
 | **Matter**, the in-home standard | csa-iot.org |
-| **URPX**, machine-readable tariffs, hosted by LF Energy | lfenergy.org/projects/utility-rate-plan-exchange-urpx |
+| **URPX**, machine-readable tariffs, hosted by LF Energy | urpx.org |
 
 <div class="band">
 

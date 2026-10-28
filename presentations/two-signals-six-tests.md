@@ -185,7 +185,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 <div class="band">
 
-**What makes them possible is already in place.** A UL 3141 power control system holds a whole site under a number, and <span class="nb">D.26-02-025</span> put a dynamic limit into a California tariff. **The number has no way to reach the house.**
+**What makes them possible is already in place.** A UL 3141 power control system holds a whole site under a number, and <span class="nb">D.26-02-025</span> put a dynamic limit into a California tariff. **The limit needs to reach the house.**
 
 </div>
 
@@ -429,11 +429,11 @@ Consolidate into a unified standard for all flexible demand appliances, one that
 
 #### CPUC
 
-<span class="do">Make the flexible connection open.</span> The limit ordered in <span class="nb">D.26-02-025</span> has to reach the customer machine-readable, with no enrollment and no intermediary.
+<span class="do">Require utilities to publish the price and the capacity limit, via OpenADR 3.</span> The limit ordered in <span class="nb">D.26-02-025</span> has to reach the customer machine-readable, with no enrollment and no intermediary.
+
+<span class="do">Extend the flexible connection tariff</span> beyond PG&E and SCE.
 
 <span class="do">Require every tariff filing to include a URPX rate plan</span>, so any rate becomes a price stream.
-
-<span class="do">Extend the standard offer</span> beyond PG&E and SCE.
 
 </div>
 <div>

@@ -242,10 +242,10 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ## One box enforces the limit.<br>Everything else only needs the price.
 
-- **Enforcement is one box's job, and it has to be one.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
+- **Enforcement is one box's job.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
 - **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
-- **Some may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
-- **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Most homes will not have an energy manager for years, which is why the capability belongs in the appliance.
+- **Some devices may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Many homes will have no energy manager, especially in the near term, which is why the capability belongs in the appliance.
 - **So the ask on an appliance vendor is two things, and they are the same for every product category.** Respond to a price, and support an open local control protocol so the house can reach it.
 
 <div class="band">
@@ -291,7 +291,7 @@ And any of it can be switched off. On October 25, 2025 Google ended cloud suppor
   h3 { margin-bottom: 4px; }
 </style>
 
-### What needs to happen
+### How it needs to work
 
 ## <span class="lbl">Grid:</span> Both signals, one open protocol, direct to the customer<br><span class="lbl">Home:</span> One open protocol for local appliance control and orchestration
 
@@ -299,7 +299,7 @@ And any of it can be switched off. On October 25, 2025 Google ended cloud suppor
 
 <div class="cap">
 
-**Most of this is running today, at pilot scale.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices, and [free open-source software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the house: no account, no contract, no enrollment. [PG&E is piloting the other half with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) (HomeBoost and PanelBoost).
+**Most of this is running today, at pilot scale.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices, and [free open-source software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the house: no account, no contract, no enrollment. [PG&E is piloting dynamic capacity limits with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload).
 
 </div>
 
@@ -354,24 +354,6 @@ Every appliance in the house is wired to one electrical code. Nobody wrote a sep
 
 ---
 
-## What not to mandate
-
-| If the rule says | What you will actually get |
-| --- | --- |
-| "Must support [named standard, 2019 edition]" | Compliance frozen at the state of the art in 2019, and a vendor incentive to do nothing further |
-| "The manufacturer shall provide a grid interface" | A cloud interface. The appliance still speaks nothing open, and it dies when that cloud does |
-| "Customers participate through a program administrator" | Every customer needs a third party's permission before they can help the grid |
-| "Each inverter shall be controllable" | Five separate control paths into one house and nobody managing the total |
-| "The appliance shall run between 9 a.m. and 3 p.m." | A load shape frozen into regulation. It cannot follow a price, cannot respect a limit, and cannot change when the grid does |
-
-<div class="band">
-
-**Name the capability in the rule, and the standard in an appendix you can update without reopening the rule.** Write it at the appliance, not at somebody's server.
-
-</div>
-
----
-
 <!-- _class: dense -->
 
 <style scoped>
@@ -400,6 +382,24 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 <div class="band">
 
 **Thermostats, EV charging and home batteries have no rule text yet.** Pass the tests, and consolidate into a unified standard for all flexible demand appliances.
+
+</div>
+
+---
+
+## What not to mandate
+
+| If the rule says | What you will actually get |
+| --- | --- |
+| "Must support [named standard, 2019 edition]" | Compliance frozen at the state of the art in 2019, and a vendor incentive to do nothing further |
+| "The manufacturer shall provide a grid interface" | A cloud interface. The appliance still speaks nothing open, and it dies when that cloud does |
+| "Customers participate through a program administrator" | Every customer needs a third party's permission before they can help the grid |
+| "Each inverter shall be controllable" | Five separate control paths into one house and nobody managing the total |
+| "The appliance shall run between 9 a.m. and 3 p.m." | A load shape frozen into regulation. It cannot follow a price, cannot respect a limit, and cannot change when the grid does |
+
+<div class="band">
+
+**Name the capability in the rule, and the standard in an appendix you can update without reopening the rule.** Write it at the appliance, not at somebody's server.
 
 </div>
 

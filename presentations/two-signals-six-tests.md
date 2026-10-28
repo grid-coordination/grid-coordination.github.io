@@ -208,7 +208,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 <div class="cap">
 
-**These two can be adopted separately.** Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.
+**These two can be adopted separately.** Different signals, different timescales, different failure modes.
 
 </div>
 
@@ -221,9 +221,8 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ## The limit is on the connection, not the device
 
-- **Today we enroll one device at a time.** One thermostat program, one charger program, one inverter under IEEE 2030.5. A customer with all three is in three programs, none of which can see the other two.
 - **One customer, one connection, one limit** (import and export). A modern home has solar, a battery, one or two car chargers, a heat pump and a heat pump water heater, all at once. The limit belongs on the wire, not on any one appliance.
-- **Two things need to know it, and everything else in the house does not.** The **UL 3141 listed power control system** that enforces it, because enforcement has to happen where the whole site's draw is visible, not inside one appliance. And the **energy manager** that plans against it, so the house schedules inside the envelope instead of colliding with it. They can be the same device.
+- **Today we enroll one device at a time.** One thermostat program, one charger program, one inverter under IEEE 2030.5. A customer with all three is in three programs, none of which can see the other two.
 
 <div class="band">
 
@@ -312,6 +311,7 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 - **Enforcement is one box's job, and it has to be one.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
 - **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
 - **Some may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Most homes will not have an energy manager for years, which is why the capability belongs in the appliance.
 - **So the ask on an appliance vendor is one capability.** Read a price. It is the same capability for every product category, and OpenADR 3 and Matter already carry it.
 
 <div class="band">

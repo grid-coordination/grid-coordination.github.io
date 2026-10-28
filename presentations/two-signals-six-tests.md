@@ -381,7 +381,7 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 
 <div class="band">
 
-**Thermostats, EV charging and home batteries have no rule text yet.** Pass the tests, and consolidate into a unified standard for all flexible demand appliances.
+**Pool controls is the only FDAS rule text that exists.** HVAC, water heating, EV charging and home batteries are all flexible, and all of them land on the same transformer. Consolidate into a unified standard for all flexible demand appliances, one that passes all six tests.
 
 </div>
 

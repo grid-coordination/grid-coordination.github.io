@@ -232,6 +232,30 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ---
 
+<!-- _class: dense2 -->
+
+<style scoped>
+  li { font-size: 18.5px; }
+</style>
+
+### To close on capacity
+
+## One box enforces the limit.<br>Everything else only needs the price.
+
+- **Enforcement is one box's job, and it has to be one.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
+- **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
+- **Some may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Most homes will not have an energy manager for years, which is why the capability belongs in the appliance.
+- **So the ask on an appliance vendor is two things, and they are the same for every product category.** Respond to a price, and support an open local control protocol so the house can reach it.
+
+<div class="band">
+
+**The capacity signal has to exist, be published, and reach one box in the house.** That is the whole ask.
+
+</div>
+
+---
+
 <!-- _class: tight -->
 
 <style scoped>
@@ -242,7 +266,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ### How it works today
 
-## Four companies must agree before one appliance turns down<br>The problem with aggregators and manufacturer clouds
+## The problem with aggregators and manufacturer clouds<br>Four companies must agree before one appliance flexes its demand
 
 ![w:700](images/cpuc/today.svg)
 
@@ -257,23 +281,6 @@ How can a customer's appliances and DERs be orchestrated when every one of them 
 And any of it can be switched off. On October 25, 2025 Google ended cloud support for first and second generation Nest thermostats: those homes lost every ability to respond to an outside signal, on a date the manufacturer chose.
 
 </div>
-
----
-
-## Six tests for any flexibility proposal
-
-<div class="cap" style="margin-top:0">
-
-Rate designs, appliance standards, VPP programs, capacity and interconnection proposals. Every one of them will use the words <em>flexible</em>, <em>smart</em>, and <em>customer choice</em>. **Many of them also insert a new gatekeeper between the grid and the customer.**
-
-</div>
-
-1. Does the grid send the customer **an objective**, or does it **operate the appliance**?
-2. Does the open interface reach **the appliance itself**, or stop at **the manufacturer's cloud**?
-3. Can the customer choose **who optimizes their home**, including doing it themselves?
-4. Can the customer take **the signals** **directly from their utility**, or is a **middleman required**?
-5. Is **fail-safe behavior specified and mandated**: if the signal fails, is **a known default** held?
-6. Does the customer **who cannot respond** end up better off, or worse?
 
 ---
 
@@ -298,27 +305,20 @@ Rate designs, appliance standards, VPP programs, capacity and interconnection pr
 
 ---
 
-<!-- _class: dense2 -->
+## Six tests for any flexibility proposal
 
-<style scoped>
-  li { font-size: 18.5px; }
-</style>
+<div class="cap" style="margin-top:0">
 
-### To close on capacity
-
-## One box enforces the limit.<br>Everything else only needs the price.
-
-- **Enforcement is one box's job, and it has to be one.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
-- **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
-- **Some may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
-- **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Most homes will not have an energy manager for years, which is why the capability belongs in the appliance.
-- **So the ask on an appliance vendor is one capability.** Read a price. It is the same capability for every product category, and OpenADR 3 and Matter already carry it.
-
-<div class="band">
-
-**The capacity signal has to exist, be published, and reach one box in the house.** That is the whole ask.
+Rate designs, appliance standards, VPP programs, capacity and interconnection proposals. Every one of them will use the words <em>flexible</em>, <em>smart</em>, and <em>customer choice</em>. **Many of them also insert a new gatekeeper between the grid and the customer.**
 
 </div>
+
+1. Does the grid send the customer **an objective**, or does it **operate the appliance**?
+2. Does the open interface reach **the appliance itself**, or stop at **the manufacturer's cloud**?
+3. Can the customer choose **who optimizes their home**, including doing it themselves?
+4. Can the customer take **the signals** **directly from their utility**, or is a **middleman required**?
+5. Is **fail-safe behavior specified and mandated**: if the signal fails, is **a known default** held?
+6. Does the customer **who cannot respond** end up better off, or worse?
 
 ---
 

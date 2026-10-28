@@ -146,6 +146,26 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 
 ---
 
+<style scoped>
+  .band { font-size: 19px; }
+</style>
+
+## Price balances the grid. It cannot see the transformer.
+
+![w:680](images/cpuc/price-alone.svg)
+
+<div class="band">
+
+**Highly dynamic pricing is the right answer for balancing the grid, and the most important thing California is doing on demand flexibility.**
+
+It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because a price is shared by everyone on the same asset. It cannot stop five houses on one transformer responding to the same number at the same moment.
+
+**That is why we also need a capacity limit.**
+
+</div>
+
+---
+
 <!-- _class: dense -->
 
 <style scoped>
@@ -157,7 +177,7 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 
 | | Static | Dynamic |
 | --- | --- | --- |
-| **The number** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power a connection may import, and may export, right now |
+| **The size of the pipe** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power a connection may import, and may export, right now |
 | **It changes** | Once, when somebody digs up the street | Every interval, with a schedule ahead and a default to fall back to |
 | **Who sets it** | The electrical code, at installation | The distribution utility, from what the shared transformer and conductors can carry |
 | **Who enforces it** | A breaker. Since NEC 705.13, also a **UL 3141** power control system | The same **UL 3141** power control system |
@@ -172,41 +192,11 @@ Balancing the grid is an <span class="green">economics</span> problem. Protectin
 ---
 
 <style scoped>
-  .cap { font-size: 16.5px; margin-top: 8px; }
-</style>
-
-## Today, electrifying a home means a service upgrade
-
-![w:800](images/cpuc/service-upgrade.svg)
-
-<div class="cap">
-
-**We charge customers for a peak that does not happen, because we have no way to promise that it will not.** And the upgrade answers only the customer's half of the problem: this house can electrify, and the shared transformer is handed more load to carry. Protecting that transformer means replacing it early. Both upgrades land in rates.
-
-</div>
-
----
-
-## Price balances the grid. It cannot see the transformer.
-
-![w:760](images/cpuc/price-alone.svg)
-
-<div class="band">
-
-**Highly dynamic pricing is the right answer for balancing the grid, and the most important thing California is doing on demand flexibility.**
-
-It should be pursued harder, not hedged. **Dynamic pricing reduces capacity problems. It cannot eliminate them**, because a price is shared by everyone on the same asset. It cannot stop five houses on one transformer responding to the same number at the same moment.
-
-</div>
-
----
-
-<style scoped>
   table { font-size: 17.5px; }
   .cap { font-size: 17px; }
 </style>
 
-## But one signal cannot do both jobs
+## Two signals: a price, and a capacity limit
 
 |  | A dynamic price | A per-customer power limit |
 | --- | --- | --- |
@@ -218,9 +208,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 <div class="cap">
 
-Everyone in this room already lives with a power limit: it is the main breaker in your garage, and nobody has ever called it tyranny. The transformer on your street is the same device one size up, shared with five or six neighbors, except it has no breaker. It just cooks quietly for years, and then fails on the hottest day.
-
-**These two can be legislated separately.** Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.
+**These two can be adopted separately.** Different signals, different timescales, different failure modes. They meet in exactly one place: the thing in the house that decides what runs.
 
 </div>
 
@@ -480,6 +468,22 @@ Every one of these fits inside a proceeding that is already open, and uses a sta
 ### Backup
 
 # Detail
+
+---
+
+<style scoped>
+  .cap { font-size: 16.5px; margin-top: 8px; }
+</style>
+
+## Today, electrifying a home means a service upgrade
+
+![w:800](images/cpuc/service-upgrade.svg)
+
+<div class="cap">
+
+**We charge customers for a peak that does not happen, because we have no way to promise that it will not.** And the upgrade answers only the customer's half of the problem: this house can electrify, and the shared transformer is handed more load to carry. Protecting that transformer means replacing it early. Both upgrades land in rates.
+
+</div>
 
 ---
 

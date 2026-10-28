@@ -363,7 +363,7 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 .vn { color: var(--copper); font-weight: 600; }
 .vp { color: var(--muted);  font-weight: 600; }
 .vy { color: var(--green);  font-weight: 600; }
-.band { margin-top: 20px; }
+.band { margin-top: 20px; font-size: 19px; }
 </style>
 
 ### The FDAS pool controls ruling
@@ -381,7 +381,9 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 
 <div class="band">
 
-**Pool controls is the only FDAS rule text that exists.** HVAC, water heating, EV charging and home batteries are all flexible, and all of them land on the same transformer. Consolidate into a unified standard for all flexible demand appliances, one that passes all six tests.
+**Pool controls is the only FDAS rule text that exists.**
+HVAC, water heating, EV charging and home batteries are all flexible, and all of them land on the same transformer.
+Consolidate into a unified standard for all flexible demand appliances, one that passes all six tests.
 
 </div>
 

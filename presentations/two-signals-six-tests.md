@@ -242,7 +242,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ## One box enforces the limit.<br>Everything else only needs the price.
 
-- **Enforcement is one box's job.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
+- **Enforcing the limit is one box's job.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
 - **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
 - **Some devices may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
 - **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Many homes will have no energy manager, especially in the near term, which is why the capability belongs in the appliance.
@@ -266,7 +266,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 ### How it works today
 
-## The problem with aggregators and manufacturer clouds<br>Four companies must agree before one appliance flexes its demand
+## The problem with aggregators and manufacturer clouds<br>Three companies must agree before one appliance flexes its demand
 
 ![w:700](images/cpuc/today.svg)
 

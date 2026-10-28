@@ -250,7 +250,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 <div class="band">
 
-**The capacity signal has to exist, be published, and reach one box in the house.** That is the whole ask.
+**The capacity signal has to exist, be published, and reach the house.**
 
 </div>
 
@@ -299,7 +299,7 @@ And any of it can be switched off. On October 25, 2025 Google ended cloud suppor
 
 <div class="cap">
 
-**Half of this is already running.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices, and [free open-source software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the house: no account, no contract, no enrollment. [PG&E is piloting the other half with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) (HomeBoost and PanelBoost).
+**Most of this is running today, at pilot scale.** A [free, public server](https://github.com/grid-coordination/price-server-user-guide) carries real hourly California prices, and [free open-source software](https://github.com/grid-coordination/openadr3-ven-hass) receives it and orchestrates the house: no account, no contract, no enrollment. [PG&E is piloting the other half with AMI 2.0](https://www.canarymedia.com/articles/utilities/as-californians-electrify-tech-prevent-grid-overload) (HomeBoost and PanelBoost).
 
 </div>
 

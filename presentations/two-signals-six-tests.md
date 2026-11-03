@@ -343,7 +343,7 @@ We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC
 - **The Commission has built this shape before.** The Load Management Standards are one rule covering every large IOU, not a separate proceeding per utility. FDAS should be one rule covering every flexible appliance, not a separate proceeding per appliance.
 - **Every one of them needs the same two facts, and only those two.** What power costs now and next, and how much this connection may draw. A water heater does not need a water heater vocabulary to know either one.
 - **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both facts, with the server address a setting the customer controls.
-- **House to appliance: Matter.** The same two facts to every device in the building, whatever it is.
+- **House to appliance: a standard, open, local, IP protocol for power and energy management.** Matter is the one that ships today in the ecosystems people already own.
 - **This is less regulation, not more.** Both protocols ship today. One capability written once, instead of a rulemaking per appliance forever, each going stale the day it is printed.
 
 <div class="band">

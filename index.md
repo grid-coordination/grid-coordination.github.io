@@ -73,7 +73,7 @@ That constraint is gone. A heat pump, an EV charger or a smart panel can each ru
 <div class="card-grid" markdown="0">
   <div class="card">
     <h3>Advocate for policy</h3>
-    <p>We file formal comments with the California Energy Commission on flexible demand appliance standards, arguing for open standards, customer choice and interoperability. <a href="/policy">Our filings and the regulatory record</a>.</p>
+    <p>We file formal comments with the California Energy Commission on flexible demand appliance standards, and appear as a party of record before the California Public Utilities Commission, arguing for open standards, customer choice and interoperability. <a href="/policy">Our filings and the regulatory record</a>.</p>
   </div>
   <div class="card">
     <h3>Build open protocols and software</h3>

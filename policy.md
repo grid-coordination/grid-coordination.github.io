@@ -40,15 +40,25 @@ A customer has a right to the real-time data their own meter produces, locally, 
 
 - **[Two Signals, Six Tests](/presentations/two-signals-six-tests.html)** &mdash; prepared for California PUC and CEC staff. The two problems, the two signals that answer them, and six tests for judging any flexibility proposal. [PDF](/presentations/two-signals-six-tests.pdf) &middot; [one-page handout](/presentations/two-signals-six-tests-onepager.pdf).
 
-### Upcoming: CEC Commissioner Workshop on Interoperability
+### CEC Commissioner Workshop on Interoperability, November 4, 2026
 
-**Wednesday, November 4, 2026, 9:00 a.m. to 1:00 p.m. Pacific. Remote only, via Zoom.** [Event page](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability) &middot; [Notice and agenda](https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=120537&tn=272800) (TN 272800) &middot; [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02), Load Flexibility Policy & Planning.
+**Our founder presented the Interoperability Overview, with Bruce Nordman.** [Slides](/presentations/two-signals-six-tests.html) &middot; [PDF](/presentations/two-signals-six-tests.pdf).
 
-This is the proceeding this project exists to inform. The CEC's own notice says the workshop "will focus on alignment among communication protocols and standards, including OpenADR 3.1, Matter, IEEE 2030.5, ISO 15118, Open Charge Point Interface (OCPI), and Open Charge Point Protocol (OCPP), to support scalable, privacy-preserving automation and consumer-authorized control." Its background section states that the CEC is considering an approach that "supports dynamic signals, including price, greenhouse gas emissions, and grid conditions" and "enables consumer-authorized control."
+[Event page](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability) &middot; [Schedule and agenda](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273311) (TN 273311) &middot; [Notice](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273084) (TN 273084) &middot; [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02), Load Flexibility Policy &amp; Planning.
+
+The CEC's notice says the workshop "will focus on alignment among communication protocols and standards, including OpenADR 3, Matter, IEEE 2030.5, ISO 15118, Open Charge Point Interface (OCPI), and Open Charge Point Protocol (OCPP), to support scalable, privacy-preserving automation and consumer-authorized control," and that the CEC is considering an approach that "supports dynamic signals, including price, greenhouse gas emissions, and grid conditions" and "enables consumer-authorized control."
 
 Two of the three standards advocated here are named in that list. The two things the CEC says it wants, dynamic signals including price and control the customer authorizes, are what the first and third of our [six tests](/presentations/two-signals-six-tests.html) ask of any flexibility proposal.
 
-Grid Coordination will attend, and our founder has been invited to present. A detailed agenda is expected in the docket before the workshop.
+Opening remarks came from CEC Commissioner J. Andrew McAllister and CPUC Commissioners Darcie L. Houck and Matthew Baker. Three panels followed, on the standards landscape, on utility, aggregator and VPP perspectives, and on consumer electronics, OEM and EVSE perspectives.
+
+**Written comments are due to the Docket Unit by 5:00 p.m. Pacific on November 18, 2026**, through the [e-commenting page for Docket 24-FDAS-02](https://efiling.energy.ca.gov/EComment/EComment.aspx?docketnumber=24-FDAS-02).
+
+### California Public Utilities Commission &mdash; R.21-06-017, flexible service connections
+
+**[Opening comments on the Track 3 proposed decision](/policy/r2106017)**, filed November 9, 2026 as a party of record. [PDF](/policy/R2106017-Opening-Comments-of-Donald-C-Jackson.pdf).
+
+The proposed decision resolves the physics of flexible service connections and leaves the delivery unresolved. A customer cannot respond to an operating envelope that never reaches equipment the customer controls. The comments identify nine errors and propose corrections, the largest of which is internal: in Section 11 the Commission states conclusions that its own ordering paragraphs do not carry out.
 
 ### California Energy Commission &mdash; Flexible Demand Appliance Standards
 

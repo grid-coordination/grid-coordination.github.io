@@ -42,7 +42,7 @@ A customer has a right to the real-time data their own meter produces, locally, 
 
 ### CEC Commissioner Workshop on Interoperability, November 4, 2026
 
-**Our founder presented the Interoperability Overview, with Bruce Nordman.** [Slides](/presentations/two-signals-six-tests.html) &middot; [PDF](/presentations/two-signals-six-tests.pdf).
+**Our founder gave the Interoperability Overview, sharing the slot with Bruce Nordman.** He presented [Two Signals, Six Tests](/presentations/two-signals-six-tests.html) &middot; [PDF](/presentations/two-signals-six-tests.pdf).
 
 [Event page](https://www.energy.ca.gov/event/workshop/2026-11/commissioner-workshop-interoperability) &middot; [Schedule and agenda](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273311) (TN 273311) &middot; [Notice](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273084) (TN 273084) &middot; [Docket 24-FDAS-02](https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=24-FDAS-02), Load Flexibility Policy &amp; Planning.
 

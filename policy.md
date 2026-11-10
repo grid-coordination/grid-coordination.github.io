@@ -68,6 +68,12 @@ We have contributed formal responses to CEC proceedings on flexible demand stand
 
 - **[Docket 24-FDAS-04](/policy/24-fdas-04)** &mdash; Electric Vehicle Supply Equipment: We advocated for customer choice and interoperability in EVSE standards, open protocol requirements for local and cloud control, V2X capability requirements, and user-configurable flexible demand servers.
 
+### California ISO &mdash; a machine-readable Flex Alert
+
+**[CAISO Flex Alert API: analysis and proposed enhancements](https://github.com/grid-coordination/caiso-flex-alert).** Flex Alerts are the state's voluntary conservation calls, and the API behind them was built to drive a website rather than equipment. We published the first comprehensive public documentation of that API, a critique of why it does not serve home automation, building energy management or demand response aggregators, and a proposal: a versioned, schema-discoverable HTTP feed on a CDN, with an optional authenticated push tier for qualified intermediaries. It needs no new messaging infrastructure and little operational cost.
+
+A grid condition is one of the three dynamic signals the CEC says it wants to support. Today the most widely recognized grid condition signal in California cannot be consumed by the devices that would act on it.
+
 ### Key Regulatory Drivers
 
 The regulatory landscape in California is moving toward the grid coordination architecture we advocate:

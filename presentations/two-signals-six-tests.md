@@ -381,7 +381,7 @@ th:nth-child(2), td:nth-child(2) { width: 110px; }
 
 <div class="band">
 
-**Pool controls is the only FDAS rule text that exists.**
+**Pool controls is adopted, and thermostats now have draft rule text.**
 HVAC, water heating, EV charging and home batteries are all flexible, and all of them land on the same transformer.
 Consolidate into a unified standard for all flexible demand appliances, one that passes all six tests.
 
@@ -622,7 +622,7 @@ Every customer can be served by the same mechanism today, whatever tariff they a
 | **Load Management Standards** | Large IOUs: an hourly, marginal cost-based rate for every customer class by January 1, 2027. Large CCAs: that rate or a qualifying program by July 1, 2027 |
 | **Rate design** | D.25-08-049, August 2025. Guidelines for designing demand flexibility rates; the rates themselves are still in testimony. Remaining issues moved to R.26-04-009, opened April 2026 |
 | **Flexible service connections** | D.26-02-025, February 10, 2026. PG&E and SCE to establish a standardized tariffed flexible connection. Load behind a certified power control system is excluded from the connected load calculation |
-| **Appliance standards** | One adopted: pool controls, September 29, 2025. It mandates a preconfigured schedule (1693(b)(2)(C)(1)) and open standards for the **consent** functions (1693(b)(6)(B)), but no ability to receive a price, a signal or a limit, and no customer-configurable server. Thermostats (24-FDAS-03), EV charging (24-FDAS-04) and home batteries (25-FDAS-01) are open dockets with no rule text |
+| **Appliance standards** | One adopted: pool controls, September 29, 2025. It mandates a preconfigured schedule (1693(b)(2)(C)(1)) and open standards for the **consent** functions (1693(b)(6)(B)), but no ability to receive a price, a signal or a limit, and no customer-configurable server. Thermostats (24-FDAS-03) have draft Express Terms as of November 10, 2026, requiring an OpenADR 3.1 Virtual End Node and forbidding sole reliance on a manufacturer's cloud, with no customer-configurable server. EV charging (24-FDAS-04) and home batteries (25-FDAS-01) are open dockets with no rule text |
 | **Legislation** | AB 1787 held under submission in Senate Appropriations, August 13, 2026. The regulators are moving; the statute is not |
 
 ---

@@ -341,8 +341,8 @@ We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC
 </div>
 
 - **The Commission has built this shape before.** The Load Management Standards are one rule covering every large IOU, not a separate proceeding per utility. FDAS should be one rule covering every flexible appliance, not a separate proceeding per appliance.
-- **Every one of them needs the same two facts, and only those two.** What power costs now and next, and how much this connection may draw. A water heater does not need a water heater vocabulary to know either one.
-- **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both facts, with the server address a setting the customer controls.
+- **Every one of them needs the same fact: what energy costs now and next.** The limit on the connection goes to the device that enforces it and to an EMS planning the house, not to every appliance. There is nothing water-heater-specific about either.
+- **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both signals, with the server address a setting the customer controls.
 - **House to appliance: a standard, open, local, IP protocol for power and energy management.** Matter is the one that ships today in the ecosystems people already own.
 - **This is less regulation, not more.** Both protocols ship today. One capability written once, instead of a rulemaking per appliance forever, each going stale the day it is printed.
 
@@ -599,7 +599,7 @@ Assigned Commissioner and ALJ ruling, July 7, 2026, seeking comment on the Assig
 
 ## A time-of-use rate is a price stream with fewer changes
 
-- **The signal carries what power costs now and over the coming hours.** A schedule, not a single number. That forward view is what lets a house plan ahead.
+- **The signal carries what energy costs now and over the coming hours.** A schedule, not a single number. That forward view is what lets a house plan ahead.
 - **Highly dynamic pricing is the destination, and nothing has to wait for it.** A flat rate is a price stream with no changes at all. Same mechanism, same appliance, same software, whatever tariff the customer is on. The appliance never needs a tariff engine, only an interval consumer.
 - **What that asks of the Commission:** require every tariff filing to include a machine-readable rate plan. The open **[Utility Rate Plan Exchange (URPX)](https://urpx.org)** standard, hosted by LF Energy, is built for exactly this, and ships worked test cases built from published PG&E and Con Edison filings. I am modeling California residential rate plans in it, in the open, at **[grid-coordination/urpx-rate-plans](https://github.com/grid-coordination/urpx-rate-plans)**.
 - **And what it asks the Commission to retire:** tariff attributes a price stream cannot carry. A **demand charge** is the clearest example: it prices a peak after the fact, so no device can act on it from the signal alone.

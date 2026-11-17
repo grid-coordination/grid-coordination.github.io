@@ -244,7 +244,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 - **Enforcing the limit is one box's job.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
 - **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
-- **Some devices may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **An energy manager planning the house needs the limit too, and that is cheap.** It schedules better for knowing it, and is not thereby responsible for holding the site under it. Every other appliance is told what it may draw, in its own vocabulary, by whichever of those holds the plan. Receiving requires no listing. Enforcing does.
 - **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Many homes will have no energy manager, especially in the near term, which is why the capability belongs in the appliance.
 - **So the ask on an appliance vendor is two things, and they are the same for every product category.** Respond to a price, and support an open local control protocol so the house can reach it.
 
@@ -422,7 +422,7 @@ Consolidate into a unified standard for all flexible demand appliances, one that
 
 <span class="do">One unified FDAS standard for all flexible demand appliances</span>, instead of a rulemaking per appliance category.
 
-<span class="do">Write the capability into it:</span> read a price, respect a connection limit, over an open protocol the customer can repoint.
+<span class="do">Write the capability into it:</span> read a price, and accept a draw limit from the house, over an open protocol the customer can repoint.
 
 </div>
 <div>
@@ -449,7 +449,7 @@ Consolidate into a unified standard for all flexible demand appliances, one that
 
 #### Appliance OEMs
 
-<span class="do">Receive both.</span> Read a price, respect a limit, and let the customer point the server somewhere else.
+<span class="do">Both interfaces.</span> Read a price, accept a draw limit from the house, and let the customer point the server somewhere else.
 
 <span class="do">Ship it now.</span> OpenADR 3 and Matter both do this today, and neither waits on a regulator.
 

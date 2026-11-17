@@ -180,7 +180,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 | **The size of the pipe** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power a connection may import, and may export, right now |
 | **It changes** | Once, when somebody digs up the street | Every interval, with a schedule ahead and a default to fall back to |
 | **Who sets it** | The electrical code, at installation | The distribution utility, from what the shared transformer and conductors can carry |
-| **Who enforces it** | A breaker. Since NEC 705.13, also a **UL 3141** power control system | The same **UL 3141** power control system |
+| **Who enforces it** | A breaker, and a **UL 3141** power control system (PCS) | The same **UL 3141** power control system |
 | **How it arrives** | Built into the hardware | **<span class="copper">This is the gap</span>** |
 
 <div class="band">
@@ -502,7 +502,7 @@ Every one of these fits inside a proceeding that is already open, and uses a sta
 
 - **The static limit is three numbers that have to agree.** The service conductors from the transformer, the main breaker, and the panel busbar. The house may not draw more, and a breaker makes sure of it.
 - **A load calculation decides whether the new load may be installed at all.** NEC Article 220 adds up connected load with fixed demand factors and no knowledge of how that house actually behaves. A home adding a heat pump, a heat pump water heater, an induction range and EV charging can exceed its service on paper while never approaching it in practice.
-- **NEC 705.13 and UL 3141 changed the answer.** A listed power control system actively holds the site below the existing rating, so the load behind it comes out of the load calculation. The customer electrifies on the conductors and the service feed already there.
+- **The UL 3141 power control system changed the answer.** A listed PCS actively holds the site below the existing rating, so the load behind it comes out of the load calculation. The customer electrifies on the conductors and the service feed already there.
 - **California put that in a tariff.** D.26-02-025 excludes load managed behind a certified power control system from the connected load calculation.
 
 <div class="band">

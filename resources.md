@@ -55,7 +55,7 @@ Where the two fit together is straightforward, and the report draws the line its
 
 ## Upcoming
 
-**Written comments on the CEC Commissioner Workshop on Interoperability are due by 5:00 p.m. Pacific on November 18, 2026**, through the [e-commenting page for Docket 24-FDAS-02](https://efiling.energy.ca.gov/EComment/EComment.aspx?docketnumber=24-FDAS-02).
+**Written comments on the CEC Commissioner Workshop on Interoperability are due by 5:00 p.m. Pacific on December 18, 2026**, through the [e-commenting page for Docket 24-FDAS-02](https://efiling.energy.ca.gov/EComment/EComment.aspx?docketnumber=24-FDAS-02). The deadline was extended from November 18 by [TN 273664](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273664).
 
 ## Recent
 

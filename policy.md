@@ -52,7 +52,7 @@ Two of the three standards advocated here are named in that list. The two things
 
 Opening remarks came from CEC Commissioner J. Andrew McAllister and CPUC Commissioners Darcie L. Houck and Matthew Baker. Three panels followed, on the standards landscape, on utility, aggregator and VPP perspectives, and on consumer electronics, OEM and EVSE perspectives.
 
-**[Comments on the Commissioner Workshop on Interoperability](/policy/24-fdas-02)**, filed November 17, 2026. [PDF](/policy/CEC-24-FDAS-02-Comments-of-Donald-C-Jackson.pdf), with [Two Signals, Six Tests](/presentations/two-signals-six-tests.html) as Attachment A.
+**[Comments on the Commissioner Workshop on Interoperability](/policy/24-fdas-02)**, filed November 17, 2026 and docketed as [TN 273689](https://efiling.energy.ca.gov/GetDocument.aspx?tn=273689). [PDF](/policy/CEC-24-FDAS-02-Comments-of-Donald-C-Jackson.pdf), with [Two Signals, Six Tests](/presentations/two-signals-six-tests.html) as Attachment A.
 
 Fourteen requests, in four groups: what a flexible demand appliance standard should require, how the rule should be written, what the grid side should publish, and capacity limits, which answer a different problem. The draft thermostat standard published six days after the workshop never requires, in terms, that the open interface be in the appliance, and does not test it.
 

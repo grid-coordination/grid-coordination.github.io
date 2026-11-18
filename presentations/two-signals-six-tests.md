@@ -180,7 +180,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 | **The size of the pipe** | The service rating: the panel, the main breaker, the conductors back to the transformer | The power a connection may import, and may export, right now |
 | **It changes** | Once, when somebody digs up the street | Every interval, with a schedule ahead and a default to fall back to |
 | **Who sets it** | The electrical code, at installation | The distribution utility, from what the shared transformer and conductors can carry |
-| **Who enforces it** | A breaker. Since NEC 705.13, also a **UL 3141** power control system | The same **UL 3141** power control system |
+| **Who enforces it** | A breaker, and a **UL 3141** power control system (PCS) | The same **UL 3141** power control system |
 | **How it arrives** | Built into the hardware | **<span class="copper">This is the gap</span>** |
 
 <div class="band">
@@ -244,7 +244,7 @@ It should be pursued harder, not hedged. **Dynamic pricing reduces capacity prob
 
 - **Enforcing the limit is one box's job.** The **UL 3141** power control system holds the whole site under the number, because that is the only place the whole site's draw is visible. Two enforcers would fight each other.
 - **Every other appliance just reads a price.** A water heater, a heat pump, a dryer, a dishwasher: receive a price stream and shift. No capacity logic, no new vocabulary, nothing about transformers.
-- **Some devices may want to know the limit anyway, and that is cheap.** An energy manager, an EV charger, a battery deciding when to export: each schedules better if it can see the limit, and none of them is responsible for holding the site under it. Knowing requires no listing. Enforcing does.
+- **An energy manager planning the house needs the limit too, and that is cheap.** It schedules better for knowing it, and is not thereby responsible for holding the site under it. Every other appliance is told what it may draw, in its own vocabulary, by whichever of those holds the plan. Receiving requires no listing. Enforcing does.
 - **Where there is an energy manager, it takes the price. Where there is not, the appliance takes it directly.** Many homes will have no energy manager, especially in the near term, which is why the capability belongs in the appliance.
 - **So the ask on an appliance vendor is two things, and they are the same for every product category.** Respond to a price, and support an open local control protocol so the house can reach it.
 
@@ -341,8 +341,8 @@ We do not need OCPP for chargers, CTA-2045 for water heaters, AHRI 1380 for HVAC
 </div>
 
 - **The Commission has built this shape before.** The Load Management Standards are one rule covering every large IOU, not a separate proceeding per utility. FDAS should be one rule covering every flexible appliance, not a separate proceeding per appliance.
-- **Every one of them needs the same two facts, and only those two.** What power costs now and next, and how much this connection may draw. A water heater does not need a water heater vocabulary to know either one.
-- **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both facts, with the server address a setting the customer controls.
+- **Every one of them needs the same fact: what energy costs now and next.** The limit on the connection goes to the device that enforces it and to an EMS planning the house, not to every appliance. There is nothing water-heater-specific about either.
+- **Grid to house: OpenADR 3.** One open protocol over the Internet carrying both signals, with the server address a setting the customer controls.
 - **House to appliance: a standard, open, local, IP protocol for power and energy management.** Matter is the one that ships today in the ecosystems people already own.
 - **This is less regulation, not more.** Both protocols ship today. One capability written once, instead of a rulemaking per appliance forever, each going stale the day it is printed.
 
@@ -422,7 +422,7 @@ Consolidate into a unified standard for all flexible demand appliances, one that
 
 <span class="do">One unified FDAS standard for all flexible demand appliances</span>, instead of a rulemaking per appliance category.
 
-<span class="do">Write the capability into it:</span> read a price, respect a connection limit, over an open protocol the customer can repoint.
+<span class="do">Write the capability into it:</span> read a price, and accept a draw limit from the house, over an open protocol the customer can repoint.
 
 </div>
 <div>
@@ -449,7 +449,7 @@ Consolidate into a unified standard for all flexible demand appliances, one that
 
 #### Appliance OEMs
 
-<span class="do">Receive both.</span> Read a price, respect a limit, and let the customer point the server somewhere else.
+<span class="do">Both interfaces.</span> Read a price, accept a draw limit from the house, and let the customer point the server somewhere else.
 
 <span class="do">Ship it now.</span> OpenADR 3 and Matter both do this today, and neither waits on a regulator.
 
@@ -502,7 +502,7 @@ Every one of these fits inside a proceeding that is already open, and uses a sta
 
 - **The static limit is three numbers that have to agree.** The service conductors from the transformer, the main breaker, and the panel busbar. The house may not draw more, and a breaker makes sure of it.
 - **A load calculation decides whether the new load may be installed at all.** NEC Article 220 adds up connected load with fixed demand factors and no knowledge of how that house actually behaves. A home adding a heat pump, a heat pump water heater, an induction range and EV charging can exceed its service on paper while never approaching it in practice.
-- **NEC 705.13 and UL 3141 changed the answer.** A listed power control system actively holds the site below the existing rating, so the load behind it comes out of the load calculation. The customer electrifies on the conductors and the service feed already there.
+- **The UL 3141 power control system changed the answer.** A listed PCS actively holds the site below the existing rating, so the load behind it comes out of the load calculation. The customer electrifies on the conductors and the service feed already there.
 - **California put that in a tariff.** D.26-02-025 excludes load managed behind a certified power control system from the connected load calculation.
 
 <div class="band">
@@ -599,7 +599,7 @@ Assigned Commissioner and ALJ ruling, July 7, 2026, seeking comment on the Assig
 
 ## A time-of-use rate is a price stream with fewer changes
 
-- **The signal carries what power costs now and over the coming hours.** A schedule, not a single number. That forward view is what lets a house plan ahead.
+- **The signal carries what energy costs now and over the coming hours.** A schedule, not a single number. That forward view is what lets a house plan ahead.
 - **Highly dynamic pricing is the destination, and nothing has to wait for it.** A flat rate is a price stream with no changes at all. Same mechanism, same appliance, same software, whatever tariff the customer is on. The appliance never needs a tariff engine, only an interval consumer.
 - **What that asks of the Commission:** require every tariff filing to include a machine-readable rate plan. The open **[Utility Rate Plan Exchange (URPX)](https://urpx.org)** standard, hosted by LF Energy, is built for exactly this, and ships worked test cases built from published PG&E and Con Edison filings. I am modeling California residential rate plans in it, in the open, at **[grid-coordination/urpx-rate-plans](https://github.com/grid-coordination/urpx-rate-plans)**.
 - **And what it asks the Commission to retire:** tariff attributes a price stream cannot carry. A **demand charge** is the clearest example: it prices a peak after the fact, so no device can act on it from the signal alone.
